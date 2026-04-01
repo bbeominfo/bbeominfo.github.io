@@ -8,51 +8,37 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --text:#0f172a;
-  --muted:#64748b;
-  --faint:#94a3b8;
-  --border:#e2e8f0;
-  --bg:#ffffff;
-  --bg2:#f8fafc;
-  --blue:#2563eb;
-  --blue-bg:#eff6ff;
-  --blue-border:#bfdbfe;
-  --blue-text:#1d4ed8;
-  --green-bg:#f0fdf4;
-  --green-border:#bbf7d0;
-  --green-text:#15803d;
+  --text:#0f172a;--muted:#64748b;--faint:#94a3b8;--border:#e2e8f0;
+  --bg:#ffffff;--bg2:#f8fafc;
+  --blue:#2563eb;--blue-bg:#eff6ff;--blue-border:#bfdbfe;--blue-text:#1d4ed8;
+  --green-bg:#f0fdf4;--green-border:#bbf7d0;--green-text:#15803d;
   --sans:'Inter',system-ui,sans-serif;
 }
 html,body{height:100%;overflow:hidden}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 2.5rem;width:100%;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.01em;cursor:pointer}
-.nav-links{display:flex;gap:0;list-style:none}
-.nav-links li a{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:6px;transition:all 0.15s;display:block}
-.nav-links li a:hover{color:var(--text);background:var(--bg2)}
-.nav-links li a.active{color:var(--blue);font-weight:500}
-.nav-email{font-size:13px;font-weight:400;color:var(--muted);text-decoration:none}
+.nav-logo{font-size:14px;font-weight:600;color:var(--text);cursor:pointer}
+.nav-links{display:flex;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 14px;border-radius:6px;transition:all 0.15s;display:block}
+.nav-links a:hover{color:var(--text);background:var(--bg2)}
+.nav-links a.active{color:var(--blue);font-weight:500}
+.nav-email{font-size:13px;color:var(--muted);text-decoration:none}
 .nav-email:hover{color:var(--text)}
 
-/* PAGES */
 .pages{position:fixed;top:60px;left:0;right:0;bottom:0;overflow:hidden}
-.page{position:absolute;inset:0;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity 0.3s ease}
+.page{position:absolute;inset:0;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity 0.25s ease}
 .page.active{opacity:1;pointer-events:all}
-
 .wrap{max-width:1100px;margin:0 auto;padding:3rem 2.5rem 4rem}
 
-/* SECTION LABEL & TITLE */
 .sec-label{font-size:11px;font-weight:600;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem}
 .sec-title{font-size:1.8rem;font-weight:600;color:var(--text);letter-spacing:-0.03em;margin-bottom:2rem;line-height:1.2}
 
-/* HERO */
-.hero-layout{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:flex-start;padding-top:1rem}
+.hero-layout{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:flex-start;padding-top:1rem;margin-bottom:2.5rem}
 .hero-photo{width:160px;height:160px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
 .hero-photo-inner{text-align:center}
-.hero-photo-initials{font-size:2.5rem;font-weight:300;color:var(--faint);letter-spacing:-0.02em;display:block}
+.hero-photo-initials{font-size:2.5rem;font-weight:300;color:var(--faint);display:block}
 .hero-photo-hint{font-size:10px;color:var(--faint);margin-top:4px}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;border:1px solid var(--green-border);border-radius:99px;font-size:11px;font-weight:500;color:var(--green-text);background:var(--green-bg);margin-bottom:1rem}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0}
@@ -60,87 +46,61 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .hero-name span{color:var(--blue)}
 .hero-sub{font-size:14px;color:var(--muted);margin-bottom:2px}
 .hero-school{font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem}
-.hero-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.6rem}
-.chip{font-size:12px;font-weight:400;padding:4px 12px;border-radius:6px;border:1px solid var(--border);color:var(--muted);background:var(--bg2)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0}
+.chip{font-size:12px;padding:4px 12px;border-radius:6px;border:1px solid var(--border);color:var(--muted);background:var(--bg2)}
 .chip.hi{border-color:var(--blue-border);color:var(--blue-text);background:var(--blue-bg)}
-.hero-btns{display:flex;gap:10px}
-.btn{display:inline-block;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;border:none;font-family:var(--sans);transition:all 0.15s}
+
+.btn{display:inline-block;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;border:none;font-family:var(--sans);transition:all 0.15s;text-align:center}
 .btn-blue{background:var(--blue);color:#fff}
 .btn-blue:hover{opacity:0.88}
 .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn-ghost:hover{background:var(--bg2)}
 
-/* ABOUT */
 .about-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 .about-text p{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1rem}
-.about-text p:last-child{margin-bottom:0}
-.awards-list{display:flex;flex-direction:column;gap:0}
 .award-item{padding:0.9rem 0;border-bottom:1px solid var(--border);display:flex;gap:1rem;align-items:flex-start}
 .award-item:first-child{border-top:1px solid var(--border)}
-.award-mark{width:20px;height:20px;flex-shrink:0;background:var(--bg2);border:1px solid var(--border);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--faint);margin-top:2px}
 .award-name{font-size:13px;font-weight:500;color:var(--text);line-height:1.4}
 .award-year{font-size:11px;color:var(--faint);margin-top:2px}
 
-/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .skill-cat{background:var(--bg);padding:1.4rem}
 .skill-cat-label{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.8rem}
 .skill-tags{display:flex;flex-wrap:wrap;gap:5px}
 .stag{font-size:12px;padding:3px 9px;border-radius:5px;border:1px solid var(--border);color:var(--muted);background:var(--bg2)}
 
-/* RESEARCH */
-.research-list{display:flex;flex-direction:column}
 .r-item{display:grid;grid-template-columns:50px 1fr;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--border)}
 .r-item:first-child{border-top:1px solid var(--border)}
 .r-year{font-size:12px;color:var(--faint);padding-top:4px;font-weight:500}
 .r-badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:7px;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green-text)}
 .r-ongoing{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue-text)}
-.r-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;line-height:1.4;letter-spacing:-0.01em}
+.r-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;line-height:1.4}
 .r-venue{font-size:12px;font-weight:500;color:var(--blue);margin-bottom:5px}
 .r-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px}
 .r-tags{display:flex;flex-wrap:wrap;gap:5px}
 .rtag{font-size:11px;padding:3px 9px;border-radius:5px;background:var(--blue-bg);border:1px solid var(--blue-border);color:var(--blue-text)}
 
-/* PROJECTS */
-.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.p-card{border:1px solid var(--border);border-radius:12px;padding:1.5rem;background:var(--bg);transition:border-color 0.15s}
+.p-card{border:1px solid var(--border);border-radius:12px;background:var(--bg);transition:border-color 0.15s;overflow:hidden}
 .p-card:hover{border-color:var(--blue-border)}
-.p-num{font-size:11px;font-weight:600;color:var(--faint);margin-bottom:0.7rem}
-.p-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;line-height:1.4;letter-spacing:-0.01em}
-.p-role{font-size:11px;font-weight:500;color:var(--blue);margin-bottom:8px}
-.p-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:10px}
-.p-tags{display:flex;flex-wrap:wrap;gap:5px}
+.p-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.4}
 .ptag{font-size:11px;padding:3px 9px;border-radius:5px;background:var(--bg2);border:1px solid var(--border);color:var(--muted)}
 
-/* EXPERIENCE */
-.exp-list{display:flex;flex-direction:column}
 .exp-item{display:grid;grid-template-columns:1fr auto;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--border);align-items:start}
 .exp-item:first-child{border-top:1px solid var(--border)}
-.exp-role{font-size:15px;font-weight:600;color:var(--text);letter-spacing:-0.01em;margin-bottom:2px}
+.exp-role{font-size:15px;font-weight:600;color:var(--text);margin-bottom:2px}
 .exp-org{font-size:13px;font-weight:500;color:var(--blue);margin-bottom:8px}
-.exp-bullets{display:flex;flex-direction:column;gap:5px}
-.exp-bullet{font-size:13px;color:var(--muted);line-height:1.7;padding-left:1rem;position:relative}
+.exp-bullet{font-size:13px;color:var(--muted);line-height:1.7;padding-left:1rem;position:relative;margin-bottom:5px}
 .exp-bullet::before{content:'·';position:absolute;left:0;color:var(--faint)}
 .exp-period{font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:3px}
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.contact-intro{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem}
-.clinks{display:flex;flex-direction:column;gap:8px}
-.clink{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.1rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:14px;background:var(--bg);transition:border-color 0.15s}
+.clink{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.1rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:14px;background:var(--bg);transition:border-color 0.15s;margin-bottom:8px}
 .clink:hover{border-color:var(--blue-border)}
 .clink-key{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.07em;min-width:60px}
-.cform{display:flex;flex-direction:column;gap:12px}
 .flabel{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.07em;display:block;margin-bottom:4px}
-.finput,.ftextarea{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border-color 0.15s;resize:none}
+.finput,.ftextarea{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border-color 0.15s;resize:none;margin-bottom:12px}
 .finput:focus,.ftextarea:focus{border-color:var(--blue-border);background:var(--bg)}
 .ftextarea{height:110px;line-height:1.6}
 
-/* FOOTER inside page */
-.page-footer{border-top:1px solid var(--border);padding:1.5rem 2.5rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between}
-.footer-text{font-size:12px;color:var(--faint)}
-
-/* MODAL */
 .p-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:300;background:var(--bg);border:1px solid var(--border);border-radius:16px;width:min(660px,92vw);max-height:80vh;overflow-y:auto}
 .modal-header{display:flex;justify-content:space-between;align-items:flex-start;padding:1.6rem 1.8rem;border-bottom:1px solid var(--border);gap:1rem;position:sticky;top:0;background:var(--bg)}
 .modal-close{background:none;border:1px solid var(--border);border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:12px;color:var(--muted);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--sans)}
@@ -148,8 +108,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .modal-body{padding:1.6rem 1.8rem;display:flex;flex-direction:column;gap:1.4rem}
 .modal-sec-label{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.6rem}
 .modal-text{font-size:14px;color:var(--muted);line-height:1.8}
-.modal-bullets{display:flex;flex-direction:column;gap:7px}
-.modal-bullet{font-size:13px;color:var(--muted);line-height:1.7;padding-left:1rem;position:relative}
+.modal-bullet{font-size:13px;color:var(--muted);line-height:1.7;padding-left:1rem;position:relative;margin-bottom:7px}
 .modal-bullet::before{content:'·';position:absolute;left:0;color:var(--faint)}
 .modal-bullet strong{color:var(--text);font-weight:600}
 .modal-stat{background:var(--bg2);border-radius:8px;padding:0.9rem 1rem}
@@ -170,18 +129,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <li><a href="#" onclick="showPage('experience');return false" id="nav-experience">Experience</a></li>
       <li><a href="#" onclick="showPage('contact');return false" id="nav-contact">Contact</a></li>
     </ul>
-    <a href="/cdn-cgi/l/email-protection#3e5c5c5b5153575058517e59535f5752105d5153" class="nav-email"><span class="__cf_email__" data-cfemail="640606010b090d0a020b240309050d084a070b09">[email&#160;protected]</span></a>
+    <a href="mailto:bbeominfo@gmail.com" class="nav-email">bbeominfo@gmail.com</a>
   </div>
 </nav>
 
 <div class="pages">
 
-  <!-- HOME — recruiter summary -->
+  <!-- HOME -->
   <div class="page active" id="page-home">
     <div class="wrap">
-
-      <!-- Top: photo + identity + bio -->
-      <div class="hero-layout" style="margin-bottom:2.5rem">
+      <div class="hero-layout">
         <div class="hero-photo">
           <div class="hero-photo-inner">
             <span class="hero-photo-initials">KK</span>
@@ -189,15 +146,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           </div>
         </div>
         <div>
-          <div class="hero-badge">
-            <span class="hero-dot"></span>
-            Open to internship · Summer 2025
-          </div>
+          <div class="hero-badge"><span class="hero-dot"></span>Open to internship · Summer 2025</div>
           <h1 class="hero-name">Kyungbeom <span>Kim</span></h1>
           <p class="hero-sub">MS Computational Science &amp; Engineering · MS Bioinformatics</p>
           <p class="hero-school">Georgia Institute of Technology · Atlanta, GA</p>
-          <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:0.8rem;max-width:520px">Graduate researcher at GT Bio-MIBLab building ML systems for biomedical data — from LLM-based disease prediction to multi-agent AI and gene embeddings.</p>
-          <div class="hero-chips" style="margin-top:1rem">
+          <p style="font-size:14px;color:var(--muted);line-height:1.8;margin:0.8rem 0 1rem;max-width:520px">Graduate researcher at GT Bio-MIBLab building ML systems for biomedical data — from LLM-based disease prediction to multi-agent AI and gene embeddings.</p>
+          <div class="hero-chips">
             <span class="chip hi">Biomedical AI</span>
             <span class="chip hi">Large Language Models</span>
             <span class="chip hi">ML Engineering</span>
@@ -206,10 +160,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
         </div>
       </div>
 
-      <!-- Bottom: research highlight + awards side by side -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
-
-        <!-- Recent research -->
         <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden">
           <div style="padding:1rem 1.3rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center">
             <span style="font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em">Recent Research</span>
@@ -233,8 +184,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
             </div>
           </div>
         </div>
-
-        <!-- Awards + CTA -->
         <div style="display:flex;flex-direction:column;gap:1.5rem">
           <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden">
             <div style="padding:1rem 1.3rem;border-bottom:1px solid var(--border)">
@@ -248,11 +197,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
             </div>
           </div>
           <div style="display:flex;gap:10px">
-            <a href="#" class="btn btn-blue" onclick="showPage('research');return false" style="flex:1;text-align:center">View Research</a>
-            <a href="#" class="btn btn-ghost" onclick="showPage('contact');return false" style="flex:1;text-align:center">Get in Touch</a>
+            <a href="#" class="btn btn-blue" onclick="showPage('research');return false" style="flex:1">View Research</a>
+            <a href="#" class="btn btn-ghost" onclick="showPage('contact');return false" style="flex:1">Get in Touch</a>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -266,43 +214,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
         <div class="skill-cat">
           <div class="skill-cat-label">Languages</div>
           <div class="skill-tags">
-            <span class="stag">Python</span>
-            <span class="stag">C++</span>
-            <span class="stag">SQL</span>
-            <span class="stag">Bash</span>
-            <span class="stag">R</span>
-            <span class="stag">HTML/CSS/JS</span>
+            <span class="stag">Python</span><span class="stag">C++</span><span class="stag">SQL</span><span class="stag">Bash</span><span class="stag">R</span><span class="stag">HTML/CSS/JS</span>
           </div>
         </div>
         <div class="skill-cat">
           <div class="skill-cat-label">ML / DL</div>
           <div class="skill-tags">
-            <span class="stag">PyTorch</span>
-            <span class="stag">scikit-learn</span>
-            <span class="stag">HuggingFace</span>
-            <span class="stag">LLMs</span>
-            <span class="stag">GNN</span>
-            <span class="stag">Transformers</span>
+            <span class="stag">PyTorch</span><span class="stag">scikit-learn</span><span class="stag">HuggingFace</span><span class="stag">LLMs</span><span class="stag">GNN</span><span class="stag">Transformers</span>
           </div>
         </div>
         <div class="skill-cat">
           <div class="skill-cat-label">Bioinformatics</div>
           <div class="skill-tags">
-            <span class="stag">RNA-seq</span>
-            <span class="stag">scRNA-seq</span>
-            <span class="stag">BioPython</span>
-            <span class="stag">BLAST</span>
-            <span class="stag">CLC Genomics</span>
+            <span class="stag">RNA-seq</span><span class="stag">scRNA-seq</span><span class="stag">BioPython</span><span class="stag">BLAST</span><span class="stag">CLC Genomics</span>
           </div>
         </div>
         <div class="skill-cat">
           <div class="skill-cat-label">Data &amp; Tools</div>
           <div class="skill-tags">
-            <span class="stag">Pandas</span>
-            <span class="stag">NumPy</span>
-            <span class="stag">Git</span>
-            <span class="stag">Docker</span>
-            <span class="stag">Linux</span>
+            <span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Git</span><span class="stag">Docker</span><span class="stag">Linux</span>
           </div>
         </div>
       </div>
@@ -314,14 +244,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
     <div class="wrap">
       <div class="sec-label">Research</div>
       <h2 class="sec-title">Publications &amp; research</h2>
-      <div class="research-list">
+      <div>
         <div class="r-item">
           <div class="r-year">2025</div>
           <div>
             <div class="r-badge">Accepted · IEEE EMBC 2025</div>
             <div class="r-title">Integrating Polygenic Risk Scores with Clinical Features for Colon Cancer Risk Prediction</div>
             <div class="r-venue">IEEE EMBC 2025 · First Author · Bio-MIBLab, Georgia Tech</div>
-            <div class="r-desc">Led first-author ML project integrating Polygenic Risk Scores (PRSs) with clinical features to reduce false negatives in colon cancer risk prediction using the UK Biobank dataset.</div>
+            <div class="r-desc">Led first-author ML project integrating PRSs with clinical features to reduce false negatives in colon cancer risk prediction using the UK Biobank dataset.</div>
             <div class="r-tags"><span class="rtag">Machine Learning</span><span class="rtag">PRS</span><span class="rtag">Cancer Risk</span><span class="rtag">UK Biobank</span></div>
           </div>
         </div>
@@ -331,7 +261,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
             <div class="r-badge r-ongoing">Ongoing</div>
             <div class="r-title">Systematic Review: Multimodal LLM Architectures for Representation Learning</div>
             <div class="r-venue">Bio-MIBLab, Georgia Tech</div>
-            <div class="r-desc">Surveying and comparing multimodal large language model architectures with a focus on representation learning in biomedical settings.</div>
+            <div class="r-desc">Surveying and comparing multimodal LLM architectures with a focus on representation learning in biomedical settings.</div>
             <div class="r-tags"><span class="rtag">LLM</span><span class="rtag">Multimodal</span><span class="rtag">Representation Learning</span></div>
           </div>
         </div>
@@ -360,7 +290,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <div>
             <div class="r-title">Ground Truth Construction for Single-Cell LLMs via NLP-Based Metadata Annotation</div>
             <div class="r-venue">KAIST · Single-Cell Medical Genomics Lab</div>
-            <div class="r-desc">Automated single-cell sample data mining from GEO database and constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP feature extraction.</div>
+            <div class="r-desc">Automated single-cell data mining from GEO database and constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP extraction.</div>
             <div class="r-tags"><span class="rtag">Single-Cell</span><span class="rtag">NLP</span><span class="rtag">BERT</span><span class="rtag">GPT</span></div>
           </div>
         </div>
@@ -375,220 +305,48 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <h2 class="sec-title">Selected projects</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
 
-        <!-- Card 01 -->
-        <div class="p-card" onclick="openModal('modal-protein')" style="cursor:pointer;padding:0;overflow:hidden">
-          <div style="background:var(--blue-bg);border-bottom:1px solid var(--blue-border);padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
-            <div style="font-size:28px;line-height:1">🧬</div>
-            <div style="font-size:10px;font-weight:600;color:var(--blue-text);background:white;border:1px solid var(--blue-border);border-radius:4px;padding:2px 8px">2025</div>
+        <div class="p-card" onclick="openModal('modal-protein')" style="cursor:pointer">
+          <div style="background:var(--blue-bg);border-bottom:1px solid var(--blue-border);padding:1.4rem;display:flex;justify-content:space-between;align-items:flex-start">
+            <span style="font-size:28px">🧬</span>
+            <span style="font-size:10px;font-weight:600;color:var(--blue-text);background:white;border:1px solid var(--blue-border);border-radius:4px;padding:2px 8px">2025</span>
           </div>
           <div style="padding:1.2rem 1.4rem 1.4rem">
-            <div class="p-title" style="margin-bottom:6px">Protein Mutation Effect Prediction</div>
+            <div class="p-title" style="margin-bottom:8px">Protein Mutation Effect Prediction</div>
             <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
               <span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span>
             </div>
-            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+            <span style="font-size:12px;color:var(--blue);font-weight:500">View details →</span>
           </div>
         </div>
 
-        <!-- Card 02 -->
-        <div class="p-card" onclick="openModal('modal-gnn')" style="cursor:pointer;padding:0;overflow:hidden">
-          <div style="background:#f0fdf4;border-bottom:1px solid #bbf7d0;padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
-            <div style="font-size:28px;line-height:1">💊</div>
-            <div style="font-size:10px;font-weight:600;color:#15803d;background:white;border:1px solid #bbf7d0;border-radius:4px;padding:2px 8px">2025</div>
+        <div class="p-card" onclick="openModal('modal-gnn')" style="cursor:pointer">
+          <div style="background:#f0fdf4;border-bottom:1px solid #bbf7d0;padding:1.4rem;display:flex;justify-content:space-between;align-items:flex-start">
+            <span style="font-size:28px">💊</span>
+            <span style="font-size:10px;font-weight:600;color:#15803d;background:white;border:1px solid #bbf7d0;border-radius:4px;padding:2px 8px">2025</span>
           </div>
           <div style="padding:1.2rem 1.4rem 1.4rem">
-            <div class="p-title" style="margin-bottom:6px">Drug-Disease Association via Heterogeneous GNNs</div>
+            <div class="p-title" style="margin-bottom:8px">Drug-Disease Association via Heterogeneous GNNs</div>
             <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
               <span class="ptag">GNN</span><span class="ptag">Hetionet</span><span class="ptag">Sentence-BERT</span>
             </div>
-            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+            <span style="font-size:12px;color:var(--blue);font-weight:500">View details →</span>
           </div>
         </div>
 
-        <!-- Card 03 -->
-        <div class="p-card" onclick="openModal('modal-face')" style="cursor:pointer;padding:0;overflow:hidden">
-          <div style="background:#fef9c3;border-bottom:1px solid #fde68a;padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
-            <div style="font-size:28px;line-height:1">👁️</div>
-            <div style="font-size:10px;font-weight:600;color:#92400e;background:white;border:1px solid #fde68a;border-radius:4px;padding:2px 8px">2022</div>
+        <div class="p-card" onclick="openModal('modal-face')" style="cursor:pointer">
+          <div style="background:#fef9c3;border-bottom:1px solid #fde68a;padding:1.4rem;display:flex;justify-content:space-between;align-items:flex-start">
+            <span style="font-size:28px">👁️</span>
+            <span style="font-size:10px;font-weight:600;color:#92400e;background:white;border:1px solid #fde68a;border-radius:4px;padding:2px 8px">2022</span>
           </div>
           <div style="padding:1.2rem 1.4rem 1.4rem">
-            <div class="p-title" style="margin-bottom:6px">Facial Analysis via Asian Physiognomy</div>
+            <div class="p-title" style="margin-bottom:8px">Facial Analysis via Asian Physiognomy</div>
             <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
               <span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span>
             </div>
-            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+            <span style="font-size:12px;color:var(--blue);font-weight:500">View details →</span>
           </div>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-</div>
-
-  <!-- MODAL OVERLAY -->
-  <div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.4);z-index:200;align-items:center;justify-content:center;padding:2rem"></div>
-
-  <!-- MODAL: Protein Mutation -->
-  <div id="modal-protein" class="p-modal" style="display:none">
-    <div class="modal-header">
-      <div>
-        <div class="p-num" style="margin-bottom:6px">01 · Mar – May 2025</div>
-        <div class="p-title" style="font-size:1.1rem;margin-bottom:4px">Active Learning-Guided Protein Mutation Effect Prediction</div>
-        <div class="p-role">ML Developer · MLP, ESM-1v, Active Learning · Georgia Tech</div>
-      </div>
-      <button onclick="closeModal()" class="modal-close">✕</button>
-    </div>
-    <div class="modal-body">
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Problem Statement</div>
-        <p class="modal-text">Predicting the functional impact of protein mutations is critical for drug development and precision medicine. This project used Deep Mutational Scanning (DMS) scores as a fitness proxy to build ML models that predict how single amino acid mutations affect protein function.</p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Methods</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet"><strong>Feature Extraction</strong> — Combined 1280-dim mean-pooled ESM-1v embeddings with 6 biochemical features (aromaticity, hydrophobicity, isoelectric point, helix/turn/sheet fraction) → 1286-dim input vector</div>
-          <div class="modal-bullet"><strong>MLP Ensemble (Final)</strong> — 4-layer MLP (1286→512→256→64→1) with LayerNorm + LeakyReLU + Dropout(0.4), trained with AdamW over 40 epochs, ensembled across 3 random seeds</div>
-          <div class="modal-bullet"><strong>Benchmarked architectures</strong> — CNN (ESM-2 + RF feature selection), RNN (one-hot encoding), ESM fine-tuning (partial, layers 31–32)</div>
-          <div class="modal-bullet"><strong>Active Learning</strong> — 3 query strategies: MC Dropout uncertainty, ESM log-probability difference (ΔlogP), and UCB-based Gaussian Process sampling</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Results</div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
-          <div class="modal-stat"><div class="modal-stat-num">0.49</div><div class="modal-stat-label">Best validation Spearman (MLP · full-seq mean + biochem)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">0.27</div><div class="modal-stat-label">Leaderboard Spearman (MLP vs CNN 0.26 / RNN 0.07)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">0.18</div><div class="modal-stat-label">ESM fine-tuning score — frozen embeddings outperformed</div></div>
-        </div>
-        <p class="modal-text" style="font-size:13px">MLP ensemble outperformed CNN, RNN, and ESM fine-tuning. In low-data settings, freezing PLM and using a downstream MLP proved more effective than partial fine-tuning — which required 40–60GB GPU memory with lower performance.</p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">My Contributions</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet">Designed and implemented the full <strong>MLP pipeline</strong> including feature engineering, architecture design, and ensemble strategy</div>
-          <div class="modal-bullet">Implemented <strong>parameter-efficient ESM fine-tuning</strong> and led comparative analysis across all architectures</div>
-          <div class="modal-bullet">Designed all 3 <strong>active learning query strategies</strong> (MC Dropout, ΔlogP, UCB-GP)</div>
-          <div class="modal-bullet">Wrote the final report and led experimental documentation</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Future Work</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet">Incorporate 3D structural features (SASA, PDB-based) for richer mutation context</div>
-          <div class="modal-bullet">Explore LSTM/GRU-based architectures with embedding layers instead of one-hot encoding</div>
-          <div class="modal-bullet">Apply larger-scale ESM-2 models with more efficient fine-tuning (LoRA, adapter layers)</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Tech Stack</div>
-        <div class="p-tags" style="margin-top:6px">
-          <span class="ptag">PyTorch</span><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">BioPython</span><span class="ptag">scikit-learn</span><span class="ptag">NumPy</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- MODAL: GNN -->
-  <div id="modal-gnn" class="p-modal" style="display:none">
-    <div class="modal-header">
-      <div>
-        <div class="p-num" style="margin-bottom:6px">02 · Spring 2025 · CX4803 ML in Computational Biology</div>
-        <div class="p-title" style="font-size:1.1rem;margin-bottom:4px">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
-        <div class="p-role">Deep Learning Developer · Georgia Tech</div>
-      </div>
-      <button onclick="closeModal()" class="modal-close">✕</button>
-    </div>
-    <div class="modal-body">
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Problem Statement</div>
-        <p class="modal-text">Traditional drug discovery is lengthy and costly. This project aimed to predict drug-disease associations using heterogeneous Graph Neural Networks on the Hetionet biomedical knowledge graph — enabling drug repurposing by identifying existing compounds that may treat unknown diseases.</p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Methods — 4 Model Architectures Benchmarked</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet"><strong>Node2Vec + GCN</strong> — Structural baseline; biased random walk embeddings fed into a homogeneous 2-layer GCN. Highest internal AUC (0.99) but strong overfitting on external data.</div>
-          <div class="modal-bullet"><strong>Sentence Transformer + HeteroConv (Final)</strong> — Node names embedded via all-MiniLM-L6-v2 (384-dim) into 2-layer SAGEConv with 13 meta-relations. Zero-shot capable for unseen diseases.</div>
-          <div class="modal-bullet"><strong>Node2Vec + R-GCN</strong> — 5-layer relational GCN with relation-specific parameters across 8 meta-edges. AUC 0.96 on Hetionet.</div>
-          <div class="modal-bullet"><strong>Node2Vec + HGT</strong> — 2-layer Heterogeneous Graph Transformer with per-node-type and per-relation multi-head attention. AUC 0.77.</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Results</div>
-        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
-          <div class="modal-stat"><div class="modal-stat-num">0.89</div><div class="modal-stat-label">AUC on Hetionet (final model · Sentence Transformer + HeteroConv)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">0.78</div><div class="modal-stat-label">F1-score on Hetionet test set</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">0.63</div><div class="modal-stat-label">AUC on external HINGRL-B dataset (647 validated pairs)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">4</div><div class="modal-stat-label">GNN architectures compared</div></div>
-        </div>
-        <p class="modal-text" style="font-size:13px">The final model (Sentence Transformer + HeteroConv) was selected over the higher-AUC GCN due to superior diversity in Top-N drug recommendations — the GCN consistently recommended the same highly-connected compounds across all diseases (degree centrality bias).</p>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Key Findings</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet">Simple neighborhood aggregation (SAGEConv) outperformed attention-based HGT in generalization, suggesting structural bias from Node2Vec limits complex architectures.</div>
-          <div class="modal-bullet">Semantic text embeddings enabled <strong>zero-shot prediction</strong> for unseen diseases — a critical advantage over purely structural approaches.</div>
-          <div class="modal-bullet">High internal AUC does not guarantee real-world utility; qualitative diversity of recommendations is equally important in drug discovery.</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Future Work</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet">Incorporate multi-modal node embeddings: <strong>SMILES</strong> for chemical structure, <strong>gene ontology</strong>, <strong>BERT</strong> from biomedical literature</div>
-          <div class="modal-bullet">Apply degree normalization and biological filtering to reduce hub-compound bias</div>
-          <div class="modal-bullet">Extend to protein-structure data (PDB) for richer drug-target representations</div>
-        </div>
-      </div>
-
-      <div class="modal-section">
-        <div class="modal-sec-label">Tech Stack</div>
-        <div class="p-tags" style="margin-top:6px">
-          <span class="ptag">PyTorch</span><span class="ptag">PyTorch Geometric</span><span class="ptag">GCN</span><span class="ptag">R-GCN</span><span class="ptag">HGT</span><span class="ptag">SAGEConv</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span><span class="ptag">Neo4j</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- MODAL: Physiognomy -->
-  <div id="modal-face" class="p-modal" style="display:none">
-    <div class="modal-header">
-      <div>
-        <div class="p-num" style="margin-bottom:6px">03 · Mar – Sep 2022</div>
-        <div class="p-title" style="font-size:1.1rem;margin-bottom:4px">Facial Image Analysis via Traditional Asian Physiognomy</div>
-        <div class="p-role">ML Engineer / Designer</div>
-      </div>
-      <button onclick="closeModal()" class="modal-close">✕</button>
-    </div>
-    <div class="modal-body">
-      <div class="modal-section">
-        <div class="modal-sec-label">Overview</div>
-        <p class="modal-text">Developed a real-time vision-based web service for physiognomy-based facial feature classification using ML models. The project received the Outstanding AI Project Award from Korea Creative Content Agency in 2022.</p>
-      </div>
-      <div class="modal-section">
-        <div class="modal-sec-label">Key Details</div>
-        <div class="modal-bullets">
-          <div class="modal-bullet">Built end-to-end pipeline from facial feature extraction to real-time classification</div>
-          <div class="modal-bullet">Designed both ML model and web interface as the primary ML Engineer and Designer</div>
-          <div class="modal-bullet">Awarded <strong>Outstanding AI Project Award</strong> — Korea Creative Content Agency (KOCCA), 2022</div>
-        </div>
-      </div>
-      <div class="modal-section">
-        <div class="modal-sec-label">Tech Stack</div>
-        <div class="p-tags" style="margin-top:6px">
-          <span class="ptag">Computer Vision</span><span class="ptag">Machine Learning</span><span class="ptag">HTML/CSS/JS</span><span class="ptag">Python</span>
-        </div>
       </div>
     </div>
   </div>
@@ -598,17 +356,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
     <div class="wrap">
       <div class="sec-label">Experience</div>
       <h2 class="sec-title">Experience &amp; education</h2>
-      <div class="exp-list">
+      <div>
         <div class="exp-item">
           <div>
             <div class="exp-role">Graduate Research Assistant</div>
             <div class="exp-org">Georgia Institute of Technology · Bio-MIBLab</div>
-            <div class="exp-bullets">
-              <div class="exp-bullet">First-author ML paper on colon cancer risk prediction — accepted at IEEE EMBC 2025.</div>
-              <div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div>
-              <div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings.</div>
-              <div class="exp-bullet">Developing a modular Multi-Agent AI for multi-modal biomedical data integration.</div>
-            </div>
+            <div class="exp-bullet">First-author ML paper on colon cancer risk prediction — accepted at IEEE EMBC 2025.</div>
+            <div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div>
+            <div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings.</div>
+            <div class="exp-bullet">Developing a modular Multi-Agent AI for multi-modal biomedical data integration.</div>
           </div>
           <div class="exp-period">Aug 2024 – Present</div>
         </div>
@@ -616,10 +372,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <div>
             <div class="exp-role">Undergraduate Research Assistant</div>
             <div class="exp-org">KAIST · Single-Cell Medical Genomics Lab</div>
-            <div class="exp-bullets">
-              <div class="exp-bullet">Built an automated single-cell data mining pipeline from the GEO database.</div>
-              <div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP annotation.</div>
-            </div>
+            <div class="exp-bullet">Built an automated single-cell data mining pipeline from the GEO database.</div>
+            <div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP annotation.</div>
           </div>
           <div class="exp-period">Jul 2023 – Feb 2024</div>
         </div>
@@ -627,10 +381,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <div>
             <div class="exp-role">Research Intern</div>
             <div class="exp-org">Soongsil University · Biomedical Data Science Lab</div>
-            <div class="exp-bullets">
-              <div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data using t-test and FDR correction.</div>
-              <div class="exp-bullet">Applied KNN on TCGA-PAAD multi-omics data for cancer survival prediction.</div>
-            </div>
+            <div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data using t-test and FDR correction.</div>
+            <div class="exp-bullet">Applied KNN on TCGA-PAAD multi-omics data for cancer survival prediction.</div>
           </div>
           <div class="exp-period">Mar 2023 – Jun 2023</div>
         </div>
@@ -638,9 +390,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <div>
             <div class="exp-role">Bioinformatics Intern</div>
             <div class="exp-org">Insilicogen Inc.</div>
-            <div class="exp-bullets">
-              <div class="exp-bullet">End-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis with downstream R visualization.</div>
-            </div>
+            <div class="exp-bullet">End-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis with R visualization.</div>
           </div>
           <div class="exp-period">Jan 2023 – Feb 2023</div>
         </div>
@@ -648,9 +398,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <div>
             <div class="exp-role">BE in Biomedical Engineering &amp; Computer Art</div>
             <div class="exp-org">Chung-ang University, Seoul</div>
-            <div class="exp-bullets">
-              <div class="exp-bullet">Double major in Biomedical Engineering and Computer Art.</div>
-            </div>
+            <div class="exp-bullet">Double major in Biomedical Engineering and Computer Art.</div>
           </div>
           <div class="exp-period">Mar 2019 – Feb 2024</div>
         </div>
@@ -663,45 +411,147 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
     <div class="wrap">
       <div class="sec-label">Contact</div>
       <h2 class="sec-title">Let's connect</h2>
-      <div class="contact-grid">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
         <div>
-          <p class="contact-intro">I'm actively looking for internship opportunities in ML/AI engineering and biomedical AI research for Summer 2025. Feel free to reach out — I usually respond within a day.</p>
-          <div class="clinks">
-            <a href="/cdn-cgi/l/email-protection#c0a2a2a5afada9aea6af80a7ada1a9aceea3afad" class="clink">
-              <span class="clink-key">Email</span><span class="__cf_email__" data-cfemail="b7d5d5d2d8daded9d1d8f7d0dad6dedb99d4d8da">[email&#160;protected]</span>
-            </a>
-            <a href="tel:+16782766493" class="clink">
-              <span class="clink-key">Phone</span>+1 (678) 276-6493
-            </a>
-            <a href="#" class="clink">
-              <span class="clink-key">GitHub</span>Coming soon
-            </a>
-            <a href="#" class="clink">
-              <span class="clink-key">LinkedIn</span>Coming soon
-            </a>
-          </div>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem">I'm actively looking for internship opportunities in ML/AI engineering and biomedical AI research for Summer 2025. Feel free to reach out — I usually respond within a day.</p>
+          <a href="mailto:bbeominfo@gmail.com" class="clink"><span class="clink-key">Email</span>bbeominfo@gmail.com</a>
+          <a href="tel:+16782766493" class="clink"><span class="clink-key">Phone</span>+1 (678) 276-6493</a>
+          <a href="#" class="clink"><span class="clink-key">GitHub</span>Coming soon</a>
+          <a href="#" class="clink"><span class="clink-key">LinkedIn</span>Coming soon</a>
         </div>
-        <div class="cform">
-          <div>
-            <label class="flabel">Name</label>
-            <input class="finput" type="text" placeholder="Your name">
-          </div>
-          <div>
-            <label class="flabel">Email</label>
-            <input class="finput" type="email" placeholder="your@email.com">
-          </div>
-          <div>
-            <label class="flabel">Message</label>
-            <textarea class="ftextarea" placeholder="What's on your mind?"></textarea>
-          </div>
-          <a href="/cdn-cgi/l/email-protection#dab8b8bfb5b7b3b4bcb59abdb7bbb3b6f4b9b5b7" class="btn btn-blue" style="align-self:flex-start">Send Message</a>
+        <div>
+          <label class="flabel">Name</label>
+          <input class="finput" type="text" placeholder="Your name">
+          <label class="flabel">Email</label>
+          <input class="finput" type="email" placeholder="your@email.com">
+          <label class="flabel">Message</label>
+          <textarea class="ftextarea" placeholder="What's on your mind?"></textarea>
+          <a href="mailto:bbeominfo@gmail.com" class="btn btn-blue">Send Message</a>
         </div>
       </div>
     </div>
   </div>
 
+</div><!-- end .pages -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"><<script>
+<!-- MODAL OVERLAY -->
+<div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.4);z-index:200"></div>
+
+<!-- MODAL: Protein -->
+<div id="modal-protein" class="p-modal" style="display:none">
+  <div class="modal-header">
+    <div>
+      <div style="font-size:11px;color:var(--faint);margin-bottom:6px">01 · Mar – May 2025</div>
+      <div style="font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.4">Active Learning-Guided Protein Mutation Effect Prediction</div>
+      <div style="font-size:12px;color:var(--blue);font-weight:500">ML Developer · MLP, ESM-1v, Active Learning · Georgia Tech</div>
+    </div>
+    <button onclick="closeModal()" class="modal-close">✕</button>
+  </div>
+  <div class="modal-body">
+    <div><div class="modal-sec-label">Problem Statement</div><p class="modal-text">Predicting the functional impact of protein mutations is critical for drug development and precision medicine. This project used Deep Mutational Scanning (DMS) scores as a fitness proxy to build ML models that predict how single amino acid mutations affect protein function.</p></div>
+    <div><div class="modal-sec-label">Methods</div>
+      <div class="modal-bullet"><strong>Feature Extraction</strong> — 1280-dim mean-pooled ESM-1v embeddings + 6 biochemical features (aromaticity, hydrophobicity, isoelectric point, helix/turn/sheet fraction) → 1286-dim input</div>
+      <div class="modal-bullet"><strong>MLP Ensemble (Final)</strong> — 4-layer MLP (1286→512→256→64→1), LayerNorm + LeakyReLU + Dropout(0.4), AdamW, 40 epochs, ensembled across 3 random seeds</div>
+      <div class="modal-bullet"><strong>Benchmarked</strong> — CNN (ESM-2 + RF feature selection), RNN (one-hot), ESM fine-tuning (partial, layers 31–32)</div>
+      <div class="modal-bullet"><strong>Active Learning</strong> — 3 strategies: MC Dropout uncertainty, ESM ΔlogP, UCB-based Gaussian Process</div>
+    </div>
+    <div><div class="modal-sec-label">Results</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
+        <div class="modal-stat"><div class="modal-stat-num">0.49</div><div class="modal-stat-label">Best validation Spearman (MLP full-seq mean + biochem)</div></div>
+        <div class="modal-stat"><div class="modal-stat-num">0.27</div><div class="modal-stat-label">Leaderboard Spearman (MLP vs CNN 0.26 / RNN 0.07)</div></div>
+        <div class="modal-stat"><div class="modal-stat-num">0.18</div><div class="modal-stat-label">ESM fine-tuning — frozen embeddings outperformed</div></div>
+      </div>
+    </div>
+    <div><div class="modal-sec-label">My Contributions</div>
+      <div class="modal-bullet">Designed and implemented the full <strong>MLP pipeline</strong> — feature engineering, architecture, ensemble strategy</div>
+      <div class="modal-bullet">Implemented <strong>parameter-efficient ESM fine-tuning</strong> and led comparative analysis</div>
+      <div class="modal-bullet">Designed all 3 <strong>active learning query strategies</strong> (MC Dropout, ΔlogP, UCB-GP)</div>
+      <div class="modal-bullet">Wrote the final report and led experimental documentation</div>
+    </div>
+    <div><div class="modal-sec-label">Future Work</div>
+      <div class="modal-bullet">Incorporate 3D structural features (SASA, PDB-based) for richer mutation context</div>
+      <div class="modal-bullet">Explore LSTM/GRU with embedding layers instead of one-hot encoding</div>
+      <div class="modal-bullet">Apply ESM-2 with LoRA / adapter-based fine-tuning for low-data efficiency</div>
+    </div>
+    <div><div class="modal-sec-label">Tech Stack</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px">
+        <span class="ptag">PyTorch</span><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">BioPython</span><span class="ptag">scikit-learn</span><span class="ptag">NumPy</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: GNN -->
+<div id="modal-gnn" class="p-modal" style="display:none">
+  <div class="modal-header">
+    <div>
+      <div style="font-size:11px;color:var(--faint);margin-bottom:6px">02 · Spring 2025 · CX4803 ML in Computational Biology</div>
+      <div style="font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.4">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
+      <div style="font-size:12px;color:var(--blue);font-weight:500">Deep Learning Developer · Georgia Tech</div>
+    </div>
+    <button onclick="closeModal()" class="modal-close">✕</button>
+  </div>
+  <div class="modal-body">
+    <div><div class="modal-sec-label">Problem Statement</div><p class="modal-text">Traditional drug discovery is lengthy and costly. This project predicted drug-disease associations using heterogeneous GNNs on the Hetionet biomedical knowledge graph — enabling drug repurposing by identifying existing compounds that may treat unknown diseases.</p></div>
+    <div><div class="modal-sec-label">Methods — 4 Architectures Benchmarked</div>
+      <div class="modal-bullet"><strong>Node2Vec + GCN</strong> — Structural baseline; highest internal AUC (0.99) but strong overfitting on external data</div>
+      <div class="modal-bullet"><strong>Sentence Transformer + HeteroConv (Final)</strong> — all-MiniLM-L6-v2 384-dim embeddings into 2-layer SAGEConv with 13 meta-relations; zero-shot capable for unseen diseases</div>
+      <div class="modal-bullet"><strong>Node2Vec + R-GCN</strong> — 5-layer relational GCN with relation-specific parameters across 8 meta-edges; AUC 0.96</div>
+      <div class="modal-bullet"><strong>Node2Vec + HGT</strong> — 2-layer Heterogeneous Graph Transformer with per-node-type multi-head attention; AUC 0.77</div>
+    </div>
+    <div><div class="modal-sec-label">Results</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
+        <div class="modal-stat"><div class="modal-stat-num">0.89</div><div class="modal-stat-label">AUC on Hetionet (Sentence Transformer + HeteroConv)</div></div>
+        <div class="modal-stat"><div class="modal-stat-num">0.78</div><div class="modal-stat-label">F1-score on Hetionet test set</div></div>
+        <div class="modal-stat"><div class="modal-stat-num">0.63</div><div class="modal-stat-label">AUC on external HINGRL-B (647 validated pairs)</div></div>
+        <div class="modal-stat"><div class="modal-stat-num">4</div><div class="modal-stat-label">GNN architectures compared</div></div>
+      </div>
+      <p class="modal-text" style="font-size:13px">Final model selected over higher-AUC GCN due to superior diversity in Top-N drug recommendations — GCN showed degree centrality bias, consistently recommending the same highly-connected compounds.</p>
+    </div>
+    <div><div class="modal-sec-label">Key Findings</div>
+      <div class="modal-bullet">Simple SAGEConv outperformed attention-based HGT in generalization</div>
+      <div class="modal-bullet">Semantic embeddings enabled <strong>zero-shot prediction</strong> for unseen diseases</div>
+      <div class="modal-bullet">High internal AUC ≠ real-world utility; recommendation diversity matters in drug discovery</div>
+    </div>
+    <div><div class="modal-sec-label">Future Work</div>
+      <div class="modal-bullet">Multi-modal embeddings: <strong>SMILES</strong> (chemical structure), gene ontology, biomedical BERT</div>
+      <div class="modal-bullet">Degree normalization and biological filtering to reduce hub-compound bias</div>
+      <div class="modal-bullet">Extend to protein-structure data (PDB) for richer drug-target representations</div>
+    </div>
+    <div><div class="modal-sec-label">Tech Stack</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px">
+        <span class="ptag">PyTorch</span><span class="ptag">PyTorch Geometric</span><span class="ptag">GCN</span><span class="ptag">R-GCN</span><span class="ptag">HGT</span><span class="ptag">SAGEConv</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span><span class="ptag">Neo4j</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Physiognomy -->
+<div id="modal-face" class="p-modal" style="display:none">
+  <div class="modal-header">
+    <div>
+      <div style="font-size:11px;color:var(--faint);margin-bottom:6px">03 · Mar – Sep 2022</div>
+      <div style="font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.4">Facial Image Analysis via Traditional Asian Physiognomy</div>
+      <div style="font-size:12px;color:var(--blue);font-weight:500">ML Engineer / Designer</div>
+    </div>
+    <button onclick="closeModal()" class="modal-close">✕</button>
+  </div>
+  <div class="modal-body">
+    <div><div class="modal-sec-label">Overview</div><p class="modal-text">Developed a real-time vision-based web service for physiognomy-based facial feature classification. Received Outstanding AI Project Award from Korea Creative Content Agency in 2022.</p></div>
+    <div><div class="modal-sec-label">Key Details</div>
+      <div class="modal-bullet">Built end-to-end pipeline from facial feature extraction to real-time classification</div>
+      <div class="modal-bullet">Led both ML model design and web interface as primary ML Engineer and Designer</div>
+      <div class="modal-bullet">Awarded <strong>Outstanding AI Project Award</strong> — Korea Creative Content Agency (KOCCA), 2022</div>
+    </div>
+    <div><div class="modal-sec-label">Tech Stack</div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:6px">
+        <span class="ptag">Computer Vision</span><span class="ptag">Machine Learning</span><span class="ptag">HTML/CSS/JS</span><span class="ptag">Python</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
@@ -714,11 +564,7 @@ function openModal(id){
   document.querySelectorAll('.p-modal').forEach(m=>m.style.display='none');
   const overlay=document.getElementById('modal-overlay');
   const modal=document.getElementById(id);
-  if(overlay&&modal){
-    overlay.style.display='flex';
-    modal.style.display='block';
-    modal.scrollTop=0;
-  }
+  if(overlay&&modal){overlay.style.display='block';modal.style.display='block';modal.scrollTop=0;}
 }
 function closeModal(){
   document.querySelectorAll('.p-modal').forEach(m=>m.style.display='none');
