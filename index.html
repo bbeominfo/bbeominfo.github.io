@@ -22,6 +22,9 @@
   --green-bg:#EAF3DE;
   --green-border:#C0DD97;
   --green-text:#3B6D11;
+  --amber-bg:#FAEEDA;
+  --amber-border:#FAC775;
+  --amber-text:#633806;
   --sans:'Inter',sans-serif;
   --serif:'Instrument Serif',serif;
   --mono:'JetBrains Mono',monospace;
@@ -29,21 +32,17 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
-.nav-logo{font-family:var(--mono);font-size:13px;color:var(--blue);font-weight:500;letter-spacing:0.02em}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;background:rgba(255,255,255,0.93);backdrop-filter:blur(10px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.nav-logo{font-family:var(--mono);font-size:13px;color:var(--blue);font-weight:500}
 .nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:400;transition:color 0.15s;letter-spacing:0.01em}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.15s}
 .nav-links a:hover{color:var(--text)}
 .nav-cta{padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:7px;font-size:13px;font-family:var(--sans);font-weight:500;cursor:pointer;text-decoration:none;transition:opacity 0.15s}
 .nav-cta:hover{opacity:0.85}
 
-/* LAYOUT */
 .page{padding:0 2.5rem;max-width:900px;margin:0 auto}
 section{padding:5rem 0 0}
 section:last-of-type{padding-bottom:5rem}
-
-/* SECTION LABEL */
 .sec-label{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem}
 .sec-title{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--text);margin-bottom:2rem;line-height:1.2}
 .sec-title em{font-style:italic;color:var(--blue)}
@@ -56,7 +55,6 @@ section:last-of-type{padding-bottom:5rem}
 .hero-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0}
 .hero-avatar-row{display:flex;align-items:center;gap:16px;margin-bottom:2rem}
 .hero-avatar{width:68px;height:68px;border-radius:50%;background:var(--blue-light);border:0.5px solid var(--blue-mid);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;color:var(--blue);flex-shrink:0}
-.hero-meta{display:flex;flex-direction:column;gap:3px}
 .hero-location{font-size:13px;color:var(--muted)}
 .hero-name{font-family:var(--serif);font-size:clamp(3rem,7vw,5rem);line-height:1.0;color:var(--text);margin-bottom:1.2rem;font-weight:400}
 .hero-name em{font-style:italic;color:var(--blue)}
@@ -70,17 +68,25 @@ section:last-of-type{padding-bottom:5rem}
 .hero-cta{display:flex;gap:10px;flex-wrap:wrap}
 .btn-primary{padding:10px 22px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:opacity 0.15s;display:inline-block}
 .btn-primary:hover{opacity:0.85}
-.btn-outline{padding:10px 22px;background:transparent;color:var(--text);border:0.5px solid var(--border);border-radius:8px;font-size:14px;font-weight:400;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:background 0.15s;display:inline-block}
+.btn-outline{padding:10px 22px;background:transparent;color:var(--text);border:0.5px solid var(--border);border-radius:8px;font-size:14px;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:background 0.15s;display:inline-block}
 .btn-outline:hover{background:var(--bg2)}
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start}
 .about-text p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:1rem}
-.about-stats{display:flex;flex-direction:column;gap:0}
+.about-stats{display:flex;flex-direction:column}
 .stat-row{padding:1rem 0;border-bottom:0.5px solid var(--border)}
 .stat-row:first-child{border-top:0.5px solid var(--border)}
-.stat-num{font-family:var(--mono);font-size:1.5rem;color:var(--text);font-weight:500}
+.stat-num{font-family:var(--mono);font-size:1.4rem;color:var(--text);font-weight:500}
 .stat-label{font-size:12px;color:var(--faint);margin-top:2px}
+
+/* AWARDS */
+.awards-list{display:flex;flex-direction:column;gap:0}
+.award-item{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;border-bottom:0.5px solid var(--border)}
+.award-item:first-child{border-top:0.5px solid var(--border)}
+.award-icon{width:32px;height:32px;border-radius:8px;background:var(--amber-bg);border:0.5px solid var(--amber-border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.award-name{font-size:14px;font-weight:500;color:var(--text);line-height:1.4}
+.award-year{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:2px}
 
 /* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;border:0.5px solid var(--border);border-radius:12px;overflow:hidden;background:var(--border)}
@@ -90,7 +96,7 @@ section:last-of-type{padding-bottom:5rem}
 .stag{font-size:12px;font-family:var(--mono);padding:4px 10px;background:var(--bg2);border:0.5px solid var(--border);border-radius:5px;color:var(--muted)}
 
 /* RESEARCH */
-.research-list{display:flex;flex-direction:column;gap:0}
+.research-list{display:flex;flex-direction:column}
 .research-item{padding:1.6rem 0;border-bottom:0.5px solid var(--border);display:grid;grid-template-columns:60px 1fr;gap:1.5rem}
 .research-item:first-child{border-top:0.5px solid var(--border)}
 .r-year{font-family:var(--mono);font-size:12px;color:var(--faint);padding-top:3px}
@@ -99,44 +105,47 @@ section:last-of-type{padding-bottom:5rem}
 .r-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:10px}
 .r-tags{display:flex;flex-wrap:wrap;gap:5px}
 .rtag{font-size:11px;font-family:var(--mono);padding:3px 9px;background:var(--blue-light);border:0.5px solid var(--blue-mid);border-radius:5px;color:var(--blue-dark)}
+.r-badge{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:4px;margin-bottom:8px;background:var(--green-bg);border:0.5px solid var(--green-border);color:var(--green-text)}
 
 /* PROJECTS */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
 .project-card{background:var(--bg);border:0.5px solid var(--border);border-radius:12px;padding:1.6rem;transition:border-color 0.15s}
-.project-card:hover{border-color:#B5D4F4}
+.project-card:hover{border-color:var(--blue-mid)}
 .p-num{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:0.8rem}
 .p-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:6px}
+.p-role{font-family:var(--mono);font-size:11px;color:var(--blue);margin-bottom:8px}
 .p-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1rem}
 .p-stack{display:flex;flex-wrap:wrap;gap:5px}
 .ptag{font-size:11px;font-family:var(--mono);padding:3px 9px;background:var(--bg2);border:0.5px solid var(--border);border-radius:5px;color:var(--muted)}
 
 /* EXPERIENCE */
 .exp-list{display:flex;flex-direction:column}
-.exp-item{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1.6rem 0;border-bottom:0.5px solid var(--border)}
+.exp-item{padding:1.6rem 0;border-bottom:0.5px solid var(--border)}
 .exp-item:first-child{border-top:0.5px solid var(--border)}
-.exp-role{font-size:15px;font-weight:500;color:var(--text);margin-bottom:3px}
-.exp-org{font-size:13px;color:var(--blue);margin-bottom:5px}
-.exp-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:520px}
-.exp-period{font-family:var(--mono);font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:3px}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:4px}
+.exp-role{font-size:15px;font-weight:500;color:var(--text)}
+.exp-period{font-family:var(--mono);font-size:12px;color:var(--faint);white-space:nowrap;flex-shrink:0}
+.exp-org{font-size:13px;color:var(--blue);margin-bottom:8px}
+.exp-bullets{display:flex;flex-direction:column;gap:5px;padding-left:0}
+.exp-bullet{font-size:13px;color:var(--muted);line-height:1.7;display:flex;gap:10px}
+.exp-bullet::before{content:'—';color:var(--faint);flex-shrink:0;font-family:var(--mono)}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .contact-text{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem}
 .contact-links{display:flex;flex-direction:column;gap:8px}
 .clink{display:flex;align-items:center;gap:12px;padding:0.9rem 1.1rem;background:var(--bg);border:0.5px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:14px;transition:border-color 0.15s}
-.clink:hover{border-color:#B5D4F4}
+.clink:hover{border-color:var(--blue-mid)}
 .clink-label{font-family:var(--mono);font-size:11px;color:var(--faint);min-width:72px}
 .contact-form{display:flex;flex-direction:column;gap:10px}
 .flabel{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px;display:block}
 .finput,.ftextarea{width:100%;background:var(--bg2);border:0.5px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border-color 0.15s;resize:none}
-.finput:focus,.ftextarea:focus{border-color:#B5D4F4;background:var(--bg)}
+.finput:focus,.ftextarea:focus{border-color:var(--blue-mid);background:var(--bg)}
 .ftextarea{height:110px;line-height:1.6}
 
-/* FOOTER */
 footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}
 .footer-text{font-family:var(--mono);font-size:12px;color:var(--faint)}
 
-/* ANIMATIONS */
 .fade{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease}
 .fade.on{opacity:1;transform:none}
 
@@ -148,6 +157,7 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .research-item{grid-template-columns:1fr}
   .r-year{display:none}
+  .exp-header{flex-direction:column;gap:2px}
   footer{flex-direction:column;gap:8px;text-align:center}
 }
 </style>
@@ -179,26 +189,25 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
         </div>
         <div class="hero-avatar-row">
           <div class="hero-avatar">KK</div>
-          <div class="hero-meta">
-            <span class="hero-location">Atlanta, GA · Georgia Institute of Technology</span>
-          </div>
+          <div class="hero-location">Atlanta, GA · Georgia Institute of Technology</div>
         </div>
         <h1 class="hero-name">Kyungbeom<br><em>Kim</em></h1>
         <div class="hero-degrees">
           <div class="hero-degree">MS Computational Science &amp; Engineering</div>
           <div class="hero-degree">MS Bioinformatics</div>
         </div>
-        <div class="hero-school">Georgia Institute of Technology</div>
+        <div class="hero-school">Georgia Institute of Technology · Aug 2024 – Present</div>
         <div class="hero-chips">
           <span class="chip hi">Biomedical AI</span>
           <span class="chip hi">LLM</span>
           <span class="chip hi">ML Engineering</span>
-          <span class="chip">AI Engineering</span>
+          <span class="chip">Multi-Agent AI</span>
           <span class="chip">Bioinformatics</span>
           <span class="chip">Deep Learning</span>
+          <span class="chip">GNN</span>
         </div>
         <div class="hero-cta">
-          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#research" class="btn-primary">View Research</a>
           <a href="#contact" class="btn-outline">Get in Touch</a>
         </div>
       </div>
@@ -212,22 +221,61 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
     <h2 class="sec-title">Who I <em>am</em></h2>
     <div class="about-grid">
       <div class="about-text">
-        <p>I'm a graduate student pursuing dual master's degrees in Computational Science &amp; Engineering and Bioinformatics at Georgia Tech. My work sits at the intersection of machine learning and biomedical science — building AI systems that can make sense of complex biological data.</p>
-        <p>I'm particularly drawn to large language models and their applications in the biomedical domain — from clinical text understanding to drug discovery and genomics. I care about building systems that are not only accurate, but interpretable and practically deployable.</p>
-        <p>Currently seeking internship opportunities in ML/AI engineering, biomedical AI research, and related fields for Summer 2025.</p>
+        <p>I'm a graduate student pursuing dual master's degrees in Computational Science &amp; Engineering and Bioinformatics at Georgia Tech, where I work at the <strong>Bio-MIBLab</strong> on machine learning systems for biomedical data.</p>
+        <p>My research focuses on applying large language models and deep learning to complex biological problems — from multimodal disease risk prediction to gene embedding and multi-agent AI architectures. I'm passionate about building systems that are not only accurate but interpretable and clinically useful.</p>
+        <p>Before GT, I gained research experience at KAIST's Single-Cell Medical Genomics Lab and worked as an intern at Soongsil University and Insilicogen, a bioinformatics company. I hold a Bachelor's in Biomedical Engineering and Computer Art from Chung-ang University, Seoul.</p>
+        <p>Currently seeking internship opportunities in ML/AI engineering and biomedical AI research for Summer 2025.</p>
       </div>
       <div class="about-stats">
         <div class="stat-row">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Accepted paper · IEEE EMBC 2025</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Awards in 2025</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Research &amp; industry experiences</div>
+        </div>
+        <div class="stat-row">
           <div class="stat-num">2</div>
-          <div class="stat-label">Dual master's degrees in progress</div>
+          <div class="stat-label">Dual MS degrees in progress</div>
         </div>
-        <div class="stat-row">
-          <div class="stat-num">LLM</div>
-          <div class="stat-label">Primary research focus</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <div class="sec-label" style="margin-bottom:1rem">Awards &amp; Recognition</div>
+      <div class="awards-list">
+        <div class="award-item">
+          <div class="award-icon">★</div>
+          <div>
+            <div class="award-name">IEEE BHI 2025 Data Competition Award</div>
+            <div class="award-year">2025 · IEEE</div>
+          </div>
         </div>
-        <div class="stat-row">
-          <div class="stat-num">GT</div>
-          <div class="stat-label">Georgia Institute of Technology</div>
+        <div class="award-item">
+          <div class="award-icon">★</div>
+          <div>
+            <div class="award-name">NSF-EMBS-Google Sponsored Young Professional NextGen Scholar Recognition · IEEE BHI 2025</div>
+            <div class="award-year">2025 · IEEE</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">★</div>
+          <div>
+            <div class="award-name">Computational Biology Faculty Research Award</div>
+            <div class="award-year">2025 · Georgia Institute of Technology</div>
+          </div>
+        </div>
+        <div class="award-item">
+          <div class="award-icon">★</div>
+          <div>
+            <div class="award-name">Outstanding AI Project Award</div>
+            <div class="award-year">2022 · Korea Creative Content Agency</div>
+          </div>
         </div>
       </div>
     </div>
@@ -243,36 +291,40 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
         <div class="skill-cat-label">Languages</div>
         <div class="skill-tags">
           <span class="stag">Python</span>
-          <span class="stag">R</span>
+          <span class="stag">C++</span>
           <span class="stag">SQL</span>
           <span class="stag">Bash</span>
+          <span class="stag">HTML/CSS/JS</span>
         </div>
       </div>
       <div class="skill-cat">
         <div class="skill-cat-label">ML / DL</div>
         <div class="skill-tags">
           <span class="stag">PyTorch</span>
-          <span class="stag">TensorFlow</span>
           <span class="stag">scikit-learn</span>
-          <span class="stag">HuggingFace</span>
+          <span class="stag">LLMs</span>
+          <span class="stag">GNN</span>
+          <span class="stag">Transformers</span>
         </div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-label">Biomedical</div>
+        <div class="skill-cat-label">Bioinformatics</div>
         <div class="skill-tags">
           <span class="stag">BioPython</span>
+          <span class="stag">RNA-seq</span>
+          <span class="stag">scRNA-seq</span>
           <span class="stag">BLAST</span>
-          <span class="stag">Pandas</span>
-          <span class="stag">NumPy</span>
+          <span class="stag">CLC Genomics</span>
         </div>
       </div>
       <div class="skill-cat">
-        <div class="skill-cat-label">Tools &amp; Cloud</div>
+        <div class="skill-cat-label">Data &amp; Tools</div>
         <div class="skill-tags">
-          <span class="stag">Docker</span>
+          <span class="stag">Pandas</span>
+          <span class="stag">NumPy</span>
+          <span class="stag">R</span>
           <span class="stag">Git</span>
-          <span class="stag">AWS</span>
-          <span class="stag">Linux</span>
+          <span class="stag">Docker</span>
         </div>
       </div>
     </div>
@@ -285,27 +337,71 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
     <h2 class="sec-title">Research &amp; <em>publications</em></h2>
     <div class="research-list">
       <div class="research-item">
-        <div class="r-year">2024</div>
+        <div class="r-year">2025</div>
         <div>
-          <div class="r-title">Your Paper Title Here</div>
-          <div class="r-venue">Conference / Journal Name · 2024</div>
-          <div class="r-desc">Brief description of the research — what problem you tackled, the approach, and key findings. Replace this with your actual abstract summary.</div>
+          <div class="r-badge">Accepted · IEEE EMBC 2025</div>
+          <div class="r-title">Integrating Polygenic Risk Scores with Clinical Features for Colon Cancer Risk Prediction</div>
+          <div class="r-venue">IEEE EMBC 2025 · First Author</div>
+          <div class="r-desc">Led first-author ML project integrating Polygenic Risk Scores (PRSs) with clinical features to reduce false negatives in colon cancer risk prediction using the UK Biobank dataset.</div>
           <div class="r-tags">
-            <span class="rtag">LLM</span>
-            <span class="rtag">Biomedical NLP</span>
-            <span class="rtag">Transformer</span>
+            <span class="rtag">Machine Learning</span>
+            <span class="rtag">PRS</span>
+            <span class="rtag">Cancer Risk</span>
+            <span class="rtag">UK Biobank</span>
           </div>
         </div>
       </div>
       <div class="research-item">
-        <div class="r-year">2023</div>
+        <div class="r-year">2025</div>
         <div>
-          <div class="r-title">Second Research Project or Working Paper</div>
-          <div class="r-venue">Workshop / Preprint · 2023</div>
-          <div class="r-desc">Another research description. This could be a thesis chapter, lab project, or any ongoing work that showcases your research capabilities.</div>
+          <div class="r-title">Systematic Review: Multimodal LLM Architectures for Representation Learning</div>
+          <div class="r-venue">Ongoing · Bio-MIBLab, Georgia Tech</div>
+          <div class="r-desc">Surveying and comparing multimodal large language model architectures with a focus on representation learning in biomedical settings.</div>
           <div class="r-tags">
-            <span class="rtag">Bioinformatics</span>
-            <span class="rtag">Deep Learning</span>
+            <span class="rtag">LLM</span>
+            <span class="rtag">Multimodal</span>
+            <span class="rtag">Representation Learning</span>
+          </div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="r-year">2025</div>
+        <div>
+          <div class="r-title">GeneDAE: Sparse Autoencoder for SNP-Informed Gene Embeddings</div>
+          <div class="r-venue">Ongoing · Bio-MIBLab, Georgia Tech</div>
+          <div class="r-desc">Designing and analyzing GeneDAE, a sparse autoencoder methodology for SNP-informed gene embeddings toward autoimmune disease risk prediction.</div>
+          <div class="r-tags">
+            <span class="rtag">Autoencoder</span>
+            <span class="rtag">SNP</span>
+            <span class="rtag">Gene Embedding</span>
+            <span class="rtag">Autoimmune Disease</span>
+          </div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="r-year">2025</div>
+        <div>
+          <div class="r-title">Modular Multi-Agent AI for Disease Risk Prediction</div>
+          <div class="r-venue">Ongoing · Bio-MIBLab, Georgia Tech</div>
+          <div class="r-desc">Developing a modular Multi-Agent AI architecture for disease risk prediction from multi-modal biomedical data integration.</div>
+          <div class="r-tags">
+            <span class="rtag">Multi-Agent AI</span>
+            <span class="rtag">Multimodal</span>
+            <span class="rtag">Disease Prediction</span>
+          </div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="r-year">2024</div>
+        <div>
+          <div class="r-title">Ground Truth Construction for Single-Cell LLMs via NLP-Based Metadata Annotation</div>
+          <div class="r-venue">KAIST · Single-Cell Medical Genomics Lab</div>
+          <div class="r-desc">Automated single-cell sample data mining from GEO database and constructed ground truth datasets for single-cell LLMs by annotating genomic metadata using fine-tuned BERT and GPT-based NLP extraction.</div>
+          <div class="r-tags">
+            <span class="rtag">Single-Cell</span>
+            <span class="rtag">NLP</span>
+            <span class="rtag">BERT</span>
+            <span class="rtag">GPT</span>
           </div>
         </div>
       </div>
@@ -319,27 +415,30 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
     <h2 class="sec-title">Selected <em>projects</em></h2>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="p-num">01</div>
-        <div class="p-title">Project Name One</div>
-        <div class="p-desc">Short description — what you built, why it matters, and the outcome. Mention metrics if available (e.g., 94% accuracy).</div>
+        <div class="p-num">01 · 2025</div>
+        <div class="p-title">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
+        <div class="p-role">Deep Learning Developer</div>
+        <div class="p-desc">Benchmarked multiple heterogeneous GNN models (GCN, R-GCN, HGT, HeteroConv) on the Hetionet knowledge graph using Node2Vec and Sentence-BERT embeddings. Achieved AUC &gt; 0.89.</div>
         <div class="p-stack">
-          <span class="ptag">PyTorch</span><span class="ptag">HuggingFace</span><span class="ptag">FastAPI</span>
+          <span class="ptag">PyTorch</span><span class="ptag">GNN</span><span class="ptag">Node2Vec</span><span class="ptag">SBERT</span>
         </div>
       </div>
       <div class="project-card">
-        <div class="p-num">02</div>
-        <div class="p-title">Project Name Two</div>
-        <div class="p-desc">Another project — Kaggle, course work, or personal project. Focus on impact and what you learned.</div>
+        <div class="p-num">02 · 2025</div>
+        <div class="p-title">Active Learning-Guided Protein Mutation Effect Prediction</div>
+        <div class="p-role">Machine Learning Developer</div>
+        <div class="p-desc">Mutation effect prediction pipeline using DMS data, combining biochemical features with ESM-1v protein language model embeddings. Achieved top Spearman correlation with MLP ensemble.</div>
         <div class="p-stack">
-          <span class="ptag">Python</span><span class="ptag">scikit-learn</span><span class="ptag">Streamlit</span>
+          <span class="ptag">ESM-1v</span><span class="ptag">MLP</span><span class="ptag">Active Learning</span><span class="ptag">PyTorch</span>
         </div>
       </div>
       <div class="project-card">
-        <div class="p-num">03</div>
-        <div class="p-title">Project Name Three</div>
-        <div class="p-desc">A bioinformatics or data engineering project. Link to GitHub if available.</div>
+        <div class="p-num">03 · 2022</div>
+        <div class="p-title">Facial Image Analysis via Traditional Asian Physiognomy</div>
+        <div class="p-role">ML Engineer / Designer</div>
+        <div class="p-desc">Real-time vision-based web service for physiognomy-based facial feature classification using ML models. Received Outstanding AI Project Award from Korea Creative Content Agency.</div>
         <div class="p-stack">
-          <span class="ptag">BioPython</span><span class="ptag">R</span><span class="ptag">Docker</span>
+          <span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span>
         </div>
       </div>
     </div>
@@ -352,36 +451,69 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
     <h2 class="sec-title">Experience &amp; <em>education</em></h2>
     <div class="exp-list">
       <div class="exp-item">
-        <div>
-          <div class="exp-role">MS Computational Science &amp; Engineering</div>
-          <div class="exp-org">Georgia Institute of Technology</div>
-          <div class="exp-desc">Dual degree program focusing on machine learning, scientific computing, and biomedical AI applications.</div>
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Graduate Research Assistant</div>
+            <div class="exp-org">Georgia Institute of Technology · Bio-MIBLab</div>
+          </div>
+          <div class="exp-period">Aug 2024 – Present</div>
         </div>
-        <div class="exp-period">2023 — Present</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">First-author ML paper on colon cancer risk prediction using PRSs — accepted at IEEE EMBC 2025.</div>
+          <div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div>
+          <div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings in autoimmune disease prediction.</div>
+          <div class="exp-bullet">Developing a modular Multi-Agent AI architecture for multi-modal biomedical data integration.</div>
+        </div>
       </div>
       <div class="exp-item">
-        <div>
-          <div class="exp-role">MS Bioinformatics</div>
-          <div class="exp-org">Georgia Institute of Technology</div>
-          <div class="exp-desc">Coursework in computational biology, genomics, structural bioinformatics, and biological data analysis.</div>
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Undergraduate Research Assistant</div>
+            <div class="exp-org">KAIST · Single-Cell Medical Genomics Lab</div>
+          </div>
+          <div class="exp-period">Jul 2023 – Feb 2024</div>
         </div>
-        <div class="exp-period">2023 — Present</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Automated single-cell sample data mining from GEO database, building an end-to-end data acquisition pipeline.</div>
+          <div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and prompt-engineered GPT for NLP-based genomic metadata annotation.</div>
+        </div>
       </div>
       <div class="exp-item">
-        <div>
-          <div class="exp-role">Research / Internship Experience</div>
-          <div class="exp-org">[Organization Name]</div>
-          <div class="exp-desc">Replace this with your actual experience — research assistant role, internship, or undergraduate work.</div>
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Research Intern</div>
+            <div class="exp-org">Soongsil University · Biomedical Data Science Lab</div>
+          </div>
+          <div class="exp-period">Mar 2023 – Jun 2023</div>
         </div>
-        <div class="exp-period">2022 — 2023</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data using t-test and FDR correction.</div>
+          <div class="exp-bullet">Applied KNN classification and regression on TCGA-PAAD multi-omics data for cancer survival prediction.</div>
+        </div>
       </div>
       <div class="exp-item">
-        <div>
-          <div class="exp-role">Bachelor's Degree</div>
-          <div class="exp-org">[Undergraduate University]</div>
-          <div class="exp-desc">Replace with your undergrad info — major, GPA, relevant coursework.</div>
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">Bioinformatics Intern</div>
+            <div class="exp-org">Insilicogen Inc.</div>
+          </div>
+          <div class="exp-period">Jan 2023 – Feb 2023</div>
         </div>
-        <div class="exp-period">2018 — 2022</div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">End-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis, with downstream visualization in R.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-role">BE in Biomedical Engineering &amp; Computer Art</div>
+            <div class="exp-org">Chung-ang University, Seoul</div>
+          </div>
+          <div class="exp-period">Mar 2019 – Feb 2024</div>
+        </div>
+        <div class="exp-bullets">
+          <div class="exp-bullet">Double major in Biomedical Engineering and Computer Art.</div>
+        </div>
       </div>
     </div>
     <div class="sec-divider"></div>
@@ -398,6 +530,10 @@ footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;jus
           <a href="mailto:bbeominfo@gmail.com" class="clink">
             <span class="clink-label">email</span>
             bbeominfo@gmail.com
+          </a>
+          <a href="tel:+16782766493" class="clink">
+            <span class="clink-label">phone</span>
+            +1 (678) 276-6493
           </a>
           <a href="#" class="clink">
             <span class="clink-label">github</span>
