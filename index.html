@@ -373,33 +373,51 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
     <div class="wrap">
       <div class="sec-label">Projects</div>
       <h2 class="sec-title">Selected projects</h2>
-      <div class="projects-grid">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem">
 
-        <div class="p-card" onclick="openModal('modal-protein')" style="cursor:pointer">
-          <div class="p-num">01 · 2025</div>
-          <div class="p-title">Active Learning-Guided Protein Mutation Effect Prediction</div>
-          <div class="p-role">ML Developer · MLP, Active Learning, ESM-1v</div>
-          <div class="p-desc">Predicted functional effects of single-point protein mutations using DMS scores. MLP ensemble on ESM-1v embeddings + biochemical features achieved top Spearman correlation (0.49).</div>
-          <div class="p-tags"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">PyTorch</span><span class="ptag">BioPython</span></div>
-          <div style="margin-top:12px;font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+        <!-- Card 01 -->
+        <div class="p-card" onclick="openModal('modal-protein')" style="cursor:pointer;padding:0;overflow:hidden">
+          <div style="background:var(--blue-bg);border-bottom:1px solid var(--blue-border);padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
+            <div style="font-size:28px;line-height:1">🧬</div>
+            <div style="font-size:10px;font-weight:600;color:var(--blue-text);background:white;border:1px solid var(--blue-border);border-radius:4px;padding:2px 8px">2025</div>
+          </div>
+          <div style="padding:1.2rem 1.4rem 1.4rem">
+            <div class="p-title" style="margin-bottom:6px">Protein Mutation Effect Prediction</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
+              <span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span>
+            </div>
+            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+          </div>
         </div>
 
-        <div class="p-card" onclick="openModal('modal-gnn')" style="cursor:pointer">
-          <div class="p-num">02 · 2025</div>
-          <div class="p-title">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
-          <div class="p-role">Deep Learning Developer</div>
-          <div class="p-desc">Benchmarked GCN, R-GCN, HGT, HeteroConv on the Hetionet biomedical knowledge graph. Node2Vec + Sentence-BERT embeddings. Achieved AUC &gt; 0.89.</div>
-          <div class="p-tags"><span class="ptag">PyTorch</span><span class="ptag">GNN</span><span class="ptag">Node2Vec</span><span class="ptag">SBERT</span><span class="ptag">Hetionet</span></div>
-          <div style="margin-top:12px;font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+        <!-- Card 02 -->
+        <div class="p-card" onclick="openModal('modal-gnn')" style="cursor:pointer;padding:0;overflow:hidden">
+          <div style="background:#f0fdf4;border-bottom:1px solid #bbf7d0;padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
+            <div style="font-size:28px;line-height:1">💊</div>
+            <div style="font-size:10px;font-weight:600;color:#15803d;background:white;border:1px solid #bbf7d0;border-radius:4px;padding:2px 8px">2025</div>
+          </div>
+          <div style="padding:1.2rem 1.4rem 1.4rem">
+            <div class="p-title" style="margin-bottom:6px">Drug-Disease Association via Heterogeneous GNNs</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
+              <span class="ptag">GNN</span><span class="ptag">Hetionet</span><span class="ptag">Sentence-BERT</span>
+            </div>
+            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+          </div>
         </div>
 
-        <div class="p-card" onclick="openModal('modal-face')" style="cursor:pointer">
-          <div class="p-num">03 · 2022</div>
-          <div class="p-title">Facial Analysis via Traditional Asian Physiognomy</div>
-          <div class="p-role">ML Engineer / Designer</div>
-          <div class="p-desc">Real-time vision-based web service for physiognomy-based facial feature classification. Received Outstanding AI Project Award from Korea Creative Content Agency.</div>
-          <div class="p-tags"><span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span></div>
-          <div style="margin-top:12px;font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+        <!-- Card 03 -->
+        <div class="p-card" onclick="openModal('modal-face')" style="cursor:pointer;padding:0;overflow:hidden">
+          <div style="background:#fef9c3;border-bottom:1px solid #fde68a;padding:1.4rem 1.4rem 1.2rem;display:flex;align-items:flex-start;justify-content:space-between">
+            <div style="font-size:28px;line-height:1">👁️</div>
+            <div style="font-size:10px;font-weight:600;color:#92400e;background:white;border:1px solid #fde68a;border-radius:4px;padding:2px 8px">2022</div>
+          </div>
+          <div style="padding:1.2rem 1.4rem 1.4rem">
+            <div class="p-title" style="margin-bottom:6px">Facial Analysis via Asian Physiognomy</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px">
+              <span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span>
+            </div>
+            <div style="font-size:12px;color:var(--blue);font-weight:500">View details →</div>
+          </div>
         </div>
 
       </div>
@@ -415,38 +433,63 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <div>
         <div class="p-num" style="margin-bottom:6px">01 · Mar – May 2025</div>
         <div class="p-title" style="font-size:1.1rem;margin-bottom:4px">Active Learning-Guided Protein Mutation Effect Prediction</div>
-        <div class="p-role">ML Developer · MLP, Active Learning, ESM-1v</div>
+        <div class="p-role">ML Developer · MLP, ESM-1v, Active Learning · Georgia Tech</div>
       </div>
       <button onclick="closeModal()" class="modal-close">✕</button>
     </div>
     <div class="modal-body">
+
       <div class="modal-section">
-        <div class="modal-sec-label">Overview</div>
-        <p class="modal-text">Predicted functional effects of single-point protein mutations using Deep Mutational Scanning (DMS) scores as a fitness proxy. Integrated handcrafted biochemical features with high-dimensional embeddings from ESM-1v, a protein language model pretrained on hundreds of millions of sequences.</p>
+        <div class="modal-sec-label">Problem Statement</div>
+        <p class="modal-text">Predicting the functional impact of protein mutations is critical for drug development and precision medicine. This project used Deep Mutational Scanning (DMS) scores as a fitness proxy to build ML models that predict how single amino acid mutations affect protein function.</p>
       </div>
+
+      <div class="modal-section">
+        <div class="modal-sec-label">Methods</div>
+        <div class="modal-bullets">
+          <div class="modal-bullet"><strong>Feature Extraction</strong> — Combined 1280-dim mean-pooled ESM-1v embeddings with 6 biochemical features (aromaticity, hydrophobicity, isoelectric point, helix/turn/sheet fraction) → 1286-dim input vector</div>
+          <div class="modal-bullet"><strong>MLP Ensemble (Final)</strong> — 4-layer MLP (1286→512→256→64→1) with LayerNorm + LeakyReLU + Dropout(0.4), trained with AdamW over 40 epochs, ensembled across 3 random seeds</div>
+          <div class="modal-bullet"><strong>Benchmarked architectures</strong> — CNN (ESM-2 + RF feature selection), RNN (one-hot encoding), ESM fine-tuning (partial, layers 31–32)</div>
+          <div class="modal-bullet"><strong>Active Learning</strong> — 3 query strategies: MC Dropout uncertainty, ESM log-probability difference (ΔlogP), and UCB-based Gaussian Process sampling</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-sec-label">Results</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px">
+          <div class="modal-stat"><div class="modal-stat-num">0.49</div><div class="modal-stat-label">Best validation Spearman (MLP · full-seq mean + biochem)</div></div>
+          <div class="modal-stat"><div class="modal-stat-num">0.27</div><div class="modal-stat-label">Leaderboard Spearman (MLP vs CNN 0.26 / RNN 0.07)</div></div>
+          <div class="modal-stat"><div class="modal-stat-num">0.18</div><div class="modal-stat-label">ESM fine-tuning score — frozen embeddings outperformed</div></div>
+        </div>
+        <p class="modal-text" style="font-size:13px">MLP ensemble outperformed CNN, RNN, and ESM fine-tuning. In low-data settings, freezing PLM and using a downstream MLP proved more effective than partial fine-tuning — which required 40–60GB GPU memory with lower performance.</p>
+      </div>
+
       <div class="modal-section">
         <div class="modal-sec-label">My Contributions</div>
         <div class="modal-bullets">
-          <div class="modal-bullet">Designed and implemented the <strong>MLP ensemble</strong> (3 seeds) on 1286-dim feature vectors (1280-dim ESM-1v mean-pooled embeddings + 6 biochemical features)</div>
-          <div class="modal-bullet">Achieved highest Spearman correlation of <strong>0.4913</strong> among all model architectures (MLP vs CNN vs RNN vs ESM fine-tuning)</div>
-          <div class="modal-bullet">Implemented <strong>parameter-efficient fine-tuning</strong> of ESM-1v (layers 31–32 unfrozen), validating that frozen embeddings + MLP outperforms fine-tuning in low-data settings</div>
-          <div class="modal-bullet">Designed <strong>3 active learning query strategies</strong>: MC Dropout uncertainty, log-probability difference (ESM), and UCB-based Gaussian Process sampling</div>
+          <div class="modal-bullet">Designed and implemented the full <strong>MLP pipeline</strong> including feature engineering, architecture design, and ensemble strategy</div>
+          <div class="modal-bullet">Implemented <strong>parameter-efficient ESM fine-tuning</strong> and led comparative analysis across all architectures</div>
+          <div class="modal-bullet">Designed all 3 <strong>active learning query strategies</strong> (MC Dropout, ΔlogP, UCB-GP)</div>
+          <div class="modal-bullet">Wrote the final report and led experimental documentation</div>
         </div>
       </div>
+
       <div class="modal-section">
-        <div class="modal-sec-label">Results</div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px">
-          <div class="modal-stat"><div class="modal-stat-num">0.49</div><div class="modal-stat-label">Best Spearman correlation (MLP ensemble)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">0.27</div><div class="modal-stat-label">Leaderboard score (MLP vs CNN 0.26 / RNN 0.07)</div></div>
-          <div class="modal-stat"><div class="modal-stat-num">1286</div><div class="modal-stat-label">Feature dimensions (ESM-1v + biochemical)</div></div>
+        <div class="modal-sec-label">Future Work</div>
+        <div class="modal-bullets">
+          <div class="modal-bullet">Incorporate 3D structural features (SASA, PDB-based) for richer mutation context</div>
+          <div class="modal-bullet">Explore LSTM/GRU-based architectures with embedding layers instead of one-hot encoding</div>
+          <div class="modal-bullet">Apply larger-scale ESM-2 models with more efficient fine-tuning (LoRA, adapter layers)</div>
         </div>
       </div>
+
       <div class="modal-section">
         <div class="modal-sec-label">Tech Stack</div>
         <div class="p-tags" style="margin-top:6px">
           <span class="ptag">PyTorch</span><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">BioPython</span><span class="ptag">scikit-learn</span><span class="ptag">NumPy</span>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -454,32 +497,65 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   <div id="modal-gnn" class="p-modal" style="display:none">
     <div class="modal-header">
       <div>
-        <div class="p-num" style="margin-bottom:6px">02 · Mar – May 2025</div>
+        <div class="p-num" style="margin-bottom:6px">02 · Spring 2025 · CX4803 ML in Computational Biology</div>
         <div class="p-title" style="font-size:1.1rem;margin-bottom:4px">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
-        <div class="p-role">Deep Learning Developer</div>
+        <div class="p-role">Deep Learning Developer · Georgia Tech</div>
       </div>
       <button onclick="closeModal()" class="modal-close">✕</button>
     </div>
     <div class="modal-body">
+
       <div class="modal-section">
-        <div class="modal-sec-label">Overview</div>
-        <p class="modal-text">Developed and benchmarked multiple heterogeneous GNN models for drug-disease link prediction on the Hetionet biomedical knowledge graph. Compared GCN, R-GCN, HGT, and HeteroConv architectures using Node2Vec and Sentence-BERT embeddings.</p>
+        <div class="modal-sec-label">Problem Statement</div>
+        <p class="modal-text">Traditional drug discovery is lengthy and costly. This project aimed to predict drug-disease associations using heterogeneous Graph Neural Networks on the Hetionet biomedical knowledge graph — enabling drug repurposing by identifying existing compounds that may treat unknown diseases.</p>
       </div>
+
       <div class="modal-section">
-        <div class="modal-sec-label">Key Details</div>
+        <div class="modal-sec-label">Methods — 4 Model Architectures Benchmarked</div>
         <div class="modal-bullets">
-          <div class="modal-bullet">Benchmarked <strong>4 GNN architectures</strong>: GCN, R-GCN, HGT, HeteroConv on the Hetionet knowledge graph</div>
-          <div class="modal-bullet">Used <strong>Node2Vec</strong> and <strong>Sentence-BERT</strong> for node embeddings to capture structural and semantic information</div>
-          <div class="modal-bullet">Achieved <strong>AUC &gt; 0.89</strong> with strong diversity and generalizability on external datasets (HINGRL)</div>
-          <div class="modal-bullet">Analyzed trade-off between model complexity and biological relevance</div>
+          <div class="modal-bullet"><strong>Node2Vec + GCN</strong> — Structural baseline; biased random walk embeddings fed into a homogeneous 2-layer GCN. Highest internal AUC (0.99) but strong overfitting on external data.</div>
+          <div class="modal-bullet"><strong>Sentence Transformer + HeteroConv (Final)</strong> — Node names embedded via all-MiniLM-L6-v2 (384-dim) into 2-layer SAGEConv with 13 meta-relations. Zero-shot capable for unseen diseases.</div>
+          <div class="modal-bullet"><strong>Node2Vec + R-GCN</strong> — 5-layer relational GCN with relation-specific parameters across 8 meta-edges. AUC 0.96 on Hetionet.</div>
+          <div class="modal-bullet"><strong>Node2Vec + HGT</strong> — 2-layer Heterogeneous Graph Transformer with per-node-type and per-relation multi-head attention. AUC 0.77.</div>
         </div>
       </div>
+
+      <div class="modal-section">
+        <div class="modal-sec-label">Results</div>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:12px">
+          <div class="modal-stat"><div class="modal-stat-num">0.89</div><div class="modal-stat-label">AUC on Hetionet (final model · Sentence Transformer + HeteroConv)</div></div>
+          <div class="modal-stat"><div class="modal-stat-num">0.78</div><div class="modal-stat-label">F1-score on Hetionet test set</div></div>
+          <div class="modal-stat"><div class="modal-stat-num">0.63</div><div class="modal-stat-label">AUC on external HINGRL-B dataset (647 validated pairs)</div></div>
+          <div class="modal-stat"><div class="modal-stat-num">4</div><div class="modal-stat-label">GNN architectures compared</div></div>
+        </div>
+        <p class="modal-text" style="font-size:13px">The final model (Sentence Transformer + HeteroConv) was selected over the higher-AUC GCN due to superior diversity in Top-N drug recommendations — the GCN consistently recommended the same highly-connected compounds across all diseases (degree centrality bias).</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-sec-label">Key Findings</div>
+        <div class="modal-bullets">
+          <div class="modal-bullet">Simple neighborhood aggregation (SAGEConv) outperformed attention-based HGT in generalization, suggesting structural bias from Node2Vec limits complex architectures.</div>
+          <div class="modal-bullet">Semantic text embeddings enabled <strong>zero-shot prediction</strong> for unseen diseases — a critical advantage over purely structural approaches.</div>
+          <div class="modal-bullet">High internal AUC does not guarantee real-world utility; qualitative diversity of recommendations is equally important in drug discovery.</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <div class="modal-sec-label">Future Work</div>
+        <div class="modal-bullets">
+          <div class="modal-bullet">Incorporate multi-modal node embeddings: <strong>SMILES</strong> for chemical structure, <strong>gene ontology</strong>, <strong>BERT</strong> from biomedical literature</div>
+          <div class="modal-bullet">Apply degree normalization and biological filtering to reduce hub-compound bias</div>
+          <div class="modal-bullet">Extend to protein-structure data (PDB) for richer drug-target representations</div>
+        </div>
+      </div>
+
       <div class="modal-section">
         <div class="modal-sec-label">Tech Stack</div>
         <div class="p-tags" style="margin-top:6px">
-          <span class="ptag">PyTorch</span><span class="ptag">PyTorch Geometric</span><span class="ptag">GNN</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span>
+          <span class="ptag">PyTorch</span><span class="ptag">PyTorch Geometric</span><span class="ptag">GCN</span><span class="ptag">R-GCN</span><span class="ptag">HGT</span><span class="ptag">SAGEConv</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span><span class="ptag">Neo4j</span>
         </div>
       </div>
+
     </div>
   </div>
 
