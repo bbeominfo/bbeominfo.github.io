@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kyungbeom Kim — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;
+  --bg2:#f8f9fa;
+  --bg3:#f1f3f5;
+  --text:#111827;
+  --muted:#6b7280;
+  --faint:#9ca3af;
+  --border:#e5e7eb;
+  --blue:#185FA5;
+  --blue-light:#E6F1FB;
+  --blue-mid:#B5D4F4;
+  --blue-dark:#0C447C;
+  --green-bg:#EAF3DE;
+  --green-border:#C0DD97;
+  --green-text:#3B6D11;
+  --sans:'Inter',sans-serif;
+  --serif:'Instrument Serif',serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem}
+.nav-logo{font-family:var(--mono);font-size:13px;color:var(--blue);font-weight:500;letter-spacing:0.02em}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;font-weight:400;transition:color 0.15s;letter-spacing:0.01em}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:7px;font-size:13px;font-family:var(--sans);font-weight:500;cursor:pointer;text-decoration:none;transition:opacity 0.15s}
+.nav-cta:hover{opacity:0.85}
+
+/* LAYOUT */
+.page{padding:0 2.5rem;max-width:900px;margin:0 auto}
+section{padding:5rem 0 0}
+section:last-of-type{padding-bottom:5rem}
+
+/* SECTION LABEL */
+.sec-label{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.4rem}
+.sec-title{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--text);margin-bottom:2rem;line-height:1.2}
+.sec-title em{font-style:italic;color:var(--blue)}
+.sec-divider{width:100%;height:0.5px;background:var(--border);margin-top:5rem}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:56px}
+.hero-inner{padding:4rem 0 3rem;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border:0.5px solid var(--green-border);border-radius:99px;font-family:var(--mono);font-size:11px;color:var(--green-text);background:var(--green-bg);margin-bottom:2rem;letter-spacing:0.04em}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.hero-avatar-row{display:flex;align-items:center;gap:16px;margin-bottom:2rem}
+.hero-avatar{width:68px;height:68px;border-radius:50%;background:var(--blue-light);border:0.5px solid var(--blue-mid);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;color:var(--blue);flex-shrink:0}
+.hero-meta{display:flex;flex-direction:column;gap:3px}
+.hero-location{font-size:13px;color:var(--muted)}
+.hero-name{font-family:var(--serif);font-size:clamp(3rem,7vw,5rem);line-height:1.0;color:var(--text);margin-bottom:1.2rem;font-weight:400}
+.hero-name em{font-style:italic;color:var(--blue)}
+.hero-degrees{margin-bottom:1rem}
+.hero-degree{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.hero-degree::before{content:'';width:20px;height:0.5px;background:var(--border);flex-shrink:0}
+.hero-school{font-family:var(--mono);font-size:12px;color:var(--blue);margin-bottom:1.8rem;letter-spacing:0.03em}
+.hero-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2.4rem}
+.chip{padding:5px 12px;border:0.5px solid var(--border);border-radius:6px;font-size:12px;color:var(--muted);background:var(--bg2);font-family:var(--mono)}
+.chip.hi{border-color:var(--blue-mid);color:var(--blue-dark);background:var(--blue-light)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn-primary{padding:10px 22px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:500;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:opacity 0.15s;display:inline-block}
+.btn-primary:hover{opacity:0.85}
+.btn-outline{padding:10px 22px;background:transparent;color:var(--text);border:0.5px solid var(--border);border-radius:8px;font-size:14px;font-weight:400;font-family:var(--sans);cursor:pointer;text-decoration:none;transition:background 0.15s;display:inline-block}
+.btn-outline:hover{background:var(--bg2)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:3fr 2fr;gap:3rem;align-items:start}
+.about-text p{color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:1rem}
+.about-stats{display:flex;flex-direction:column;gap:0}
+.stat-row{padding:1rem 0;border-bottom:0.5px solid var(--border)}
+.stat-row:first-child{border-top:0.5px solid var(--border)}
+.stat-num{font-family:var(--mono);font-size:1.5rem;color:var(--text);font-weight:500}
+.stat-label{font-size:12px;color:var(--faint);margin-top:2px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;border:0.5px solid var(--border);border-radius:12px;overflow:hidden;background:var(--border)}
+.skill-cat{background:var(--bg);padding:1.4rem}
+.skill-cat-label{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.8rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.stag{font-size:12px;font-family:var(--mono);padding:4px 10px;background:var(--bg2);border:0.5px solid var(--border);border-radius:5px;color:var(--muted)}
+
+/* RESEARCH */
+.research-list{display:flex;flex-direction:column;gap:0}
+.research-item{padding:1.6rem 0;border-bottom:0.5px solid var(--border);display:grid;grid-template-columns:60px 1fr;gap:1.5rem}
+.research-item:first-child{border-top:0.5px solid var(--border)}
+.r-year{font-family:var(--mono);font-size:12px;color:var(--faint);padding-top:3px}
+.r-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:4px;line-height:1.4}
+.r-venue{font-family:var(--mono);font-size:11px;color:var(--blue);margin-bottom:6px}
+.r-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:10px}
+.r-tags{display:flex;flex-wrap:wrap;gap:5px}
+.rtag{font-size:11px;font-family:var(--mono);padding:3px 9px;background:var(--blue-light);border:0.5px solid var(--blue-mid);border-radius:5px;color:var(--blue-dark)}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.project-card{background:var(--bg);border:0.5px solid var(--border);border-radius:12px;padding:1.6rem;transition:border-color 0.15s}
+.project-card:hover{border-color:#B5D4F4}
+.p-num{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:0.8rem}
+.p-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:6px}
+.p-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:1rem}
+.p-stack{display:flex;flex-wrap:wrap;gap:5px}
+.ptag{font-size:11px;font-family:var(--mono);padding:3px 9px;background:var(--bg2);border:0.5px solid var(--border);border-radius:5px;color:var(--muted)}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column}
+.exp-item{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1.6rem 0;border-bottom:0.5px solid var(--border)}
+.exp-item:first-child{border-top:0.5px solid var(--border)}
+.exp-role{font-size:15px;font-weight:500;color:var(--text);margin-bottom:3px}
+.exp-org{font-size:13px;color:var(--blue);margin-bottom:5px}
+.exp-desc{font-size:13px;color:var(--muted);line-height:1.7;max-width:520px}
+.exp-period{font-family:var(--mono);font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:3px}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact-text{font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem}
+.contact-links{display:flex;flex-direction:column;gap:8px}
+.clink{display:flex;align-items:center;gap:12px;padding:0.9rem 1.1rem;background:var(--bg);border:0.5px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:14px;transition:border-color 0.15s}
+.clink:hover{border-color:#B5D4F4}
+.clink-label{font-family:var(--mono);font-size:11px;color:var(--faint);min-width:72px}
+.contact-form{display:flex;flex-direction:column;gap:10px}
+.flabel{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px;display:block}
+.finput,.ftextarea{width:100%;background:var(--bg2);border:0.5px solid var(--border);border-radius:8px;padding:10px 14px;color:var(--text);font-family:var(--sans);font-size:14px;outline:none;transition:border-color 0.15s;resize:none}
+.finput:focus,.ftextarea:focus{border-color:#B5D4F4;background:var(--bg)}
+.ftextarea{height:110px;line-height:1.6}
+
+/* FOOTER */
+footer{border-top:0.5px solid var(--border);padding:2rem 2.5rem;display:flex;justify-content:space-between;align-items:center;max-width:900px;margin:0 auto}
+.footer-text{font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+/* ANIMATIONS */
+.fade{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease}
+.fade.on{opacity:1;transform:none}
+
+@media(max-width:680px){
+  nav{padding:0 1.2rem}
+  .nav-links{display:none}
+  .page{padding:0 1.2rem}
+  .hero-name{font-size:3rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .research-item{grid-template-columns:1fr}
+  .r-year{display:none}
+  footer{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">kyungbeom.kim</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:bbeominfo@gmail.com" class="nav-cta">Get in Touch</a>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">
+          <span class="hero-dot"></span>
+          Open to internship opportunities · 2025
+        </div>
+        <div class="hero-avatar-row">
+          <div class="hero-avatar">KK</div>
+          <div class="hero-meta">
+            <span class="hero-location">Atlanta, GA · Georgia Institute of Technology</span>
+          </div>
+        </div>
+        <h1 class="hero-name">Kyungbeom<br><em>Kim</em></h1>
+        <div class="hero-degrees">
+          <div class="hero-degree">MS Computational Science &amp; Engineering</div>
+          <div class="hero-degree">MS Bioinformatics</div>
+        </div>
+        <div class="hero-school">Georgia Institute of Technology</div>
+        <div class="hero-chips">
+          <span class="chip hi">Biomedical AI</span>
+          <span class="chip hi">LLM</span>
+          <span class="chip hi">ML Engineering</span>
+          <span class="chip">AI Engineering</span>
+          <span class="chip">Bioinformatics</span>
+          <span class="chip">Deep Learning</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="fade">
+    <div class="sec-label">01 — About</div>
+    <h2 class="sec-title">Who I <em>am</em></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a graduate student pursuing dual master's degrees in Computational Science &amp; Engineering and Bioinformatics at Georgia Tech. My work sits at the intersection of machine learning and biomedical science — building AI systems that can make sense of complex biological data.</p>
+        <p>I'm particularly drawn to large language models and their applications in the biomedical domain — from clinical text understanding to drug discovery and genomics. I care about building systems that are not only accurate, but interpretable and practically deployable.</p>
+        <p>Currently seeking internship opportunities in ML/AI engineering, biomedical AI research, and related fields for Summer 2025.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-row">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Dual master's degrees in progress</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">LLM</div>
+          <div class="stat-label">Primary research focus</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-num">GT</div>
+          <div class="stat-label">Georgia Institute of Technology</div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="fade">
+    <div class="sec-label">02 — Skills</div>
+    <h2 class="sec-title">Technical <em>toolkit</em></h2>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <div class="skill-cat-label">Languages</div>
+        <div class="skill-tags">
+          <span class="stag">Python</span>
+          <span class="stag">R</span>
+          <span class="stag">SQL</span>
+          <span class="stag">Bash</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">ML / DL</div>
+        <div class="skill-tags">
+          <span class="stag">PyTorch</span>
+          <span class="stag">TensorFlow</span>
+          <span class="stag">scikit-learn</span>
+          <span class="stag">HuggingFace</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Biomedical</div>
+        <div class="skill-tags">
+          <span class="stag">BioPython</span>
+          <span class="stag">BLAST</span>
+          <span class="stag">Pandas</span>
+          <span class="stag">NumPy</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <div class="skill-cat-label">Tools &amp; Cloud</div>
+        <div class="skill-tags">
+          <span class="stag">Docker</span>
+          <span class="stag">Git</span>
+          <span class="stag">AWS</span>
+          <span class="stag">Linux</span>
+        </div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="fade">
+    <div class="sec-label">03 — Research</div>
+    <h2 class="sec-title">Research &amp; <em>publications</em></h2>
+    <div class="research-list">
+      <div class="research-item">
+        <div class="r-year">2024</div>
+        <div>
+          <div class="r-title">Your Paper Title Here</div>
+          <div class="r-venue">Conference / Journal Name · 2024</div>
+          <div class="r-desc">Brief description of the research — what problem you tackled, the approach, and key findings. Replace this with your actual abstract summary.</div>
+          <div class="r-tags">
+            <span class="rtag">LLM</span>
+            <span class="rtag">Biomedical NLP</span>
+            <span class="rtag">Transformer</span>
+          </div>
+        </div>
+      </div>
+      <div class="research-item">
+        <div class="r-year">2023</div>
+        <div>
+          <div class="r-title">Second Research Project or Working Paper</div>
+          <div class="r-venue">Workshop / Preprint · 2023</div>
+          <div class="r-desc">Another research description. This could be a thesis chapter, lab project, or any ongoing work that showcases your research capabilities.</div>
+          <div class="r-tags">
+            <span class="rtag">Bioinformatics</span>
+            <span class="rtag">Deep Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="fade">
+    <div class="sec-label">04 — Projects</div>
+    <h2 class="sec-title">Selected <em>projects</em></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="p-num">01</div>
+        <div class="p-title">Project Name One</div>
+        <div class="p-desc">Short description — what you built, why it matters, and the outcome. Mention metrics if available (e.g., 94% accuracy).</div>
+        <div class="p-stack">
+          <span class="ptag">PyTorch</span><span class="ptag">HuggingFace</span><span class="ptag">FastAPI</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="p-num">02</div>
+        <div class="p-title">Project Name Two</div>
+        <div class="p-desc">Another project — Kaggle, course work, or personal project. Focus on impact and what you learned.</div>
+        <div class="p-stack">
+          <span class="ptag">Python</span><span class="ptag">scikit-learn</span><span class="ptag">Streamlit</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="p-num">03</div>
+        <div class="p-title">Project Name Three</div>
+        <div class="p-desc">A bioinformatics or data engineering project. Link to GitHub if available.</div>
+        <div class="p-stack">
+          <span class="ptag">BioPython</span><span class="ptag">R</span><span class="ptag">Docker</span>
+        </div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="fade">
+    <div class="sec-label">05 — Experience</div>
+    <h2 class="sec-title">Experience &amp; <em>education</em></h2>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">MS Computational Science &amp; Engineering</div>
+          <div class="exp-org">Georgia Institute of Technology</div>
+          <div class="exp-desc">Dual degree program focusing on machine learning, scientific computing, and biomedical AI applications.</div>
+        </div>
+        <div class="exp-period">2023 — Present</div>
+      </div>
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">MS Bioinformatics</div>
+          <div class="exp-org">Georgia Institute of Technology</div>
+          <div class="exp-desc">Coursework in computational biology, genomics, structural bioinformatics, and biological data analysis.</div>
+        </div>
+        <div class="exp-period">2023 — Present</div>
+      </div>
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">Research / Internship Experience</div>
+          <div class="exp-org">[Organization Name]</div>
+          <div class="exp-desc">Replace this with your actual experience — research assistant role, internship, or undergraduate work.</div>
+        </div>
+        <div class="exp-period">2022 — 2023</div>
+      </div>
+      <div class="exp-item">
+        <div>
+          <div class="exp-role">Bachelor's Degree</div>
+          <div class="exp-org">[Undergraduate University]</div>
+          <div class="exp-desc">Replace with your undergrad info — major, GPA, relevant coursework.</div>
+        </div>
+        <div class="exp-period">2018 — 2022</div>
+      </div>
+    </div>
+    <div class="sec-divider"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="fade">
+    <div class="sec-label">06 — Contact</div>
+    <h2 class="sec-title">Let's <em>connect</em></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-text">I'm actively looking for internship opportunities in ML/AI engineering and biomedical AI research for Summer 2025. Feel free to reach out — I usually respond within a day.</p>
+        <div class="contact-links">
+          <a href="mailto:bbeominfo@gmail.com" class="clink">
+            <span class="clink-label">email</span>
+            bbeominfo@gmail.com
+          </a>
+          <a href="#" class="clink">
+            <span class="clink-label">github</span>
+            Coming soon
+          </a>
+          <a href="#" class="clink">
+            <span class="clink-label">linkedin</span>
+            Coming soon
+          </a>
+          <a href="#" class="clink">
+            <span class="clink-label">resume</span>
+            Download CV
+          </a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div>
+          <label class="flabel">Name</label>
+          <input class="finput" type="text" placeholder="Your name" />
+        </div>
+        <div>
+          <label class="flabel">Email</label>
+          <input class="finput" type="email" placeholder="your@email.com" />
+        </div>
+        <div>
+          <label class="flabel">Message</label>
+          <textarea class="ftextarea" placeholder="What's on your mind?"></textarea>
+        </div>
+        <a href="mailto:bbeominfo@gmail.com" class="btn-primary" style="align-self:flex-start;margin-top:4px">Send Message</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="footer-text">Kyungbeom Kim · Georgia Tech · 2025</span>
+  <span class="footer-text">bbeominfo@gmail.com</span>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:0.08});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
