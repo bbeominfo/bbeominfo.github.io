@@ -346,6 +346,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           </div>
         </div>
 
+        <div class="p-card" onclick="showPage('proj-scp')">
+          <div class="p-thumb" style="background:#fdf4ff">
+            <div class="p-thumb-placeholder">
+              <span class="p-thumb-icon">🏥</span>
+              <span class="p-thumb-hint">Image coming soon</span>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <div class="p-card-title">LLM-Integrated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div>
+            <div class="p-card-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">EHR</span></div>
+            <div class="p-card-link">View details →</div>
+          </div>
+        </div>
+
+        <div class="p-card" onclick="showPage('proj-rna')">
+          <div class="p-thumb" style="background:#f0f9ff">
+            <div class="p-thumb-placeholder">
+              <span class="p-thumb-icon">🔩</span>
+              <span class="p-thumb-hint">Image coming soon</span>
+            </div>
+          </div>
+          <div class="p-card-body">
+            <div class="p-card-title">RNA Secondary Structure Prediction: DP to Deep Learning Benchmark</div>
+            <div class="p-card-chips"><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">Nussinov</span></div>
+            <div class="p-card-link">View details →</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -714,6 +742,138 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <label class="flabel">Message</label>
           <textarea class="ftextarea" placeholder="What's on your mind?"></textarea>
           <a href="mailto:bbeominfo@gmail.com" class="btn btn-blue">Send Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL: SCP -->
+  <div class="page" id="page-proj-scp">
+    <div class="wrap">
+      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
+      <div class="p-detail-header">
+        <div class="p-detail-meta">07 · 2025 · IEEE TBME (Under Review) · Children's Healthcare of Atlanta</div>
+        <h1 class="p-detail-title">Integrating LLMs into a Semi-Automated Clinical Documentation Pipeline for Pediatric Cancer Survivorship Care Plans</h1>
+        <div class="p-detail-role">ML / NLP Developer · Georgia Institute of Technology &amp; CHOA · Bio-MIBLab</div>
+        <div class="p-detail-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">Epic EHR</span><span class="ptag">ETL Pipeline</span><span class="ptag">Prompt Engineering</span><span class="ptag">Few-Shot Learning</span><span class="ptag">Regex</span></div>
+      </div>
+      <div class="p-detail-grid">
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Problem Statement</div>
+            <p class="p-section-text">Survivorship Care Plans (SCPs) are essential clinical documents for pediatric cancer survivors — summarizing treatment exposures, late effects, and surveillance recommendations. Despite affecting 500,000+ survivors nationwide, SCP generation remains labor-intensive and error-prone. Critical treatment events (radiation, surgery, HSCT, CAR-T) are buried in unstructured clinical notes and cannot be reliably extracted by rule-based systems alone.</p>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">System Architecture</div>
+            <div class="p-bullet"><strong>Dual-track pipeline</strong> — Track 1: deterministic ETL (BSA calculations, regex, medication mapping) for structured drug data; Track 2: GPT-4o LLM prompting for unstructured clinical narratives</div>
+            <div class="p-bullet"><strong>Data sources</strong> — Epic Clarity EHR (medication orders, MAR, height/weight history), clinical notes (H&amp;P, progress notes, discharge summaries, procedure notes), imaging history</div>
+            <div class="p-bullet"><strong>Deterministic track</strong> — Mosteller BSA formula, medication name standardization, cumulative dose aggregation (mg/kg → mg/m²)</div>
+            <div class="p-bullet"><strong>LLM track</strong> — Structured prompt engineering with inclusion/exclusion criteria, few-shot examples, JSON output schema; applied to CAR-T, HSCT, radiation, and surgery extraction</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Prompt Engineering Strategies</div>
+            <div class="p-bullet"><strong>CAR-T</strong> — Strict confirmation rules (explicit infusion only); counterfactual phrasing to reject eligibility/bridging/lymphodepletion mentions</div>
+            <div class="p-bullet"><strong>HSCT</strong> — JSON output: hsct_type, source, HLA match, transplant date; post-processing: date normalization, copy-forward error correction, note-frequency majority voting</div>
+            <div class="p-bullet"><strong>Surgery</strong> — 4 strategies compared: zero-shot → definitions → few-shot → few-shot + definitions; best = few-shot + definitions (96.61% global accuracy)</div>
+            <div class="p-bullet"><strong>Radiation</strong> — Explicit confirmation of completed therapeutic radiation; excluded diagnostic, speculative, planned, or template-pasted mentions</div>
+          </div>
+        </div>
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Results</div>
+            <div class="p-stats">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div class="p-stat"><div class="p-stat-num">99.86%</div><div class="p-stat-label">Chemotherapy concordance (N=1,120 patients, 57 drugs)</div></div>
+                <div class="p-stat"><div class="p-stat-num">100%</div><div class="p-stat-label">CAR-T detection accuracy (extreme class imbalance)</div></div>
+                <div class="p-stat"><div class="p-stat-num">97.8%</div><div class="p-stat-label">HSCT detection; 96% exact-match on transplant dates</div></div>
+                <div class="p-stat"><div class="p-stat-num">96.61%</div><div class="p-stat-label">Surgery extraction accuracy (few-shot + definitions)</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Key Findings</div>
+            <div class="p-bullet">Pipeline <strong>uncovered errors in manually-curated validation data</strong> — 39% of discrepancies were human abstraction errors</div>
+            <div class="p-bullet">Few-shot + definitions: amputation F1 0.25 → 0.80; pelvic surgery F1 0.36 → 0.83</div>
+            <div class="p-bullet">Dual-track design: deterministic logic for structured numerical computation, LLM for heterogeneous narrative semantics</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">My Contributions</div>
+            <div class="p-bullet">Developed LLM prompting strategies for CAR-T, HSCT, radiation, and surgery clinical entity extraction</div>
+            <div class="p-bullet">Implemented and evaluated the 4-strategy surgery prompting comparison</div>
+            <div class="p-bullet">Contributed to ETL pipeline integration and post-processing logic</div>
+            <div class="p-bullet">Co-authored the IEEE TBME paper (under review)</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Future Work</div>
+            <div class="p-bullet">Real-time EHR integration and automated filtering for non-cancer exposures</div>
+            <div class="p-bullet">Extend to outside hospital records and adult cancer centers</div>
+            <div class="p-bullet">Continuous learning loop with clinical feedback for improved rare-event detection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT DETAIL: RNA Structure -->
+  <div class="page" id="page-proj-rna">
+    <div class="wrap">
+      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
+      <div class="p-detail-header">
+        <div class="p-detail-meta">08 · Spring 2025 · CS 7641 Algorithms in Bioinformatics</div>
+        <h1 class="p-detail-title">RNA Secondary Structure Prediction: A Unified Benchmark from Dynamic Programming to Deep Learning</h1>
+        <div class="p-detail-role">ML Developer · Georgia Institute of Technology</div>
+        <div class="p-detail-chips"><span class="ptag">PyTorch</span><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">RNN</span><span class="ptag">DNABERT-2</span><span class="ptag">Nussinov</span><span class="ptag">ArchiveII</span><span class="ptag">bpRNA</span></div>
+      </div>
+      <div class="p-detail-grid">
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Problem Statement</div>
+            <p class="p-section-text">RNA secondary structure — the set of base-pairing interactions defining a molecule's 2D conformation — is central to gene regulation, catalysis, and protein synthesis. Predicting structure from sequence alone is a long-standing challenge. This project established a unified benchmark comparing Nussinov DP, RNN/LSTM, and Transformer-based models under identical training and evaluation conditions on the same datasets and decoding pipeline.</p>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Methods</div>
+            <div class="p-bullet"><strong>Formulation</strong> — Given RNA sequence X, predict pairwise matrix P ∈ [0,1]ⁿˣⁿ; decode via Nussinov DP into dot-bracket structure; evaluate with PPV, Sensitivity, F1</div>
+            <div class="p-bullet"><strong>Datasets</strong> — ArchiveII (3,000+ validated sequences); bpRNA-NF-15.0 (15,000+, family-wise split for generalization)</div>
+            <div class="p-bullet"><strong>Nussinov DP</strong> — Classic baseline: maximize base pairs (A–U, G–C, G–U); implemented from scratch</div>
+            <div class="p-bullet"><strong>RNN / LSTM</strong> — GRU-based RNN and bidirectional LSTM; L×L contact matrix via dot-product; BCEWithLogitsLoss; early stopping</div>
+            <div class="p-bullet"><strong>Transformer (scratch)</strong> — Encoder-only; learnable positional embeddings; multi-head self-attention; pairwise scoring head; weighted BCE for class imbalance</div>
+            <div class="p-bullet"><strong>Pretrained DNABERT-2</strong> — HuggingFace checkpoint; frozen encoder + light bilinear pairwise head; fine-tuned 2 epochs on ArchiveII</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Key Findings</div>
+            <div class="p-bullet">Nussinov: majority of sequences F1 &lt; 0.1; fails on long-range helices and multi-loop junctions — expected given algorithmic simplicity</div>
+            <div class="p-bullet">RNN/LSTM: high recall (~0.09–0.72) but precision near zero — evaluation pipeline issue (decoder pairs not correctly mapped to binary matrix), not model failure</div>
+            <div class="p-bullet">Transformer (scratch): collapsed to all-negative prediction — severe class imbalance not corrected by naive BCE loss</div>
+            <div class="p-bullet">DNABERT-2: opposite failure — over-predicted pairs (recall 0.96, precision 0.004); DNA-trained model poorly adapted to RNA pairwise task with frozen encoder</div>
+            <div class="p-bullet">Core insight: simple BCE loss insufficient for highly imbalanced pairwise RNA labels — needs focal loss, weighted sampling, or architecture-specific solutions</div>
+          </div>
+        </div>
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Results</div>
+            <div class="p-stats">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div class="p-stat"><div class="p-stat-num">&lt;0.1</div><div class="p-stat-label">Nussinov F1 for majority of sequences</div></div>
+                <div class="p-stat"><div class="p-stat-num">0.96</div><div class="p-stat-label">DNABERT-2 recall (over-prediction failure)</div></div>
+                <div class="p-stat"><div class="p-stat-num">0.0</div><div class="p-stat-label">Scratch Transformer F1 (all-negative collapse)</div></div>
+                <div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">Model families benchmarked under identical conditions</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">My Contributions</div>
+            <div class="p-bullet">Implemented <strong>Transformer from scratch</strong> — embedding, positional encoding, multi-head self-attention, pairwise scoring head</div>
+            <div class="p-bullet">Set up and fine-tuned <strong>DNABERT-2</strong> pretrained encoder with pairwise classification head on ArchiveII</div>
+            <div class="p-bullet">Designed all Transformer experiments: threshold sensitivity, weighted loss, pretrained vs. scratch comparison</div>
+            <div class="p-bullet">Diagnosed failure modes across all 4 architectures and co-authored the final report</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Future Work</div>
+            <div class="p-bullet">Focal loss or weighted BCE sampling to address severe class imbalance</div>
+            <div class="p-bullet">RNA-specific pretrained models (RNA-FM, Uni-RNA) instead of DNA-centric DNABERT-2</div>
+            <div class="p-bullet">MEA decoder instead of Nussinov for more accurate structure decoding</div>
+            <div class="p-bullet">Family-wise cross-validation on bpRNA-NF-15.0 for proper generalization testing</div>
+          </div>
         </div>
       </div>
     </div>
