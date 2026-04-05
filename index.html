@@ -35,22 +35,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .sec-label{font-size:11px;font-weight:600;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.4rem}
 .sec-title{font-size:1.8rem;font-weight:600;color:var(--text);letter-spacing:-0.03em;margin-bottom:2rem;line-height:1.2}
 
-/* HERO */
-.hero-layout{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:flex-start;padding-top:1rem;margin-bottom:2.5rem}
-.hero-photo{width:160px;height:160px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
-.hero-photo-inner{text-align:center}
-.hero-photo-initials{font-size:2.5rem;font-weight:300;color:var(--faint);display:block}
-.hero-photo-hint{font-size:10px;color:var(--faint);margin-top:4px}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;padding:4px 12px;border:1px solid var(--green-border);border-radius:99px;font-size:11px;font-weight:500;color:var(--green-text);background:var(--green-bg);margin-bottom:1rem}
-.hero-dot{width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0}
-.hero-name{font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.5rem}
-.hero-name span{color:var(--blue)}
-.hero-sub{font-size:14px;color:var(--muted);margin-bottom:2px}
-.hero-school{font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem}
-.hero-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0}
-.chip{font-size:12px;padding:4px 12px;border-radius:6px;border:1px solid var(--border);color:var(--muted);background:var(--bg2)}
-.chip.hi{border-color:var(--blue-border);color:var(--blue-text);background:var(--blue-bg)}
-
 .btn{display:inline-block;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;border:none;font-family:var(--sans);transition:all 0.15s;text-align:center}
 .btn-blue{background:var(--blue);color:#fff}
 .btn-blue:hover{opacity:0.88}
@@ -59,14 +43,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .btn-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);cursor:pointer;background:none;border:none;font-family:var(--sans);padding:0;margin-bottom:2rem}
 .btn-back:hover{color:var(--text)}
 
-/* SKILLS */
-.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.skill-cat{background:var(--bg);padding:1.4rem}
-.skill-cat-label{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.8rem}
-.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
-.stag{font-size:12px;padding:3px 9px;border-radius:5px;border:1px solid var(--border);color:var(--muted);background:var(--bg2)}
-
-/* RESEARCH */
 .r-item{display:grid;grid-template-columns:50px 1fr;gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--border)}
 .r-item:first-child{border-top:1px solid var(--border)}
 .r-year{font-size:12px;color:var(--faint);padding-top:4px;font-weight:500}
@@ -74,15 +50,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .r-ongoing{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue-text)}
 .r-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:3px;line-height:1.4}
 .r-venue{font-size:12px;font-weight:500;color:var(--blue);margin-bottom:5px}
-.r-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px}
 .r-tags{display:flex;flex-wrap:wrap;gap:5px}
 .rtag{font-size:11px;padding:3px 9px;border-radius:5px;background:var(--blue-bg);border:1px solid var(--blue-border);color:var(--blue-text)}
 
-/* PROJECT CARDS */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
 .p-card{border:1px solid var(--border);border-radius:12px;background:var(--bg);transition:border-color 0.15s,transform 0.15s;overflow:hidden;cursor:pointer}
 .p-card:hover{border-color:var(--blue-border);transform:translateY(-2px)}
-.p-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid var(--border)}
+.p-thumb{height:140px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border)}
 .p-thumb-placeholder{display:flex;flex-direction:column;align-items:center;gap:8px}
 .p-thumb-icon{font-size:36px}
 .p-thumb-hint{font-size:10px;color:var(--faint)}
@@ -92,7 +66,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .ptag{font-size:11px;padding:3px 9px;border-radius:5px;background:var(--bg2);border:1px solid var(--border);color:var(--muted)}
 .p-card-link{font-size:12px;color:var(--blue);font-weight:500}
 
-/* PROJECT DETAIL PAGE */
 .p-detail-header{margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
 .p-detail-meta{font-size:12px;color:var(--faint);margin-bottom:0.5rem}
 .p-detail-title{font-size:1.6rem;font-weight:600;color:var(--text);letter-spacing:-0.02em;line-height:1.3;margin-bottom:0.5rem}
@@ -110,7 +83,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .p-stat-label{font-size:11px;color:var(--faint);line-height:1.4}
 .p-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 
-/* EXPERIENCE */
 .exp-item{display:grid;grid-template-columns:1fr auto;gap:2rem;padding:1.6rem 0;border-bottom:1px solid var(--border);align-items:start}
 .exp-item:first-child{border-top:1px solid var(--border)}
 .exp-role{font-size:15px;font-weight:600;color:var(--text);margin-bottom:2px}
@@ -119,7 +91,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .exp-bullet::before{content:'·';position:absolute;left:0;color:var(--faint)}
 .exp-period{font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:3px}
 
-/* CONTACT */
 .clink{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.1rem;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--text);font-size:14px;background:var(--bg);transition:border-color 0.15s;margin-bottom:8px}
 .clink:hover{border-color:var(--blue-border)}
 .clink-key{font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.07em;min-width:60px}
@@ -142,7 +113,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <li><a href="#" onclick="showPage('research');return false" id="nav-research">Publications</a></li>
       <li><a href="#" onclick="showPage('contact');return false" id="nav-contact">Contact</a></li>
     </ul>
-    <a href="/cdn-cgi/l/email-protection#2a48484f454743444c456a4d474b434604494547" class="nav-email"><span class="__cf_email__" data-cfemail="c9ababaca6a4a0a7afa689aea4a8a0a5e7aaa6a4">[email&#160;protected]</span></a>
+    <a href="mailto:bbeominfo@gmail.com" class="nav-email">bbeominfo@gmail.com</a>
   </div>
 </nav>
 
@@ -151,24 +122,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   <!-- HOME -->
   <div class="page active" id="page-home">
     <div class="wrap">
-
-      <!-- Hero: photo + name + bio -->
       <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-start;padding-top:1rem;margin-bottom:3rem">
         <div style="width:180px;height:220px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);flex-shrink:0;overflow:hidden">
-          <img src="personal_photo.jpg" alt="Kyungbeom Kim"
-            style="width:100%;height:100%;object-fit:cover;object-position:center 15%"
-            onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
+          <img src="personal_photo.jpg" alt="Kyungbeom Kim" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
         </div>
         <div>
           <h1 style="font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.6rem">Kyungbeom <span style="color:var(--blue)">Kim</span></h1>
           <p style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem">MS Computational Science &amp; Engineering · MS Bioinformatics · Georgia Institute of Technology</p>
           <p style="font-size:14px;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:1.6rem">I am a graduate researcher at GT Bio-MIBLab working at the intersection of machine learning and biomedical science. My research focuses on large language models for clinical NLP, polygenic risk score integration for disease prediction, and multi-agent AI systems for biomedical data. I am passionate about building ML systems that are not only accurate but interpretable and clinically deployable. I am actively seeking internship opportunities in ML/AI engineering and biomedical AI research.</p>
-
-          <!-- Education -->
           <div style="display:flex;flex-direction:column;gap:6px">
             <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
               <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Computational Science and Engineering</strong> · Georgia Tech · 2024–Present</span>
+              <span><strong style="color:var(--text);font-weight:500">MS Computational Science &amp; Engineering</strong> · Georgia Tech · 2024–Present</span>
             </div>
             <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
               <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
@@ -176,141 +141,52 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
             </div>
             <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
               <span style="width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">BS Biomedical Engineering &amp; Computer Art</strong> · Chung-Ang University · 2019–2024</span>
+              <span><strong style="color:var(--text);font-weight:500">BE Biomedical Engineering &amp; Computer Art</strong> · Chung-ang University · 2019–2024</span>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Navigation buttons -->
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
         <button onclick="showPage('research')" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
           <div style="font-size:20px;margin-bottom:6px">📄</div>
           <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Publications</div>
-          <div style="font-size:12px;color:var(--faint)">See Details Here</div>
+          <div style="font-size:12px;color:var(--faint)">6 papers · IEEE, ACM</div>
         </button>
         <button onclick="showPage('projects')" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
           <div style="font-size:20px;margin-bottom:6px">🔬</div>
           <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Projects</div>
-          <div style="font-size:12px;color:var(--faint)">See Details Here</div>
+          <div style="font-size:12px;color:var(--faint)">10 projects · ML, Bioinformatics</div>
         </button>
         <button onclick="showPage('awards')" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
           <div style="font-size:20px;margin-bottom:6px">🏆</div>
           <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Awards</div>
-          <div style="font-size:12px;color:var(--faint)">See Details Here</div>
+          <div style="font-size:12px;color:var(--faint)">6 awards · IEEE, Georgia Tech</div>
         </button>
       </div>
-
     </div>
   </div>
 
-  <!-- SKILLS -->
-  <div class="page" id="page-skills">
-    <div class="wrap">
-      <div class="sec-label">Skills</div>
-      <h2 class="sec-title">Technical toolkit</h2>
-      <div class="skills-grid">
-        <div class="skill-cat">
-          <div class="skill-cat-label">Languages</div>
-          <div class="skill-tags"><span class="stag">Python</span><span class="stag">C++</span><span class="stag">SQL</span><span class="stag">Bash</span><span class="stag">R</span><span class="stag">HTML/CSS/JS</span></div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">ML / DL</div>
-          <div class="skill-tags"><span class="stag">PyTorch</span><span class="stag">scikit-learn</span><span class="stag">HuggingFace</span><span class="stag">LLMs</span><span class="stag">GNN</span><span class="stag">Transformers</span></div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Bioinformatics</div>
-          <div class="skill-tags"><span class="stag">RNA-seq</span><span class="stag">scRNA-seq</span><span class="stag">BioPython</span><span class="stag">BLAST</span><span class="stag">CLC Genomics</span></div>
-        </div>
-        <div class="skill-cat">
-          <div class="skill-cat-label">Data &amp; Tools</div>
-          <div class="skill-tags"><span class="stag">Pandas</span><span class="stag">NumPy</span><span class="stag">Git</span><span class="stag">Docker</span><span class="stag">Linux</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RESEARCH -->
+  <!-- RESEARCH / PUBLICATIONS -->
   <div class="page" id="page-research">
     <div class="wrap">
-      <div class="sec-label">Research</div>
+      <div class="sec-label">Publications</div>
       <h2 class="sec-title">Publications &amp; research</h2>
-
-      <!-- PUBLICATIONS -->
-      <div class="sec-label" style="margin-bottom:0.8rem">Publications</div>
+      <div class="sec-label" style="margin-bottom:0.8rem">Published</div>
       <div style="margin-bottom:2.5rem">
-
-        <div class="r-item">
-          <div class="r-year">2026</div>
-          <div>
-            <div class="r-badge">Published · Innovation &amp; Emerging Technologies</div>
-            <div class="r-title">Large Language Models in Healthcare and Biomedical Informatics: A Comprehensive Review</div>
-            <div class="r-venue">Innovation and Emerging Technologies 13, 2630001</div>
-            <div class="r-tags"><span class="rtag">LLM</span><span class="rtag">Healthcare AI</span><span class="rtag">Review</span></div>
-          </div>
-        </div>
-
-        <div class="r-item">
-          <div class="r-year">2025</div>
-          <div>
-            <div class="r-badge">Published · IEEE Reviews in Biomedical Engineering · 5 citations</div>
-            <div class="r-title">FHIR in Focus: Enabling Biomedical Data Harmonization for Intelligent Healthcare Systems</div>
-            <div class="r-venue">IEEE Reviews in Biomedical Engineering</div>
-            <div class="r-tags"><span class="rtag">FHIR</span><span class="rtag">Data Harmonization</span><span class="rtag">Interoperability</span></div>
-          </div>
-        </div>
-
-        <div class="r-item">
-          <div class="r-year">2025</div>
-          <div>
-            <div class="r-badge">Accepted · IEEE EMBC 2025 · First Author</div>
-            <div class="r-title">Enhancing Colon Cancer Risk Prediction in Machine Learning Models using Polygenic Risk Scores</div>
-            <div class="r-venue">IEEE EMBC 2025 · First Author</div>
-            <div class="r-tags"><span class="rtag">Machine Learning</span><span class="rtag">PRS</span><span class="rtag">Cancer Risk</span></div>
-          </div>
-        </div>
-
-        <div class="r-item">
-          <div class="r-year">2025</div>
-          <div>
-            <div class="r-badge">Published · ACM BCB 2025</div>
-            <div class="r-title">Interpretable Neural Networks Reveal Gene Interactions Underlying Autoimmune Disease Risk</div>
-            <div class="r-venue">ACM International Conference on Bioinformatics 2025</div>
-            <div class="r-tags"><span class="rtag">Interpretable ML</span><span class="rtag">Gene Interactions</span><span class="rtag">Autoimmune</span></div>
-          </div>
-        </div>
-
-        <div class="r-item">
-          <div class="r-year">2025</div>
-          <div>
-            <div class="r-badge r-ongoing">Preprint · Authorea · 1 citation</div>
-            <div class="r-title">A Survey of Multimodal Large Language Models in Biomedical Engineering and Healthcare</div>
-            <div class="r-venue">Authorea Preprints</div>
-            <div class="r-tags"><span class="rtag">Multimodal LLM</span><span class="rtag">Survey</span><span class="rtag">Biomedical AI</span></div>
-          </div>
-        </div>
-
-        <div class="r-item">
-          <div class="r-year">2026</div>
-          <div>
-            <div class="r-badge r-ongoing">Preprint · Authorea</div>
-            <div class="r-title">Federated Learning in Biomedical and Health Informatics: A Systematic Review and Future Directions</div>
-            <div class="r-venue">Authorea Preprints</div>
-            <div class="r-tags"><span class="rtag">Federated Learning</span><span class="rtag">Privacy-Preserving ML</span><span class="rtag">Health Informatics</span></div>
-          </div>
-        </div>
-
+        <div class="r-item"><div class="r-year">2026</div><div><div class="r-badge">Published · Innovation &amp; Emerging Technologies</div><div class="r-title">Large Language Models in Healthcare and Biomedical Informatics: A Comprehensive Review</div><div class="r-venue">Innovation and Emerging Technologies 13, 2630001</div><div class="r-tags"><span class="rtag">LLM</span><span class="rtag">Healthcare AI</span><span class="rtag">Review</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge">Published · IEEE Reviews in Biomedical Engineering · 5 citations</div><div class="r-title">FHIR in Focus: Enabling Biomedical Data Harmonization for Intelligent Healthcare Systems</div><div class="r-venue">IEEE Reviews in Biomedical Engineering</div><div class="r-tags"><span class="rtag">FHIR</span><span class="rtag">Data Harmonization</span><span class="rtag">Interoperability</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge">Accepted · IEEE EMBC 2025 · First Author</div><div class="r-title">Enhancing Colon Cancer Risk Prediction in Machine Learning Models using Polygenic Risk Scores</div><div class="r-venue">IEEE EMBC 2025 · First Author</div><div class="r-tags"><span class="rtag">Machine Learning</span><span class="rtag">PRS</span><span class="rtag">Cancer Risk</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge">Published · ACM BCB 2025</div><div class="r-title">Interpretable Neural Networks Reveal Gene Interactions Underlying Autoimmune Disease Risk</div><div class="r-venue">ACM International Conference on Bioinformatics 2025</div><div class="r-tags"><span class="rtag">Interpretable ML</span><span class="rtag">Gene Interactions</span><span class="rtag">Autoimmune</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Preprint · Authorea · 1 citation</div><div class="r-title">A Survey of Multimodal Large Language Models in Biomedical Engineering and Healthcare</div><div class="r-venue">Authorea Preprints</div><div class="r-tags"><span class="rtag">Multimodal LLM</span><span class="rtag">Survey</span><span class="rtag">Biomedical AI</span></div></div></div>
+        <div class="r-item"><div class="r-year">2026</div><div><div class="r-badge r-ongoing">Preprint · Authorea</div><div class="r-title">Federated Learning in Biomedical and Health Informatics: A Systematic Review and Future Directions</div><div class="r-venue">Authorea Preprints</div><div class="r-tags"><span class="rtag">Federated Learning</span><span class="rtag">Privacy-Preserving ML</span><span class="rtag">Health Informatics</span></div></div></div>
       </div>
-
-      <!-- ONGOING RESEARCH -->
       <div class="sec-label" style="margin-bottom:0.8rem">Ongoing Research</div>
       <div>
-        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">Integrating LLMs into a Semi-Automated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div><div class="r-venue">IEEE TBME (Under Review) · Bio-MIBLab, Georgia Tech &amp; CHOA</div><div class="r-desc">Hybrid pipeline combining deterministic ETL and GPT-4o prompting to automate Survivorship Care Plan generation from Epic EHR data for pediatric cancer survivors.</div><div class="r-tags"><span class="rtag">GPT-4o</span><span class="rtag">Clinical NLP</span><span class="rtag">EHR</span><span class="rtag">Pediatric Oncology</span></div></div></div>
-        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">Systematic Review: Multimodal LLM Architectures for Representation Learning</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-desc">Surveying and comparing multimodal LLM architectures with a focus on representation learning in biomedical settings.</div><div class="r-tags"><span class="rtag">LLM</span><span class="rtag">Multimodal</span><span class="rtag">Representation Learning</span></div></div></div>
-        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">GeneDAE: Sparse Autoencoder for SNP-Informed Gene Embeddings</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-desc">Designing a sparse autoencoder methodology for SNP-informed gene embeddings toward autoimmune disease risk prediction.</div><div class="r-tags"><span class="rtag">Autoencoder</span><span class="rtag">SNP</span><span class="rtag">Gene Embedding</span><span class="rtag">Autoimmune</span></div></div></div>
-        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">Modular Multi-Agent AI for Disease Risk Prediction</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-desc">Developing a modular Multi-Agent AI architecture for disease risk prediction from multi-modal biomedical data integration.</div><div class="r-tags"><span class="rtag">Multi-Agent AI</span><span class="rtag">Multimodal</span><span class="rtag">Disease Prediction</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Under Review · IEEE TBME</div><div class="r-title">Integrating LLMs into a Semi-Automated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div><div class="r-venue">IEEE TBME · Bio-MIBLab, Georgia Tech &amp; CHOA</div><div class="r-tags"><span class="rtag">GPT-4o</span><span class="rtag">Clinical NLP</span><span class="rtag">EHR</span><span class="rtag">Pediatric Oncology</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">Systematic Review: Multimodal LLM Architectures for Representation Learning</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-tags"><span class="rtag">LLM</span><span class="rtag">Multimodal</span><span class="rtag">Representation Learning</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">GeneDAE: Sparse Autoencoder for SNP-Informed Gene Embeddings</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-tags"><span class="rtag">Autoencoder</span><span class="rtag">SNP</span><span class="rtag">Gene Embedding</span><span class="rtag">Autoimmune</span></div></div></div>
+        <div class="r-item"><div class="r-year">2025</div><div><div class="r-badge r-ongoing">Ongoing</div><div class="r-title">Modular Multi-Agent AI for Disease Risk Prediction</div><div class="r-venue">Bio-MIBLab, Georgia Tech</div><div class="r-tags"><span class="rtag">Multi-Agent AI</span><span class="rtag">Multimodal</span><span class="rtag">Disease Prediction</span></div></div></div>
       </div>
-
     </div>
   </div>
 
@@ -320,539 +196,255 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <div class="sec-label">Projects</div>
       <h2 class="sec-title">Selected projects</h2>
       <div class="projects-grid">
-
-        <div class="p-card" onclick="showPage('proj-colon')">
-          <div class="p-thumb" style="background:#f0fdf4">
+        <div class="p-card" onclick="showPage('proj-colon')"><div class="p-thumb" style="background:#f0fdf4"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🧬</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Colon Cancer Risk Prediction with Polygenic Risk Scores</div><div class="p-card-chips"><span class="ptag">Machine Learning</span><span class="ptag">PRS</span><span class="ptag">UK Biobank</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-cleft')">
+          <div class="p-thumb" style="background:#fff1f2">
             <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">🧬</span>
+              <span class="p-thumb-icon">🧠</span>
               <span class="p-thumb-hint">Image coming soon</span>
             </div>
           </div>
           <div class="p-card-body">
-            <div class="p-card-title">Colon Cancer Risk Prediction with Polygenic Risk Scores</div>
-            <div class="p-card-chips"><span class="ptag">Machine Learning</span><span class="ptag">PRS</span><span class="ptag">UK Biobank</span></div>
+            <div class="p-card-title">GeneDAE-Based Variant Prioritization for Orofacial Cleft Risk</div>
+            <div class="p-card-chips"><span class="ptag">GeneDAE</span><span class="ptag">Integrated Gradients</span><span class="ptag">GWAS</span></div>
             <div class="p-card-link">View details →</div>
           </div>
         </div>
 
-        <div class="p-card" onclick="showPage('proj-glucose')">
-          <div class="p-thumb" style="background:var(--blue-bg)">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">📊</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">Multimodal Glucose Response Modeling for Personalized Nutrition</div>
-            <div class="p-card-chips"><span class="ptag">XGBoost</span><span class="ptag">CGM</span><span class="ptag">Microbiome</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-airhealth')">
-          <div class="p-thumb" style="background:#fef9c3">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">🌬️</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">AirHealth: Air Quality &amp; Health Outcome Visualization Dashboard</div>
-            <div class="p-card-chips"><span class="ptag">LSTM</span><span class="ptag">D3.js</span><span class="ptag">EPA Data</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-protein')">
-          <div class="p-thumb" style="background:#fdf4ff">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">🔬</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">Active Learning-Guided Protein Mutation Effect Prediction</div>
-            <div class="p-card-chips"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-gnn')">
-          <div class="p-thumb" style="background:#ecfdf5">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">💊</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">Drug-Disease Association Modeling via Heterogeneous GNNs</div>
-            <div class="p-card-chips"><span class="ptag">GNN</span><span class="ptag">Hetionet</span><span class="ptag">Sentence-BERT</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-face')">
-          <div class="p-thumb" style="background:#fffbeb">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">👁️</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">Facial Analysis via Traditional Asian Physiognomy</div>
-            <div class="p-card-chips"><span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-scp')">
-          <div class="p-thumb" style="background:#fdf4ff">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">🏥</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">LLM-Integrated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div>
-            <div class="p-card-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">EHR</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
-        <div class="p-card" onclick="showPage('proj-rna')">
-          <div class="p-thumb" style="background:#f0f9ff">
-            <div class="p-thumb-placeholder">
-              <span class="p-thumb-icon">🔩</span>
-              <span class="p-thumb-hint">Image coming soon</span>
-            </div>
-          </div>
-          <div class="p-card-body">
-            <div class="p-card-title">RNA Secondary Structure Prediction: DP to Deep Learning Benchmark</div>
-            <div class="p-card-chips"><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">Nussinov</span></div>
-            <div class="p-card-link">View details →</div>
-          </div>
-        </div>
-
+        <div class="p-card" onclick="showPage('proj-psoriasis')"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🧫</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Interpretable Neural Networks for Autoimmune Disease Risk via Gene Embeddings</div><div class="p-card-chips"><span class="ptag">GeneDAE</span><span class="ptag">NID</span><span class="ptag">UK Biobank</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-glucose')"><div class="p-thumb" style="background:var(--blue-bg)"><div class="p-thumb-placeholder"><span class="p-thumb-icon">📊</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Multimodal Glucose Response Modeling for Personalized Nutrition</div><div class="p-card-chips"><span class="ptag">XGBoost</span><span class="ptag">CGM</span><span class="ptag">Microbiome</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-scp')"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🏥</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">LLM-Integrated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div><div class="p-card-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">EHR</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-airhealth')"><div class="p-thumb" style="background:#fef9c3"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🌬️</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">AirHealth: Air Quality &amp; Health Outcome Visualization Dashboard</div><div class="p-card-chips"><span class="ptag">LSTM</span><span class="ptag">D3.js</span><span class="ptag">EPA Data</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-protein')"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🔬</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Active Learning-Guided Protein Mutation Effect Prediction</div><div class="p-card-chips"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-gnn')"><div class="p-thumb" style="background:#ecfdf5"><div class="p-thumb-placeholder"><span class="p-thumb-icon">💊</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Drug-Disease Association Modeling via Heterogeneous GNNs</div><div class="p-card-chips"><span class="ptag">GNN</span><span class="ptag">Hetionet</span><span class="ptag">Sentence-BERT</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-rna')"><div class="p-thumb" style="background:#f0f9ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🔩</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">RNA Secondary Structure Prediction: DP to Deep Learning Benchmark</div><div class="p-card-chips"><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">Nussinov</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="showPage('proj-face')"><div class="p-thumb" style="background:#fffbeb"><div class="p-thumb-placeholder"><span class="p-thumb-icon">👁️</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Facial Analysis via Traditional Asian Physiognomy</div><div class="p-card-chips"><span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span></div><div class="p-card-link">View details →</div></div></div>
       </div>
     </div>
   </div>
 
   <!-- PROJECT DETAIL: Colon Cancer -->
-  <div class="page" id="page-proj-colon">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">01 · IEEE EMBC 2025 · First Author</div>
-        <h1 class="p-detail-title">Enhancing Colon Cancer Risk Prediction with Polygenic Risk Scores</h1>
-        <div class="p-detail-role">ML Developer · Georgia Institute of Technology · Bio-MIBLab</div>
-        <div class="p-detail-chips"><span class="ptag">Machine Learning</span><span class="ptag">Polygenic Risk Score</span><span class="ptag">Multi-modality</span><span class="ptag">Disease Prediction</span></div>
+  <div class="page" id="page-proj-colon"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">01 · IEEE EMBC 2025 · First Author</div><h1 class="p-detail-title">Enhancing Colon Cancer Risk Prediction with Polygenic Risk Scores</h1><div class="p-detail-role">ML Developer · Georgia Institute of Technology · Bio-MIBLab</div><div class="p-detail-chips"><span class="ptag">Machine Learning</span><span class="ptag">PRS</span><span class="ptag">Logistic Regression</span><span class="ptag">Random Forest</span><span class="ptag">UK Biobank</span><span class="ptag">SMOTE</span><span class="ptag">Plink 2.0</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">First-author IEEE EMBC 2025 paper integrating Polygenic Risk Scores with clinical features for 10-year colon cancer risk prediction on the UK Biobank cohort. By combining 5.7M SNP variants with non-genetic factors and addressing class imbalance via SMOTE, the model reduced false negatives from 106 to just 4 while achieving AUC 0.82.</p>
       </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Colon cancer causes nearly 50,000 deaths annually in the US, requiring early detection. Traditional ML models using non-genetic (NG) clinical features miss many at-risk patients. This project investigated whether integrating Polygenic Risk Scores (PRSs) — derived from millions of SNPs — alongside NG factors could reduce false negatives and improve 10-year colon cancer risk prediction.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Methods</div>
-            <div class="p-bullet"><strong>Data</strong> — UK Biobank cohort (442,574 White British individuals); 10-year incident CC identified via ICD-10 codes C18–C18.9</div>
-            <div class="p-bullet"><strong>NG Features</strong> — Age, BMI, family history, lifestyle factors (smoking, alcohol, physical activity), life stress events, medication use</div>
-            <div class="p-bullet"><strong>6 PRSs evaluated</strong> — CRC 27, CRC 63, CRC 76, CRC 103 (PGS Catalog); CC 150, CC 5M (5.7M variants) calculated via Plink 2.0</div>
-            <div class="p-bullet"><strong>Class imbalance</strong> — Addressed with SMOTE + RandomUnderSampler; Min-Max scaling applied to non-binary features</div>
-            <div class="p-bullet"><strong>Models</strong> — Logistic Regression (L2, liblinear) vs. Random Forest; hyperparameter-tuned via grid search</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">LR outperformed RF — low feature correlation in NG data favored LR's independence assumptions</div>
-            <div class="p-bullet">All 6 PRSs dramatically improved recall: false negatives reduced from <strong>106 → 4</strong></div>
-            <div class="p-bullet">CC 5M (5.7M variants) achieved best AUC (0.82) with recall 0.99 — best balance of sensitivity and discrimination</div>
-            <div class="p-bullet">PRS amplified effect of age (coefficient: 0.75 → 3.29) and BMI (0.10 → 1.47), suggesting additive interaction between genetic and lifestyle risk</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">0.99</div><div class="p-stat-label">Class 1 recall (NG + CC 5M PRS)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.82</div><div class="p-stat-label">AUC (NG + CC 5M PRS)</div></div>
-                <div class="p-stat"><div class="p-stat-num">106 → 4</div><div class="p-stat-label">False negatives reduced</div></div>
-                <div class="p-stat"><div class="p-stat-num">5.7M</div><div class="p-stat-label">SNP variants in best PRS (CC 5M)</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Led ML model development — LR and RF pipeline with hyperparameter tuning and evaluation</div>
-            <div class="p-bullet">Designed class imbalance strategy (SMOTE + undersampling) and feature preprocessing</div>
-            <div class="p-bullet">Conducted PRS comparative analysis across 6 scores and interpreted feature importance results</div>
-            <div class="p-bullet">First-authored the IEEE EMBC 2025 paper (accepted)</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Extend analysis beyond White British ancestry to reduce generalizability limitations</div>
-            <div class="p-bullet">Balance minimization of both false positives and false negatives for clinical deployment</div>
-            <div class="p-bullet">Explore interaction terms between PRS and lifestyle features for mechanistic insights</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Colon cancer causes nearly 50,000 deaths annually in the US, requiring early detection. Traditional ML models using non-genetic (NG) clinical features miss many at-risk patients. This project investigated whether integrating Polygenic Risk Scores (PRSs) derived from millions of SNPs alongside NG factors could reduce false negatives and improve 10-year colon cancer risk prediction.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Data</strong> UK Biobank cohort (442,574 White British individuals); 10-year incident CC via ICD-10 C18–C18.9</div><div class="p-bullet"><strong>6 PRSs evaluated</strong> CRC 27/63/76/103 (PGS Catalog); CC 150, CC 5M (5.7M variants) via Plink 2.0</div><div class="p-bullet"><strong>Class imbalance</strong> SMOTE + RandomUnderSampler; Min-Max scaling</div><div class="p-bullet"><strong>Models</strong> Logistic Regression (L2) vs Random Forest; grid search hyperparameter tuning</div></div><div class="p-section"><div class="p-section-label">Key Findings</div><div class="p-bullet">All 6 PRSs dramatically improved recall: false negatives <strong>106 → 4</strong></div><div class="p-bullet">CC 5M achieved best AUC (0.82) with recall 0.99</div><div class="p-bullet">PRS amplified age (0.75→3.29) and BMI (0.10→1.47) coefficients additive GxE interaction</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.99</div><div class="p-stat-label">Class 1 recall (NG + CC 5M PRS)</div></div><div class="p-stat"><div class="p-stat-num">0.82</div><div class="p-stat-label">AUC (NG + CC 5M PRS)</div></div><div class="p-stat"><div class="p-stat-num">106→4</div><div class="p-stat-label">False negatives reduced</div></div><div class="p-stat"><div class="p-stat-num">5.7M</div><div class="p-stat-label">SNP variants in best PRS</div></div></div></div></div></div></div></div></div>
 
-  <!-- PROJECT DETAIL: Glucose / Nutrition -->
-  <div class="page" id="page-proj-glucose">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">02 · Spring 2025 · IEEE BHI 2025 Data Competition Award</div>
-        <h1 class="p-detail-title">Multimodal Modeling of Postprandial Glucose Response for Personalized Nutrition</h1>
-        <div class="p-detail-role">ML Developer · Georgia Institute of Technology</div>
-        <div class="p-detail-chips"><span class="ptag">XGBoost</span><span class="ptag">CGM</span><span class="ptag">Microbiome</span><span class="ptag">Multimodal Fusion</span><span class="ptag">Optuna</span><span class="ptag">Random Forest</span><span class="ptag">LightGBM</span></div>
+  <!-- PROJECT DETAIL: Psoriasis -->
+  <div class="page" id="page-proj-psoriasis"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">02 · ACM BCB 2025 · Philadelphia, PA</div><h1 class="p-detail-title">Interpretable Neural Networks Reveal Gene Interactions Underlying Autoimmune Disease Risk</h1><div class="p-detail-role">ML Contributor · Georgia Institute of Technology · Bio-MIBLab</div><div class="p-detail-chips"><span class="ptag">GeneDAE</span><span class="ptag">Neural Interaction Detection</span><span class="ptag">UK Biobank</span><span class="ptag">PRS</span><span class="ptag">Psoriasis</span><span class="ptag">PyTorch</span><span class="ptag">Interpretable ML</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Published at ACM BCB 2025. This project developed an interpretable neural network integrating gene-level embeddings (via GeneDAE) with clinical features to predict 10-year incident psoriasis risk in the UK Biobank. Using Neural Interaction Detection across 20,301 feature pairs, the model uncovered biologically plausible GxG and GxE interactions not captured by standard PRS methods.</p>
       </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Can a meal's Carbohydrate Caloric Ratio (CCR) be inferred from the post-prandial glucose response (PPGR) measured by continuous glucose monitors (CGM)? This project explored whether glucose dynamics alone — or fused with microbiome, anthropometric, and clinical data — could enable automated dietary inference for personalized nutrition and metabolic disease prevention.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Methods</div>
-            <div class="p-bullet"><strong>Dataset</strong> — CGMacros: 45 participants (healthy, pre-diabetic, T2D), 10-day free-living period, CGM + meal logs + microbiome profiles</div>
-            <div class="p-bullet"><strong>PPGR Features</strong> — 6 physiologically interpretable features: baseline glucose, peak rise, time-to-peak, peak value, iAUC, return-to-baseline</div>
-            <div class="p-bullet"><strong>Multimodal fusion</strong> — Early fusion of PPGR + bio (clinical/anthropometric) + gut health test (pathway indices) + microbes (1,980 bacterial species)</div>
-            <div class="p-bullet"><strong>Models</strong> — RF, Gradient Boosting, XGBoost, LightGBM, CatBoost; each tuned with Optuna (TPE, 20 trials); stacking ensemble with Ridge meta-learner</div>
-            <div class="p-bullet"><strong>Meal-type analysis</strong> — Stratified evaluation across breakfast, lunch, dinner, snack</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">PPGR alone insufficient: r = 0.11, NRMSE = 0.21 — glucose dynamics don't uniquely determine meal composition in free-living data</div>
-            <div class="p-bullet">Multimodal fusion substantially improved: XGBoost achieved r = 0.40, NRMSE = 0.20</div>
-            <div class="p-bullet">Gut microbiome dominated feature importance — Bacteroides and Lachnospira genera consistently top-ranked</div>
-            <div class="p-bullet">Meal-type analysis: lunch (r=0.80) and dinner (r=0.77) most predictable; breakfast (r=0.60) most challenging due to overnight fasting variability</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">0.40</div><div class="p-stat-label">Pearson r (XGBoost multimodal)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.20</div><div class="p-stat-label">NRMSE (best model)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.80</div><div class="p-stat-label">Pearson r for lunch predictions</div></div>
-                <div class="p-stat"><div class="p-stat-num">1,980</div><div class="p-stat-label">Microbiome features integrated</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Built PPGR feature extraction pipeline — glucose trajectory windowing, iAUC computation, meal-level alignment</div>
-            <div class="p-bullet">Implemented multimodal early fusion and model benchmarking (5 models + ensemble)</div>
-            <div class="p-bullet">Led Optuna hyperparameter tuning and meal-type stratified analysis</div>
-            <div class="p-bullet">Co-authored the final report; project received <strong>IEEE BHI 2025 Data Competition Award</strong></div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Modality ablation study: PPGR+bio, PPGR+gut, PPGR+microbes vs. all combined</div>
-            <div class="p-bullet">Compositional preprocessing and PCA/CV-based selection for high-dimensional microbiome block</div>
-            <div class="p-bullet">Temporal/sequence models (LSTM, neural ODE) to capture PPGR curve shape beyond 6 summary features</div>
-          </div>
-        </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Polygenic Risk Scores (PRSs) aggregate genetic variant effects linearly, missing gene-by-gene (GxG) and gene-by-environment (GxE) interactions critical for autoimmune disease risk. This project developed an interpretable neural network integrating gene-level embeddings with clinical features to predict 10-year incident psoriasis and discover biologically meaningful interactions that conventional PRS methods cannot capture.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Dataset</strong> UK Biobank (~500K participants); 13,120 psoriasis cases (ICD-10 L40.0–L40.9), restricted to European ancestry</div><div class="p-bullet"><strong>GeneDAE (PRS2)</strong> Denoising autoencoder on 8,817 MHC variants (chr6); produced 159 interpretable gene-level embeddings</div><div class="p-bullet"><strong>Feature sets</strong> NG only (49 clinical) · NG+PRS1 (univariate PRS) · NG+PRS2 (208 features); tested with LR and NN</div><div class="p-bullet"><strong>Neural Interaction Detection (NID)</strong> 20,301 unique pairs (11,628 GxG, 7,497 GxE, 1,176 NG-NG); Bonferroni-corrected t-tests (α=0.01)</div></div><div class="p-section"><div class="p-section-label">Key Findings</div><div class="p-bullet"><strong>MIR3135B, BAK1, DXO</strong> emerged as hub genes consistent with psoriasis and smoking literature</div><div class="p-bullet">GxG effects stronger than GxE gene interaction networks drive psoriasis susceptibility</div><div class="p-bullet">7/10 top GxG gene pairs had prior psoriasis associations validated in literature</div><div class="p-bullet">First systematic application of interpretable NNs with gene-level embeddings for autoimmune disease prediction</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.60</div><div class="p-stat-label">Best AUC (LR · NG features · 10-yr psoriasis)</div></div><div class="p-stat"><div class="p-stat-num">159</div><div class="p-stat-label">Gene-level embeddings from MHC region (GeneDAE)</div></div><div class="p-stat"><div class="p-stat-num">20,301</div><div class="p-stat-label">Unique feature pairs analyzed (GxG + GxE + NG-NG)</div></div><div class="p-stat"><div class="p-stat-num">7/10</div><div class="p-stat-label">Top GxG genes validated in psoriasis literature</div></div></div></div></div></div></div></div></div>
+
+  <!-- PROJECT DETAIL: Glucose -->
+  <div class="page" id="page-proj-glucose"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">03 · Spring 2025 · IEEE BHI 2025 Data Competition Award</div><h1 class="p-detail-title">Multimodal Modeling of Postprandial Glucose Response for Personalized Nutrition</h1><div class="p-detail-role">ML Developer · Georgia Institute of Technology</div><div class="p-detail-chips"><span class="ptag">XGBoost</span><span class="ptag">CGM</span><span class="ptag">Microbiome</span><span class="ptag">Multimodal Fusion</span><span class="ptag">Optuna</span><span class="ptag">LightGBM</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">IEEE BHI 2025 Data Competition Award winner. This project investigated whether a meal's Carbohydrate Caloric Ratio (CCR) can be inferred from post-prandial glucose response (PPGR) recorded by CGM devices, fused with gut microbiome and clinical data. XGBoost with multimodal fusion achieved Pearson r=0.40, with gut microbiome features dominating prediction.</p>
       </div>
-    </div>
-  </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Can a meal's Carbohydrate Caloric Ratio (CCR) be inferred from the post-prandial glucose response (PPGR) measured by CGM? This project explored whether glucose dynamics alone or fused with microbiome, anthropometric, and clinical data could enable automated dietary inference for personalized nutrition.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Dataset</strong> CGMacros: 45 participants (healthy, pre-diabetic, T2D), 10-day free-living, CGM + meal logs + microbiome</div><div class="p-bullet"><strong>Features</strong> 6 PPGR features + early fusion of bio, gut health, microbes (1,980 species)</div><div class="p-bullet"><strong>Models</strong> RF, GB, XGBoost, LightGBM, CatBoost; Optuna tuning; stacking ensemble</div></div><div class="p-section"><div class="p-section-label">Key Findings</div><div class="p-bullet">PPGR alone insufficient (r=0.11) multimodal fusion: XGBoost r=0.40</div><div class="p-bullet">Gut microbiome (Bacteroides, Lachnospira) dominated feature importance</div><div class="p-bullet">Lunch most predictable (r=0.80); breakfast least (r=0.60)</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.40</div><div class="p-stat-label">Pearson r (XGBoost multimodal)</div></div><div class="p-stat"><div class="p-stat-num">0.20</div><div class="p-stat-label">NRMSE (best model)</div></div><div class="p-stat"><div class="p-stat-num">0.80</div><div class="p-stat-label">Pearson r for lunch predictions</div></div><div class="p-stat"><div class="p-stat-num">1,980</div><div class="p-stat-label">Microbiome features integrated</div></div></div></div></div></div></div></div></div>
+
+  <!-- PROJECT DETAIL: SCP -->
+  <div class="page" id="page-proj-scp"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">04 · 2025 · IEEE TBME (Under Review) · CHOA</div><h1 class="p-detail-title">Integrating LLMs into a Semi-Automated Clinical Documentation Pipeline for Pediatric Cancer SCPs</h1><div class="p-detail-role">ML / NLP Developer · Georgia Tech &amp; CHOA · Bio-MIBLab</div><div class="p-detail-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">Epic EHR</span><span class="ptag">ETL Pipeline</span><span class="ptag">Prompt Engineering</span><span class="ptag">Few-Shot Learning</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">IEEE TBME paper under review. A hybrid clinical documentation pipeline combining deterministic ETL and GPT-4o prompting to automate Survivorship Care Plan generation from Epic EHR data for 1,120 pediatric cancer survivors. Achieved 99.86% chemotherapy concordance, 100% CAR-T accuracy, and 97.8% HSCT detection rate.</p>
+      </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Survivorship Care Plans (SCPs) for pediatric cancer survivors are labor-intensive and error-prone. Critical treatment events (radiation, surgery, HSCT, CAR-T) are buried in unstructured clinical notes and cannot be reliably extracted by rule-based systems alone.</p></div><div class="p-section"><div class="p-section-label">System Architecture</div><div class="p-bullet"><strong>Dual-track pipeline</strong> Track 1: deterministic ETL (BSA, regex, medication mapping); Track 2: GPT-4o prompting for unstructured narratives</div><div class="p-bullet"><strong>Surgery</strong> 4 strategies: zero-shot → definitions → few-shot → few-shot + definitions; best = 96.61% accuracy</div><div class="p-bullet"><strong>HSCT</strong> JSON output with date normalization, copy-forward error correction, majority voting</div><div class="p-bullet"><strong>CAR-T</strong> Strict confirmation rules; 100% accuracy despite extreme class imbalance</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">99.86%</div><div class="p-stat-label">Chemotherapy concordance (57 drugs, N=1,120)</div></div><div class="p-stat"><div class="p-stat-num">100%</div><div class="p-stat-label">CAR-T detection accuracy</div></div><div class="p-stat"><div class="p-stat-num">97.8%</div><div class="p-stat-label">HSCT detection; 96% date accuracy</div></div><div class="p-stat"><div class="p-stat-num">96.61%</div><div class="p-stat-label">Surgery accuracy (few-shot + definitions)</div></div></div></div></div></div></div></div></div>
 
   <!-- PROJECT DETAIL: AirHealth -->
-  <div class="page" id="page-proj-airhealth">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">03 · Spring 2025 · CS 4460 Data Visualization</div>
-        <h1 class="p-detail-title">AirHealth: Interactive Visualization &amp; Forecasting of Air Quality and Health Outcomes in the U.S.</h1>
-        <div class="p-detail-role">ML Developer &amp; Visualization Engineer · Georgia Institute of Technology</div>
-        <div class="p-detail-chips"><span class="ptag">LSTM</span><span class="ptag">SARIMAX</span><span class="ptag">GRU</span><span class="ptag">Random Forest</span><span class="ptag">D3.js</span><span class="ptag">EPA API</span><span class="ptag">NOAA API</span><span class="ptag">CDC WONDER</span></div>
+  <div class="page" id="page-proj-airhealth"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">05 · Spring 2025 · CS 4460 Data Visualization</div><h1 class="p-detail-title">AirHealth: Interactive Visualization &amp; Forecasting of Air Quality and Health Outcomes in the U.S.</h1><div class="p-detail-role">ML Developer &amp; Visualization Engineer · Georgia Tech</div><div class="p-detail-chips"><span class="ptag">LSTM</span><span class="ptag">SARIMAX</span><span class="ptag">GRU</span><span class="ptag">Random Forest</span><span class="ptag">D3.js</span><span class="ptag">EPA API</span><span class="ptag">NOAA API</span><span class="ptag">CDC WONDER</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Built a nationwide ML-powered interactive dashboard linking multi-pollutant air quality data to public health outcomes across all 50 U.S. states (2018 to 2030). Integrated EPA, NOAA, and CDC data into a unified panel; used AR-LSTM for forecasting and Random Forest (R²=0.98) for health outcome prediction with a D3.js visualization frontend.</p>
       </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Air pollution is a major driver of cardiovascular and respiratory disease, yet existing research lacks an integrated, scalable framework to quantify and visualize these relationships across time and space. This project built a nationwide, ML-powered interactive dashboard linking multi-pollutant air quality data to public health outcomes across all 50 U.S. states (2018–2030).</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Data Integration</div>
-            <div class="p-bullet"><strong>EPA AQS API</strong> — PM2.5, PM10, O3, NO2, SO2, CO at state-month level (2018–2025)</div>
-            <div class="p-bullet"><strong>NOAA GHCND</strong> — 7 meteorological variables: wind speed, precipitation, temperature, snowfall</div>
-            <div class="p-bullet"><strong>CDC WONDER</strong> — Monthly COPD (J40–J44) and IHD (I20–I25) mortality at state level</div>
-            <div class="p-bullet"><strong>Urban data</strong> — FHWA vehicle miles traveled, BTS flight statistics, MODIS NDVI vegetation indices</div>
-            <div class="p-bullet">Unified 50-state monthly panel via left joins; missing values handled with polynomial interpolation (degree 2) + forward/backward fill</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Modeling Framework</div>
-            <div class="p-bullet"><strong>Time-series forecasting</strong> — SARIMAX (per-state), LSTM, GRU; LSTM selected as final model (lowest MAE); AR-LSTM for recursive forecasting to 2030</div>
-            <div class="p-bullet"><strong>Top features</strong> — Permutation importance identified NDVI, O3 mean/max/AQI, and temperature as most influential</div>
-            <div class="p-bullet"><strong>Health outcome prediction</strong> — Random Forest (R² = 0.98 for IHD deaths) and Gradient Boosting outperformed Ridge baseline (R² = −0.67)</div>
-            <div class="p-bullet"><strong>What-If simulation</strong> — OLS-based real-time calculator: users adjust PM2.5/meteorology sliders and visualize projected mortality changes</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">0.98</div><div class="p-stat-label">R² for IHD mortality prediction (Random Forest)</div></div>
-                <div class="p-stat"><div class="p-stat-num">2030</div><div class="p-stat-label">Forecast horizon (AR-LSTM)</div></div>
-                <div class="p-stat"><div class="p-stat-num">50</div><div class="p-stat-label">U.S. states covered in unified panel</div></div>
-                <div class="p-stat"><div class="p-stat-num">6</div><div class="p-stat-label">Pollutants modeled (PM2.5, PM10, O3, NO2, SO2, CO)</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Visualization Features</div>
-            <div class="p-bullet"><strong>Choropleth map</strong> — D3.js interactive U.S. map; pollutant selection, year/month slider, state-level tooltips</div>
-            <div class="p-bullet"><strong>Disease trend chart</strong> — Annual mortality rate per 100,000 residents by state and disease type (COPD, IHD)</div>
-            <div class="p-bullet"><strong>AQI radar chart</strong> — Forecasted AQI through 2030 with per-pollutant breakdown following EPA classification</div>
-            <div class="p-bullet"><strong>What-If simulator</strong> — Real-time mortality recalculation as users adjust pollutant and environmental sliders</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Add demographic and socioeconomic vulnerability indices for environmental-justice analysis</div>
-            <div class="p-bullet">Integrate hospitalization/ED visit data for short-term exposure effects</div>
-            <div class="p-bullet">Explore Poisson/negative binomial models for count-based mortality outcomes</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Air pollution drives cardiovascular and respiratory disease, yet existing research lacks an integrated, scalable framework. This project built a nationwide ML-powered interactive dashboard linking multi-pollutant air quality to public health outcomes across all 50 U.S. states (2018–2030).</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Data</strong> EPA AQS (6 pollutants), NOAA GHCND (7 meteorological vars), CDC WONDER (COPD/IHD mortality), FHWA/BTS/MODIS urban data</div><div class="p-bullet"><strong>Forecasting</strong> SARIMAX, LSTM, GRU; AR-LSTM selected for recursive forecasting to 2030</div><div class="p-bullet"><strong>Health prediction</strong> Random Forest R²=0.98 for IHD deaths; What-If OLS simulator</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.98</div><div class="p-stat-label">R² for IHD mortality (Random Forest)</div></div><div class="p-stat"><div class="p-stat-num">2030</div><div class="p-stat-label">Forecast horizon (AR-LSTM)</div></div><div class="p-stat"><div class="p-stat-num">50</div><div class="p-stat-label">U.S. states in unified panel</div></div><div class="p-stat"><div class="p-stat-num">6</div><div class="p-stat-label">Pollutants modeled</div></div></div></div></div></div></div></div>
 
   <!-- PROJECT DETAIL: Protein -->
-  <div class="page" id="page-proj-protein">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">04 · Spring 2025</div>
-        <h1 class="p-detail-title">Active Learning-Guided Protein Mutation Effect Prediction</h1>
-        <div class="p-detail-role">ML Developer · Georgia Institute of Technology</div>
-        <div class="p-detail-chips"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">PyTorch</span><span class="ptag">BioPython</span><span class="ptag">MC Dropout</span><span class="ptag">Gaussian Process</span></div>
+  <div class="page" id="page-proj-protein"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">06 · Spring 2025</div><h1 class="p-detail-title">Active Learning-Guided Protein Mutation Effect Prediction</h1><div class="p-detail-role">ML Developer · Georgia Tech</div><div class="p-detail-chips"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span><span class="ptag">PyTorch</span><span class="ptag">MC Dropout</span><span class="ptag">Gaussian Process</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Predicted the functional impact of single-point protein mutations using ESM-1v embeddings combined with biochemical features. An MLP ensemble outperformed fine-tuned and recurrent baselines (Spearman 0.49), with three active learning query strategies designed for iterative data acquisition under experimental cost constraints.</p>
       </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Predicting the functional impact of single-point protein mutations is critical for drug development and precision medicine. This project used Deep Mutational Scanning (DMS) scores as a fitness proxy and combined protein language model embeddings with biochemical features to predict mutation effects with active learning for iterative refinement.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Methods</div>
-            <div class="p-bullet"><strong>Feature Extraction</strong> — 1280-dim mean-pooled ESM-1v embeddings + 6 biochemical features (aromaticity, hydrophobicity, isoelectric point, helix/turn/sheet fraction) → 1286-dim input</div>
-            <div class="p-bullet"><strong>MLP Ensemble (Final)</strong> — 4-layer MLP (1286→512→256→64→1), LayerNorm + LeakyReLU + Dropout(0.4), AdamW 3×10⁻⁴, 40 epochs, ensembled across 3 random seeds</div>
-            <div class="p-bullet"><strong>Benchmarked</strong> — CNN (ESM-2 + RF feature selection), RNN (one-hot encoding), ESM-1v partial fine-tuning (layers 31–32)</div>
-            <div class="p-bullet"><strong>Active Learning</strong> — 3 query strategies: MC Dropout uncertainty, ESM ΔlogP (log-probability difference), UCB-based Gaussian Process sampling</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">MLP ensemble outperformed all architectures including ESM fine-tuning</div>
-            <div class="p-bullet">Frozen PLM + downstream MLP more effective than partial fine-tuning in low-data settings (fine-tuning: r=0.18, required 40–60GB GPU)</div>
-            <div class="p-bullet">Full-sequence mean pooling (r=0.49) outperformed CLS token and 11-mer windowing approaches</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">0.49</div><div class="p-stat-label">Best Spearman (MLP full-seq mean + biochem)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.27</div><div class="p-stat-label">Leaderboard Spearman (MLP vs CNN 0.26 / RNN 0.07)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.18</div><div class="p-stat-label">ESM fine-tuning — frozen embeddings outperformed</div></div>
-                <div class="p-stat"><div class="p-stat-num">3</div><div class="p-stat-label">Active learning query strategies designed</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Designed and implemented full <strong>MLP pipeline</strong> — feature engineering, architecture, ensemble strategy</div>
-            <div class="p-bullet">Implemented <strong>parameter-efficient ESM fine-tuning</strong> and led comparative analysis across all 4 architectures</div>
-            <div class="p-bullet">Designed all 3 <strong>active learning query strategies</strong> (MC Dropout, ΔlogP, UCB-GP)</div>
-            <div class="p-bullet">Wrote the final report and led experimental documentation</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Incorporate 3D structural features (SASA, PDB-based) for richer mutation context</div>
-            <div class="p-bullet">Apply ESM-2 with LoRA / adapter-based fine-tuning for low-data efficiency</div>
-            <div class="p-bullet">Explore LSTM/GRU with learned embeddings instead of one-hot encoding</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Predicting functional impact of single-point protein mutations is critical for drug development. This project combined protein language model embeddings with biochemical features and active learning for iterative refinement.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Features</strong> 1280-dim mean-pooled ESM-1v embeddings + 6 biochemical features → 1286-dim input</div><div class="p-bullet"><strong>MLP Ensemble</strong> 4-layer MLP, LayerNorm + LeakyReLU + Dropout(0.4), 3-seed ensemble</div><div class="p-bullet"><strong>Active Learning</strong> MC Dropout uncertainty, ESM ΔlogP, UCB-based Gaussian Process</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.49</div><div class="p-stat-label">Best Spearman (MLP full-seq mean)</div></div><div class="p-stat"><div class="p-stat-num">0.27</div><div class="p-stat-label">Leaderboard Spearman</div></div><div class="p-stat"><div class="p-stat-num">0.18</div><div class="p-stat-label">ESM fine-tuning (frozen outperformed)</div></div><div class="p-stat"><div class="p-stat-num">3</div><div class="p-stat-label">Active learning strategies</div></div></div></div></div></div></div></div>
 
   <!-- PROJECT DETAIL: GNN -->
-  <div class="page" id="page-proj-gnn">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">05 · Spring 2025 · CX4803 ML in Computational Biology</div>
-        <h1 class="p-detail-title">Drug-Disease Association Modeling via Heterogeneous Graph Neural Networks</h1>
-        <div class="p-detail-role">Deep Learning Developer · Georgia Institute of Technology</div>
-        <div class="p-detail-chips"><span class="ptag">PyTorch Geometric</span><span class="ptag">GCN</span><span class="ptag">R-GCN</span><span class="ptag">HGT</span><span class="ptag">SAGEConv</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span><span class="ptag">Neo4j</span></div>
+  <div class="page" id="page-proj-gnn"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">07 · Spring 2025 · CX4803 ML in Computational Biology</div><h1 class="p-detail-title">Drug-Disease Association Modeling via Heterogeneous Graph Neural Networks</h1><div class="p-detail-role">Deep Learning Developer · Georgia Tech</div><div class="p-detail-chips"><span class="ptag">PyTorch Geometric</span><span class="ptag">GCN</span><span class="ptag">R-GCN</span><span class="ptag">HGT</span><span class="ptag">SAGEConv</span><span class="ptag">Node2Vec</span><span class="ptag">Sentence-BERT</span><span class="ptag">Hetionet</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Predicted drug-disease associations using heterogeneous GNNs on the Hetionet biomedical knowledge graph. A Sentence Transformer + HeteroConv model with 13 meta-relations achieved AUC 0.89 on Hetionet and enabled zero-shot generalization to unseen diseases via semantic embeddings.</p>
       </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Traditional drug discovery is lengthy and costly. This project predicted drug-disease associations using heterogeneous GNNs on the Hetionet biomedical knowledge graph, enabling drug repurposing by identifying existing compounds that may treat unknown diseases — including zero-shot generalization to unseen diseases via semantic embeddings.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Methods — 4 Architectures Benchmarked</div>
-            <div class="p-bullet"><strong>Node2Vec + GCN</strong> — Structural baseline; biased random walk embeddings into 2-layer homogeneous GCN. Highest internal AUC (0.99) but strong overfitting.</div>
-            <div class="p-bullet"><strong>Sentence Transformer + HeteroConv (Final)</strong> — all-MiniLM-L6-v2 384-dim embeddings into 2-layer SAGEConv with 13 meta-relations; zero-shot capable for unseen diseases</div>
-            <div class="p-bullet"><strong>Node2Vec + R-GCN</strong> — 5-layer relational GCN with relation-specific parameters across 8 meta-edges; AUC 0.96</div>
-            <div class="p-bullet"><strong>Node2Vec + HGT</strong> — 2-layer Heterogeneous Graph Transformer with per-node-type multi-head attention; AUC 0.77</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">Simple SAGEConv outperformed attention-based HGT in generalization to external data (HINGRL-B)</div>
-            <div class="p-bullet">Semantic embeddings enabled <strong>zero-shot prediction</strong> for unseen diseases — key advantage over purely structural approaches</div>
-            <div class="p-bullet">High internal AUC ≠ real-world utility; GCN showed degree centrality bias, recommending same compounds across all diseases</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">0.89</div><div class="p-stat-label">AUC on Hetionet (Sentence Transformer + HeteroConv)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.78</div><div class="p-stat-label">F1-score on Hetionet test set</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.63</div><div class="p-stat-label">AUC on external HINGRL-B (647 validated pairs)</div></div>
-                <div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">GNN architectures compared</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Implemented HGT link predictor with Neo4j-extracted Node2Vec embeddings and PyG HeteroData pipeline</div>
-            <div class="p-bullet">Conducted comparative benchmarking across all 4 architectures and analyzed degree centrality bias</div>
-            <div class="p-bullet">Co-authored final report with model selection justification based on qualitative diversity analysis</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Multi-modal node embeddings: <strong>SMILES</strong> (chemical structure), gene ontology, biomedical BERT</div>
-            <div class="p-bullet">Degree normalization and biological filtering to reduce hub-compound bias</div>
-            <div class="p-bullet">Integrate protein-structure data (PDB) for richer drug-target representations</div>
-          </div>
-        </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">This project predicted drug-disease associations using heterogeneous GNNs on the Hetionet knowledge graph, enabling drug repurposing with zero-shot generalization to unseen diseases via semantic embeddings.</p></div><div class="p-section"><div class="p-section-label">Methods 4 Architectures</div><div class="p-bullet"><strong>Node2Vec + GCN</strong> Highest internal AUC (0.99) but strong overfitting</div><div class="p-bullet"><strong>Sentence Transformer + HeteroConv (Final)</strong> all-MiniLM-L6-v2, 13 meta-relations; zero-shot capable</div><div class="p-bullet"><strong>Node2Vec + R-GCN</strong> 5-layer relational GCN; AUC 0.96</div><div class="p-bullet"><strong>Node2Vec + HGT</strong> Multi-head attention; AUC 0.77</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.89</div><div class="p-stat-label">AUC on Hetionet (final model)</div></div><div class="p-stat"><div class="p-stat-num">0.78</div><div class="p-stat-label">F1-score on Hetionet test set</div></div><div class="p-stat"><div class="p-stat-num">0.63</div><div class="p-stat-label">AUC on external HINGRL-B</div></div><div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">Architectures benchmarked</div></div></div></div></div></div></div></div>
+
+  <!-- PROJECT DETAIL: RNA -->
+  <div class="page" id="page-proj-rna"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">08 · Spring 2025 · CS 7641 Algorithms in Bioinformatics</div><h1 class="p-detail-title">RNA Secondary Structure Prediction: A Unified Benchmark from Dynamic Programming to Deep Learning</h1><div class="p-detail-role">ML Developer · Georgia Tech</div><div class="p-detail-chips"><span class="ptag">PyTorch</span><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">RNN</span><span class="ptag">DNABERT-2</span><span class="ptag">Nussinov</span><span class="ptag">ArchiveII</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Established a unified benchmark comparing Nussinov dynamic programming, RNN/LSTM, and Transformer-based models for RNA secondary structure prediction under identical training and evaluation conditions. Analyzed failure modes of each architecture on the ArchiveII and bpRNA-NF-15.0 datasets.</p>
       </div>
-    </div>
-  </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">This project established a unified benchmark comparing Nussinov DP, RNN/LSTM, and Transformer-based models for RNA secondary structure prediction under identical training and evaluation conditions.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Task</strong> Predict pairwise matrix P ∈ [0,1]ⁿˣⁿ; decode via Nussinov DP into dot-bracket structure</div><div class="p-bullet"><strong>Models</strong> Nussinov DP, GRU-RNN, biLSTM, Transformer (scratch), DNABERT-2 (pretrained)</div><div class="p-bullet"><strong>Datasets</strong> ArchiveII (3,000+); bpRNA-NF-15.0 (15,000+, family-wise split)</div></div><div class="p-section"><div class="p-section-label">Key Findings</div><div class="p-bullet">Scratch Transformer: collapsed to all-negative (severe class imbalance + naive BCE)</div><div class="p-bullet">DNABERT-2: over-predicted pairs (recall 0.96, precision 0.004)</div><div class="p-bullet">Core insight: focal loss / weighted sampling needed for imbalanced pairwise RNA labels</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">&lt;0.1</div><div class="p-stat-label">Nussinov F1 (majority of sequences)</div></div><div class="p-stat"><div class="p-stat-num">0.96</div><div class="p-stat-label">DNABERT-2 recall (over-prediction)</div></div><div class="p-stat"><div class="p-stat-num">0.0</div><div class="p-stat-label">Scratch Transformer F1</div></div><div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">Model families benchmarked</div></div></div></div></div></div></div></div></div>
 
   <!-- PROJECT DETAIL: Physiognomy -->
-  <div class="page" id="page-proj-face">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">06 · Mar – Sep 2022 · Outstanding AI Project Award</div>
-        <h1 class="p-detail-title">Facial Image Analysis via Traditional Asian Physiognomy</h1>
-        <div class="p-detail-role">ML Engineer / Designer · Chung-ang University</div>
-        <div class="p-detail-chips"><span class="ptag">Computer Vision</span><span class="ptag">Machine Learning</span><span class="ptag">HTML/CSS/JS</span><span class="ptag">Python</span></div>
-      </div>
-      <div class="p-section">
-        <div class="p-section-label">Overview</div>
-        <p class="p-section-text">Developed a real-time vision-based web service for physiognomy-based facial feature classification using ML models. Led both the ML model design and the web interface as primary ML Engineer and Designer. The project received the Outstanding AI Project Award from Korea Creative Content Agency (KOCCA) in 2022.</p>
-      </div>
-      <div class="p-section">
-        <div class="p-section-label">Key Details</div>
-        <div class="p-bullet">Built end-to-end pipeline from facial feature extraction to real-time web-based classification</div>
-        <div class="p-bullet">Designed the ML model and web interface as primary ML Engineer and Designer</div>
-        <div class="p-bullet">Awarded <strong>Outstanding AI Project Award</strong> — Korea Creative Content Agency (KOCCA), 2022</div>
-      </div>
-    </div>
-  </div>
+  <div class="page" id="page-proj-face"><div class="wrap"><button class="btn-back" onclick="showPage('projects')">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">09 · Mar – Sep 2022 · Outstanding AI Project Award</div><h1 class="p-detail-title">Facial Image Analysis via Traditional Asian Physiognomy</h1><div class="p-detail-role">ML Engineer / Designer · Chung-ang University</div><div class="p-detail-chips"><span class="ptag">Computer Vision</span><span class="ptag">Machine Learning</span><span class="ptag">HTML/CSS/JS</span><span class="ptag">Python</span></div></div><div class="p-section"><div class="p-section-label">Overview</div><p class="p-section-text">Developed a real-time vision-based web service for physiognomy-based facial feature classification. Led both ML model design and web interface as primary ML Engineer and Designer. Received Outstanding AI Project Award from Korea Creative Content Agency (KOCCA) in 2022.</p></div><div class="p-section"><div class="p-section-label">Key Details</div><div class="p-bullet">Built end-to-end pipeline from facial feature extraction to real-time web-based classification</div><div class="p-bullet">Awarded <strong>Outstanding AI Project Award</strong> Korea Creative Content Agency (KOCCA), 2022</div></div></div></div>
 
   <!-- WORK / EXPERIENCE -->
   <div class="page" id="page-experience">
     <div class="wrap">
       <div class="sec-label">Work / Experience</div>
       <h2 class="sec-title">Experience &amp; education</h2>
-
-      <!-- Work Experience -->
       <div style="font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Work Experience</div>
       <div style="margin-bottom:3rem">
-
-        <div class="exp-item">
-          <div>
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:3px">
-              <div class="exp-role">Graduate Research Assistant</div>
-              <span style="font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green-text)">Current</span>
-            </div>
-            <div class="exp-org">Georgia Institute of Technology · Bio-MIBLab</div>
-            <div class="exp-bullet">First-author ML paper on colon cancer risk prediction — accepted at IEEE EMBC 2025 and received Distinguished Paper Award.</div>
-            <div class="exp-bullet">LLM-integrated semi-automated pipeline for pediatric cancer Survivorship Care Plans — IEEE TBME (under review).</div>
-            <div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div>
-            <div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings toward autoimmune disease prediction.</div>
-            <div class="exp-bullet">Developing a modular Multi-Agent AI architecture for multi-modal biomedical data integration.</div>
-          </div>
-          <div class="exp-period">Aug 2024 – Present</div>
-        </div>
-
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">Undergraduate Research Assistant</div>
-            <div class="exp-org">KAIST · Single-Cell Medical Genomics Lab</div>
-            <div class="exp-bullet">Built an automated single-cell sample data mining pipeline from the GEO database.</div>
-            <div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs by annotating genomic metadata using fine-tuned BERT and prompt-engineered GPT for NLP-based feature extraction.</div>
-          </div>
-          <div class="exp-period">Jul 2023 – Feb 2024</div>
-        </div>
-
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">Research Intern</div>
-            <div class="exp-org">Soongsil University · Biomedical Data Science Lab</div>
-            <div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data (HTseq-FPKM) based on metastasis status using t-test and FDR correction.</div>
-            <div class="exp-bullet">Applied KNN classification and regression to TCGA-PAAD gene and miRNA expression data for cancer survival prediction, with preprocessing to align samples across multi-omics datasets.</div>
-          </div>
-          <div class="exp-period">Mar 2023 – Jun 2023</div>
-        </div>
-
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">Bioinformatics Intern</div>
-            <div class="exp-org">Insilicogen Inc.</div>
-            <div class="exp-bullet">Performed end-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis, with downstream visualization in R.</div>
-          </div>
-          <div class="exp-period">Jan 2023 – Feb 2023</div>
-        </div>
-
+        <div class="exp-item"><div><div style="display:flex;align-items:center;gap:10px;margin-bottom:3px"><div class="exp-role">Graduate Research Assistant</div><span style="font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green-text)">Current</span></div><div class="exp-org">Georgia Institute of Technology · Bio-MIBLab</div><div class="exp-bullet">First-author ML paper on colon cancer risk prediction accepted at IEEE EMBC 2025, Distinguished Paper Award.</div><div class="exp-bullet">LLM-integrated pipeline for pediatric cancer Survivorship Care Plans IEEE TBME (under review).</div><div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div><div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings.</div><div class="exp-bullet">Developing a modular Multi-Agent AI architecture for multi-modal biomedical data integration.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">Undergraduate Research Assistant</div><div class="exp-org">KAIST · Single-Cell Medical Genomics Lab</div><div class="exp-bullet">Built an automated single-cell data mining pipeline from the GEO database.</div><div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP annotation.</div></div><div class="exp-period">Jul 2023 – Feb 2024</div></div>
+        <div class="exp-item"><div><div class="exp-role">Research Intern</div><div class="exp-org">Soongsil University · Biomedical Data Science Lab</div><div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data using t-test and FDR correction.</div><div class="exp-bullet">Applied KNN on TCGA-PAAD multi-omics data for cancer survival prediction.</div></div><div class="exp-period">Mar 2023 – Jun 2023</div></div>
+        <div class="exp-item"><div><div class="exp-role">Bioinformatics Intern</div><div class="exp-org">Insilicogen Inc.</div><div class="exp-bullet">End-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis with R visualization.</div></div><div class="exp-period">Jan 2023 – Feb 2023</div></div>
       </div>
-
-      <!-- Education -->
       <div style="font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Education</div>
       <div>
+        <div class="exp-item"><div><div class="exp-role">MS Computational Science &amp; Engineering</div><div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div><div class="exp-bullet">Research at Bio-MIBLab under Dr. May D. Wang. Focus on ML, scientific computing, and biomedical AI.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">MS Bioinformatics</div><div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div><div class="exp-bullet">Dual degree covering computational biology, genomics, structural bioinformatics, and biological data analysis.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">BE in Biomedical Engineering &amp; Computer Art</div><div class="exp-org">Chung-ang University · Seoul, South Korea</div><div class="exp-bullet">Double major in Biomedical Engineering and Computer Art.</div></div><div class="exp-period">Mar 2019 – Feb 2024</div></div>
+      </div>
+    </div>
+  </div>
 
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">MS Computational Science &amp; Engineering</div>
-            <div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div>
-            <div class="exp-bullet">Focus on machine learning, scientific computing, and biomedical AI. Research at Bio-MIBLab under Dr. May D. Wang.</div>
+  <!-- PROJECT DETAIL: Psoriasis / GeneDAE -->
+  <div class="page" id="page-proj-psoriasis">
+    <div class="wrap">
+      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
+      <div class="p-detail-header">
+        <div class="p-detail-meta">09 · ACM BCB 2025 · Philadelphia, PA</div>
+        <h1 class="p-detail-title">Interpretable Neural Networks Reveal Gene Interactions Underlying Autoimmune Disease Risk</h1>
+        <div class="p-detail-role">ML Contributor · Georgia Institute of Technology · Bio-MIBLab</div>
+        <div class="p-detail-chips"><span class="ptag">GeneDAE</span><span class="ptag">Neural Interaction Detection</span><span class="ptag">UK Biobank</span><span class="ptag">PRS</span><span class="ptag">Psoriasis</span><span class="ptag">PyTorch</span><span class="ptag">Interpretable ML</span></div>
+      </div>
+            <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Developed a real-time vision-based web service for physiognomy-based facial feature classification using ML. Led both ML model design and web interface as primary ML Engineer and Designer. Received Outstanding AI Project Award from Korea Creative Content Agency (KOCCA) in 2022.</p>
+      </div>
+      <div class="p-detail-grid">
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Problem Statement</div>
+            <p class="p-section-text">Polygenic Risk Scores (PRSs) aggregate genetic variant effects linearly, missing gene-by-gene (GxG) and gene-by-environment (GxE) interactions that may be critical for autoimmune disease risk. This project developed an interpretable neural network integrating gene-level embeddings with clinical features to predict 10-year incident psoriasis and discover biologically meaningful interactions that conventional PRS methods cannot capture. To our knowledge, the first systematic application of interpretable NNs with gene-level embeddings for autoimmune disease prediction in a real-world dataset.</p>
           </div>
-          <div class="exp-period">Aug 2024 – Present</div>
-        </div>
-
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">MS Bioinformatics</div>
-            <div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div>
-            <div class="exp-bullet">Dual degree covering computational biology, genomics, structural bioinformatics, and biological data analysis.</div>
+          <div class="p-section">
+            <div class="p-section-label">Methods</div>
+            <div class="p-bullet"><strong>Dataset</strong> UK Biobank (~500K participants); 13,120 psoriasis cases (ICD-10 L40.0–L40.9), 1,184 incident within 10 years; restricted to European ancestry</div>
+            <div class="p-bullet"><strong>GeneDAE (PRS2)</strong> Denoising autoencoder trained on 8,817 MHC variants (chr6); produced 159 interpretable gene-level embeddings</div>
+            <div class="p-bullet"><strong>PRS1 baseline</strong> Univariate PRS via L1-regularized logistic regression on MHC variants; sigmoid-scaled</div>
+            <div class="p-bullet"><strong>Feature sets</strong> NG only (49 clinical features) · NG+PRS1 · NG+PRS2 (208 features); each tested with Logistic Regression and Neural Network</div>
+            <div class="p-bullet"><strong>Neural Interaction Detection (NID)</strong> Pairwise interaction scoring via first hidden layer weights; 20,301 unique pairs (11,628 GxG · 7,497 GxE · 1,176 NG-NG); Bonferroni-corrected t-tests (α=0.01)</div>
           </div>
-          <div class="exp-period">Aug 2024 – Present</div>
-        </div>
-
-        <div class="exp-item">
-          <div>
-            <div class="exp-role">BE in Biomedical Engineering &amp; Computer Art</div>
-            <div class="exp-org">Chung-ang University · Seoul, South Korea</div>
-            <div class="exp-bullet">Double major in Biomedical Engineering and Computer Art. Coursework in signal processing, biomechanics, ML, and digital media design.</div>
+          <div class="p-section">
+            <div class="p-section-label">Key Findings</div>
+            <div class="p-bullet">NG+PRS2 achieved comparable AUC to PRS1 models while enabling far richer biological interpretability</div>
+            <div class="p-bullet">GxG effects stronger than GxE gene interaction networks drive psoriasis susceptibility more than environment alone</div>
+            <div class="p-bullet"><strong>MIR3135B, BAK1, DXO</strong> emerged as hub genes with strong interactions consistent with prior psoriasis and smoking literature</div>
+            <div class="p-bullet">Known HLA-C, CDSN, PSORS1 region interactions confirmed; SBP × life stress × PRS1 three-way interaction detected</div>
+            <div class="p-bullet">7/10 top GxG gene pairs had prior psoriasis associations validated in literature</div>
           </div>
-          <div class="exp-period">Mar 2019 – Feb 2024</div>
         </div>
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Results</div>
+            <div class="p-stats">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div class="p-stat"><div class="p-stat-num">0.60</div><div class="p-stat-label">Best AUC (LR · NG features · 10-yr psoriasis)</div></div>
+                <div class="p-stat"><div class="p-stat-num">159</div><div class="p-stat-label">Gene-level embeddings from MHC region via GeneDAE</div></div>
+                <div class="p-stat"><div class="p-stat-num">20,301</div><div class="p-stat-label">Unique feature pairs analyzed (GxG + GxE + NG-NG)</div></div>
+                <div class="p-stat"><div class="p-stat-num">7 / 10</div><div class="p-stat-label">Top GxG gene pairs validated in psoriasis literature</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- PROJECT DETAIL: Cleft / GeneDAE -->
+  <div class="page" id="page-proj-cleft">
+    <div class="wrap">
+      <button class="btn-back" onclick="showPage('projects')">Back to Projects</button>
+      <div class="p-detail-header">
+        <div class="p-detail-meta">10 · Ongoing · Bio-MIBLab, Georgia Tech</div>
+        <h1 class="p-detail-title">Interpretable Gene Embedding and Variant Prioritization for Orofacial Cleft Using GeneDAE</h1>
+        <div class="p-detail-role">ML Researcher · Georgia Institute of Technology · Bio-MIBLab</div>
+        <div class="p-detail-chips"><span class="ptag">GeneDAE</span><span class="ptag">Integrated Gradients</span><span class="ptag">GWAS</span><span class="ptag">UK Biobank</span><span class="ptag">Sparse Autoencoder</span><span class="ptag">Non-coding Variants</span><span class="ptag">IRF6</span><span class="ptag">MPRA</span></div>
+      </div>
+
+      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">An end-to-end workflow for complex disease genetics: starting from case-control genotype data for orofacial cleft (OFC), we use GeneDAE (a sparse denoising autoencoder) to learn interpretable gene-level representations, then apply Integrated Gradients to prioritize non-coding variants as experimentally testable hypotheses. The pipeline bridges GWAS-level signals and wet-lab validation, connecting model-derived variant rankings to functional evidence from MPRA, luciferase, and CRISPR assays in the literature.</p>
+      </div>
+
+      <div class="p-detail-grid">
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Motivation</div>
+            <p class="p-section-text">GWAS for complex diseases like orofacial cleft yields many variant signals, but non-coding variants are particularly difficult to interpret and prioritize for follow-up experiments. Standard PRS approaches summarize genetic risk as a single scalar, losing the gene-level resolution needed for mechanistic understanding. We built an end-to-end workflow that produces interpretable gene embeddings and a ranked shortlist of candidate variants actionable for functional validation.</p>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Data</div>
+            <div class="p-bullet">UK Biobank cleft cases and matched controls; SNP genotypes encoded as 0/1/2 genotype matrix</div>
+            <div class="p-bullet">Standard QC pipeline with population structure correction; designed to integrate de novo variants from hospital cohorts if needed</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">GeneDAE Model</div>
+            <div class="p-bullet">Sparse Denoising Autoencoder that learns gene embeddings directly from genotype data</div>
+            <div class="p-bullet">Variant-to-gene connections constrained by a biologically informed adjacency mask, making embeddings interpretable at the gene level rather than operating as a black box</div>
+            <div class="p-bullet">Each gene embedding summarizes disease-relevant genetic signal across all variants in that gene window</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Gene-Level Signal Validation</div>
+            <div class="p-bullet">Trained encoder transforms individuals into gene embedding space; embeddings tested for case-control separation at known loci</div>
+            <div class="p-bullet">IRF6 locus used as proof-of-concept: embedding captures the direction of association consistent with GWAS-level signal, confirming the model learns biologically meaningful representations</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Variant Prioritization via Integrated Gradients</div>
+            <div class="p-bullet">Integrated Gradients applied to attribute each gene embedding back to individual input variants</div>
+            <div class="p-bullet">Variant importance plots generated for IRF6; top-ranked variant rs2235371 matches a well-established marker in the OFC literature, providing convergent validity</div>
+            <div class="p-bullet">Non-coding variants in top rankings become regulatory candidates for functional follow-up</div>
+          </div>
+        </div>
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Literature Integration</div>
+            <div class="p-bullet"><strong>Layer A (historical anchor):</strong> Rahimov et al. 2008 (Nat Genet) showed rs642961 in the IRF6 enhancer disrupts a TFAP2A binding motif, providing a mechanistic story for how non-coding variants at this locus alter function</div>
+            <div class="p-bullet"><strong>Layer B (high-throughput functional screen):</strong> 2025 Nat Commun paper used MPRA and luciferase assays to test OFC locus SNPs for allele-specific regulatory activity, with CRISPR confirmation for select hits; critically, not all well-known SNPs show allele differences in every assay, reflecting context- and condition-dependent effects</div>
+            <div class="p-bullet">These two layers provide "connect the dots" evidence: our model narrows the search space, and existing functional data contextualizes which candidates are most experimentally tractable</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Validation Pipeline</div>
+            <div class="p-bullet"><strong>Step 1:</strong> Association signal or model-based prioritization (GeneDAE + Integrated Gradients)</div>
+            <div class="p-bullet"><strong>Step 2:</strong> Reporter assay (MPRA / luciferase) to confirm allele-specific regulatory activity</div>
+            <div class="p-bullet"><strong>Step 3:</strong> TF binding confirmation (EMSA, ChIP) to identify mechanistic basis</div>
+            <div class="p-bullet"><strong>Step 4:</strong> CRISPR editing to verify effect on gene expression</div>
+            <div class="p-bullet"><strong>Step 5:</strong> Phenotype assay to connect to functional outcome where applicable</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Outputs</div>
+            <div class="p-stats">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div class="p-stat"><div class="p-stat-num">Gene</div><div class="p-stat-label">Interpretable gene embeddings and gene-level risk signals per individual</div></div>
+                <div class="p-stat"><div class="p-stat-num">Variant</div><div class="p-stat-label">Integrated Gradients-based top variant shortlist for functional follow-up</div></div>
+                <div class="p-stat"><div class="p-stat-num">Evidence</div><div class="p-stat-label">GWAS and wet-lab literature-connected candidate justification</div></div>
+                <div class="p-stat"><div class="p-stat-num">Actionable</div><div class="p-stat-label">Candidates ready for MPRA, luciferase, TF binding, and CRISPR experiments</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AWARDS -->
+  <div class="page" id="page-awards">
+    <div class="wrap">
+      <div class="sec-label">Awards</div>
+      <h2 class="sec-title">Awards &amp; recognition</h2>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:var(--blue-bg);border:1px solid var(--blue-border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🏆</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Distinguished Paper Award</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">J. Leland Jackson Fellowships · Bioinformatics Best Paper</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Received the Bioinformatics "Best Paper" award for my first-author paper accepted at IEEE EMBC 2025.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2025</div></div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:var(--green-bg);border:1px solid var(--green-border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🥇</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Data Challenge Award IEEE BHI 2025</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">IEEE Engineering in Medicine and Biology Society</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Winning entry in Data Competition Track 2: Predicting Macronutrient Information multimodal ML on CGMacros dataset.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Oct 2025</div></div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:#fef9c3;border:1px solid #fde68a;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⭐</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">NextGen Scholar Recognition</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">IEEE BHI 2025 · NSF-EMBS-Google</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Selected as a BHI 2025 NextGen Scholar for contributions to biomedical AI and health informatics.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Sep 2025</div></div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎓</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Computational Biology Faculty GRA Award Fall 2025</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Georgia Institute of Technology · ~$20,000 in funding</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Computational Biology Faculty Research Award for Fall 2025 with ~$20K in research funding.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Jul 2025</div></div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎓</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Computational Biology Faculty GRA Award Spring 2026</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Georgia Institute of Technology · ~$20,000 in funding</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Computational Biology Faculty Research Award for Spring 2026 with ~$20K in research funding.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2024</div></div>
+        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start"><div style="width:40px;height:40px;border-radius:10px;background:#fffbeb;border:1px solid #fde68a;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🏅</div><div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Outstanding AI Project Award</div><div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Korea Creative Content Agency (KOCCA) · 2022 Gwangju ACE Fair</div><div style="font-size:13px;color:var(--muted);line-height:1.7">Selected as outstanding project for an AI-based digital human enhancement system combining computer vision and ML.</div></div><div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2022</div></div>
       </div>
     </div>
   </div>
@@ -864,8 +456,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
       <h2 class="sec-title">Let's connect</h2>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
         <div>
-          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem">I'm actively looking for internship opportunities in ML/AI engineering and biomedical AI research for Summer 2025. Feel free to reach out — I usually respond within a day.</p>
-          <a href="/cdn-cgi/l/email-protection#77151512181a1e19111837101a161e1b5914181a" class="clink"><span class="clink-key">Email</span><span class="__cf_email__" data-cfemail="cba9a9aea4a6a2a5ada48baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></a>
+          <p style="font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:1.6rem">I am actively looking for internship opportunities in ML/AI engineering and biomedical AI research. Feel free to reach out I usually respond within a day.</p>
+          <a href="mailto:bbeominfo@gmail.com" class="clink"><span class="clink-key">Email</span>bbeominfo@gmail.com</a>
           <a href="tel:+16782766493" class="clink"><span class="clink-key">Phone</span>+1 (678) 276-6493</a>
           <a href="#" class="clink"><span class="clink-key">GitHub</span>Coming soon</a>
           <a href="#" class="clink"><span class="clink-key">LinkedIn</span>Coming soon</a>
@@ -877,212 +469,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
           <input class="finput" type="email" placeholder="your@email.com">
           <label class="flabel">Message</label>
           <textarea class="ftextarea" placeholder="What's on your mind?"></textarea>
-          <a href="/cdn-cgi/l/email-protection#046666616b696d6a626b446369656d682a676b69" class="btn btn-blue">Send Message</a>
+          <a href="mailto:bbeominfo@gmail.com" class="btn btn-blue">Send Message</a>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECT DETAIL: SCP -->
-  <div class="page" id="page-proj-scp">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">07 · 2025 · IEEE TBME (Under Review) · Children's Healthcare of Atlanta</div>
-        <h1 class="p-detail-title">Integrating LLMs into a Semi-Automated Clinical Documentation Pipeline for Pediatric Cancer Survivorship Care Plans</h1>
-        <div class="p-detail-role">ML / NLP Developer · Georgia Institute of Technology &amp; CHOA · Bio-MIBLab</div>
-        <div class="p-detail-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">Epic EHR</span><span class="ptag">ETL Pipeline</span><span class="ptag">Prompt Engineering</span><span class="ptag">Few-Shot Learning</span><span class="ptag">Regex</span></div>
-      </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">Survivorship Care Plans (SCPs) are essential clinical documents for pediatric cancer survivors — summarizing treatment exposures, late effects, and surveillance recommendations. Despite affecting 500,000+ survivors nationwide, SCP generation remains labor-intensive and error-prone. Critical treatment events (radiation, surgery, HSCT, CAR-T) are buried in unstructured clinical notes and cannot be reliably extracted by rule-based systems alone.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">System Architecture</div>
-            <div class="p-bullet"><strong>Dual-track pipeline</strong> — Track 1: deterministic ETL (BSA calculations, regex, medication mapping) for structured drug data; Track 2: GPT-4o LLM prompting for unstructured clinical narratives</div>
-            <div class="p-bullet"><strong>Data sources</strong> — Epic Clarity EHR (medication orders, MAR, height/weight history), clinical notes (H&amp;P, progress notes, discharge summaries, procedure notes), imaging history</div>
-            <div class="p-bullet"><strong>Deterministic track</strong> — Mosteller BSA formula, medication name standardization, cumulative dose aggregation (mg/kg → mg/m²)</div>
-            <div class="p-bullet"><strong>LLM track</strong> — Structured prompt engineering with inclusion/exclusion criteria, few-shot examples, JSON output schema; applied to CAR-T, HSCT, radiation, and surgery extraction</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Prompt Engineering Strategies</div>
-            <div class="p-bullet"><strong>CAR-T</strong> — Strict confirmation rules (explicit infusion only); counterfactual phrasing to reject eligibility/bridging/lymphodepletion mentions</div>
-            <div class="p-bullet"><strong>HSCT</strong> — JSON output: hsct_type, source, HLA match, transplant date; post-processing: date normalization, copy-forward error correction, note-frequency majority voting</div>
-            <div class="p-bullet"><strong>Surgery</strong> — 4 strategies compared: zero-shot → definitions → few-shot → few-shot + definitions; best = few-shot + definitions (96.61% global accuracy)</div>
-            <div class="p-bullet"><strong>Radiation</strong> — Explicit confirmation of completed therapeutic radiation; excluded diagnostic, speculative, planned, or template-pasted mentions</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">99.86%</div><div class="p-stat-label">Chemotherapy concordance (N=1,120 patients, 57 drugs)</div></div>
-                <div class="p-stat"><div class="p-stat-num">100%</div><div class="p-stat-label">CAR-T detection accuracy (extreme class imbalance)</div></div>
-                <div class="p-stat"><div class="p-stat-num">97.8%</div><div class="p-stat-label">HSCT detection; 96% exact-match on transplant dates</div></div>
-                <div class="p-stat"><div class="p-stat-num">96.61%</div><div class="p-stat-label">Surgery extraction accuracy (few-shot + definitions)</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">Pipeline <strong>uncovered errors in manually-curated validation data</strong> — 39% of discrepancies were human abstraction errors</div>
-            <div class="p-bullet">Few-shot + definitions: amputation F1 0.25 → 0.80; pelvic surgery F1 0.36 → 0.83</div>
-            <div class="p-bullet">Dual-track design: deterministic logic for structured numerical computation, LLM for heterogeneous narrative semantics</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Developed LLM prompting strategies for CAR-T, HSCT, radiation, and surgery clinical entity extraction</div>
-            <div class="p-bullet">Implemented and evaluated the 4-strategy surgery prompting comparison</div>
-            <div class="p-bullet">Contributed to ETL pipeline integration and post-processing logic</div>
-            <div class="p-bullet">Co-authored the IEEE TBME paper (under review)</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Real-time EHR integration and automated filtering for non-cancer exposures</div>
-            <div class="p-bullet">Extend to outside hospital records and adult cancer centers</div>
-            <div class="p-bullet">Continuous learning loop with clinical feedback for improved rare-event detection</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PROJECT DETAIL: RNA Structure -->
-  <div class="page" id="page-proj-rna">
-    <div class="wrap">
-      <button class="btn-back" onclick="showPage('projects')">← Back to Projects</button>
-      <div class="p-detail-header">
-        <div class="p-detail-meta">08 · Spring 2025 · CS 7641 Algorithms in Bioinformatics</div>
-        <h1 class="p-detail-title">RNA Secondary Structure Prediction: A Unified Benchmark from Dynamic Programming to Deep Learning</h1>
-        <div class="p-detail-role">ML Developer · Georgia Institute of Technology</div>
-        <div class="p-detail-chips"><span class="ptag">PyTorch</span><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">RNN</span><span class="ptag">DNABERT-2</span><span class="ptag">Nussinov</span><span class="ptag">ArchiveII</span><span class="ptag">bpRNA</span></div>
-      </div>
-      <div class="p-detail-grid">
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Problem Statement</div>
-            <p class="p-section-text">RNA secondary structure — the set of base-pairing interactions defining a molecule's 2D conformation — is central to gene regulation, catalysis, and protein synthesis. Predicting structure from sequence alone is a long-standing challenge. This project established a unified benchmark comparing Nussinov DP, RNN/LSTM, and Transformer-based models under identical training and evaluation conditions on the same datasets and decoding pipeline.</p>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Methods</div>
-            <div class="p-bullet"><strong>Formulation</strong> — Given RNA sequence X, predict pairwise matrix P ∈ [0,1]ⁿˣⁿ; decode via Nussinov DP into dot-bracket structure; evaluate with PPV, Sensitivity, F1</div>
-            <div class="p-bullet"><strong>Datasets</strong> — ArchiveII (3,000+ validated sequences); bpRNA-NF-15.0 (15,000+, family-wise split for generalization)</div>
-            <div class="p-bullet"><strong>Nussinov DP</strong> — Classic baseline: maximize base pairs (A–U, G–C, G–U); implemented from scratch</div>
-            <div class="p-bullet"><strong>RNN / LSTM</strong> — GRU-based RNN and bidirectional LSTM; L×L contact matrix via dot-product; BCEWithLogitsLoss; early stopping</div>
-            <div class="p-bullet"><strong>Transformer (scratch)</strong> — Encoder-only; learnable positional embeddings; multi-head self-attention; pairwise scoring head; weighted BCE for class imbalance</div>
-            <div class="p-bullet"><strong>Pretrained DNABERT-2</strong> — HuggingFace checkpoint; frozen encoder + light bilinear pairwise head; fine-tuned 2 epochs on ArchiveII</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Key Findings</div>
-            <div class="p-bullet">Nussinov: majority of sequences F1 &lt; 0.1; fails on long-range helices and multi-loop junctions — expected given algorithmic simplicity</div>
-            <div class="p-bullet">RNN/LSTM: high recall (~0.09–0.72) but precision near zero — evaluation pipeline issue (decoder pairs not correctly mapped to binary matrix), not model failure</div>
-            <div class="p-bullet">Transformer (scratch): collapsed to all-negative prediction — severe class imbalance not corrected by naive BCE loss</div>
-            <div class="p-bullet">DNABERT-2: opposite failure — over-predicted pairs (recall 0.96, precision 0.004); DNA-trained model poorly adapted to RNA pairwise task with frozen encoder</div>
-            <div class="p-bullet">Core insight: simple BCE loss insufficient for highly imbalanced pairwise RNA labels — needs focal loss, weighted sampling, or architecture-specific solutions</div>
-          </div>
-        </div>
-        <div>
-          <div class="p-section">
-            <div class="p-section-label">Results</div>
-            <div class="p-stats">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-                <div class="p-stat"><div class="p-stat-num">&lt;0.1</div><div class="p-stat-label">Nussinov F1 for majority of sequences</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.96</div><div class="p-stat-label">DNABERT-2 recall (over-prediction failure)</div></div>
-                <div class="p-stat"><div class="p-stat-num">0.0</div><div class="p-stat-label">Scratch Transformer F1 (all-negative collapse)</div></div>
-                <div class="p-stat"><div class="p-stat-num">4</div><div class="p-stat-label">Model families benchmarked under identical conditions</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">My Contributions</div>
-            <div class="p-bullet">Implemented <strong>Transformer from scratch</strong> — embedding, positional encoding, multi-head self-attention, pairwise scoring head</div>
-            <div class="p-bullet">Set up and fine-tuned <strong>DNABERT-2</strong> pretrained encoder with pairwise classification head on ArchiveII</div>
-            <div class="p-bullet">Designed all Transformer experiments: threshold sensitivity, weighted loss, pretrained vs. scratch comparison</div>
-            <div class="p-bullet">Diagnosed failure modes across all 4 architectures and co-authored the final report</div>
-          </div>
-          <div class="p-section">
-            <div class="p-section-label">Future Work</div>
-            <div class="p-bullet">Focal loss or weighted BCE sampling to address severe class imbalance</div>
-            <div class="p-bullet">RNA-specific pretrained models (RNA-FM, Uni-RNA) instead of DNA-centric DNABERT-2</div>
-            <div class="p-bullet">MEA decoder instead of Nussinov for more accurate structure decoding</div>
-            <div class="p-bullet">Family-wise cross-validation on bpRNA-NF-15.0 for proper generalization testing</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- AWARDS -->
-  <div class="page" id="page-awards">
-    <div class="wrap">
-      <div class="sec-label">Awards</div>
-      <h2 class="sec-title">Awards &amp; recognition</h2>
-      <div style="display:flex;flex-direction:column;gap:1rem">
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:var(--blue-bg);border:1px solid var(--blue-border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🏆</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Distinguished Paper Award</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">J. Leland Jackson Fellowships · Bioinformatics Best Paper</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Received the Bioinformatics "Best Paper" award for my first-author paper accepted at IEEE EMBC 2025 — recognizing excellence in biomedical engineering and health informatics research.</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2025</div>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:var(--green-bg);border:1px solid var(--green-border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🥇</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Data Challenge Award — IEEE BHI 2025</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">IEEE Engineering in Medicine and Biology Society</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Achieved a winning entry in the Data Competition Track 2: Predicting Macronutrient Information — using multimodal ML on continuous glucose monitoring data (CGMacros dataset).</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Oct 2025</div>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:#fef9c3;border:1px solid #fde68a;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⭐</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">NextGen Scholar Recognition</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">IEEE BHI 2025 · NSF-EMBS-Google</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Selected as a BHI 2025 NextGen Scholar for contributions to biomedical AI and health informatics — sponsored by the National Science Foundation, IEEE EMBS, and Google.</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Sep 2025</div>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎓</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Computational Biology Faculty GRA Award — Fall 2025</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Georgia Institute of Technology · ~$20,000 in funding</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Computational Biology Faculty Research Award for Fall 2025, providing approximately $20,000 in research funding to support ongoing work in biomedical AI and machine learning.</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Jul 2025</div>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🎓</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Computational Biology Faculty GRA Award — Spring 2026</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Georgia Institute of Technology · ~$20,000 in funding</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Computational Biology Faculty Research Award for Spring 2026, providing approximately $20,000 in research funding — reflecting continued recognition of research contributions in computational biology.</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2024</div>
-        </div>
-
-        <div style="border:1px solid var(--border);border-radius:12px;padding:1.6rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.2rem;align-items:start">
-          <div style="width:40px;height:40px;border-radius:10px;background:#fffbeb;border:1px solid #fde68a;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🏅</div>
-          <div>
-            <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px">Outstanding AI Project Award</div>
-            <div style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:6px">Korea Creative Content Agency (KOCCA) · 2022 Gwangju ACE Fair</div>
-            <div style="font-size:13px;color:var(--muted);line-height:1.7">Selected as an outstanding project at the 2022 Gwangju ACE Fair Content Campus Joint Exhibition — recognized for an AI-based digital human enhancement system combining computer vision and ML.</div>
-          </div>
-          <div style="font-size:12px;color:var(--faint);white-space:nowrap;text-align:right;padding-top:2px">Nov 2022</div>
-        </div>
-
       </div>
     </div>
   </div>
