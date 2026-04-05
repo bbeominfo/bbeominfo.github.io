@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Kyungbeom Kim</title>
+<title>Work | Kyungbeom Kim</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -109,8 +109,8 @@ html,body{height:auto;overflow:auto}
   <div class="nav-inner">
     <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit">Kyungbeom Kim</a></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">About</a></li>
-      <li><a href="work.html">Work</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="awards.html">Awards</a></li>
       <li><a href="publications.html">Publications</a></li>
@@ -121,46 +121,20 @@ html,body{height:auto;overflow:auto}
 </nav>
 <div style="padding-top:60px">
 <div class="wrap">
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-start;padding-top:1rem;margin-bottom:3rem">
-        <div style="width:180px;height:220px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);flex-shrink:0;overflow:hidden">
-          <img src="personal_photo.jpg" alt="Kyungbeom Kim" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
-        </div>
-        <div>
-          <h1 style="font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.6rem">Kyungbeom <span style="color:var(--blue)">Kim</span></h1>
-          <p style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem">MS Computational Science &amp; Engineering · MS Bioinformatics · Georgia Institute of Technology</p>
-          <p style="font-size:14px;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:1.6rem">I am a graduate researcher at GT Bio-MIBLab working at the intersection of machine learning and biomedical science. My research focuses on large language models for clinical NLP, polygenic risk score integration for disease prediction, and multi-agent AI systems for biomedical data. I am passionate about building ML systems that are not only accurate but interpretable and clinically deployable. I am actively seeking internship opportunities in ML/AI engineering and biomedical AI research.</p>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Computational Science &amp; Engineering</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Bioinformatics</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">BE Biomedical Engineering &amp; Computer Art</strong> · Chung-ang University · 2019–2024</span>
-            </div>
-          </div>
-        </div>
+      <div class="sec-label">Work / Experience</div>
+      <h2 class="sec-title">Experience &amp; education</h2>
+      <div style="font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Work Experience</div>
+      <div style="margin-bottom:3rem">
+        <div class="exp-item"><div><div style="display:flex;align-items:center;gap:10px;margin-bottom:3px"><div class="exp-role">Graduate Research Assistant</div><span style="font-size:11px;font-weight:600;padding:2px 9px;border-radius:4px;background:var(--green-bg);border:1px solid var(--green-border);color:var(--green-text)">Current</span></div><div class="exp-org">Georgia Institute of Technology · Bio-MIBLab</div><div class="exp-bullet">First-author ML paper on colon cancer risk prediction accepted at IEEE EMBC 2025, Distinguished Paper Award.</div><div class="exp-bullet">LLM-integrated pipeline for pediatric cancer Survivorship Care Plans IEEE TBME (under review).</div><div class="exp-bullet">Surveying multimodal LLM architectures for a systematic review on representation learning.</div><div class="exp-bullet">Designing GeneDAE, a sparse autoencoder for SNP-informed gene embeddings.</div><div class="exp-bullet">Developing a modular Multi-Agent AI architecture for multi-modal biomedical data integration.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">Undergraduate Research Assistant</div><div class="exp-org">KAIST · Single-Cell Medical Genomics Lab</div><div class="exp-bullet">Built an automated single-cell data mining pipeline from the GEO database.</div><div class="exp-bullet">Constructed ground truth datasets for single-cell LLMs using fine-tuned BERT and GPT-based NLP annotation.</div></div><div class="exp-period">Jul 2023 – Feb 2024</div></div>
+        <div class="exp-item"><div><div class="exp-role">Research Intern</div><div class="exp-org">Soongsil University · Biomedical Data Science Lab</div><div class="exp-bullet">Identified differentially expressed genes in TCGA-BLCA RNA-seq data using t-test and FDR correction.</div><div class="exp-bullet">Applied KNN on TCGA-PAAD multi-omics data for cancer survival prediction.</div></div><div class="exp-period">Mar 2023 – Jun 2023</div></div>
+        <div class="exp-item"><div><div class="exp-role">Bioinformatics Intern</div><div class="exp-org">Insilicogen Inc.</div><div class="exp-bullet">End-to-end RNA-seq analysis using CLC Genomics Workbench for variant detection and DEG analysis with R visualization.</div></div><div class="exp-period">Jan 2023 – Feb 2023</div></div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-        <button onclick="location.href='publications.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">📄</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Publications</div>
-          <div style="font-size:12px;color:var(--faint)">6 papers · IEEE, ACM</div>
-        </button>
-        <button onclick="location.href='projects.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🔬</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Projects</div>
-          <div style="font-size:12px;color:var(--faint)">10 projects · ML, Bioinformatics</div>
-        </button>
-        <button onclick="location.href='awards.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🏆</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Awards</div>
-          <div style="font-size:12px;color:var(--faint)">6 awards · IEEE, Georgia Tech</div>
-        </button>
+      <div style="font-size:11px;font-weight:600;color:var(--faint);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">Education</div>
+      <div>
+        <div class="exp-item"><div><div class="exp-role">MS Computational Science &amp; Engineering</div><div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div><div class="exp-bullet">Research at Bio-MIBLab under Dr. May D. Wang. Focus on ML, scientific computing, and biomedical AI.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">MS Bioinformatics</div><div class="exp-org">Georgia Institute of Technology · Atlanta, GA</div><div class="exp-bullet">Dual degree covering computational biology, genomics, structural bioinformatics, and biological data analysis.</div></div><div class="exp-period">Aug 2024 – Present</div></div>
+        <div class="exp-item"><div><div class="exp-role">BE in Biomedical Engineering &amp; Computer Art</div><div class="exp-org">Chung-ang University · Seoul, South Korea</div><div class="exp-bullet">Double major in Biomedical Engineering and Computer Art.</div></div><div class="exp-period">Mar 2019 – Feb 2024</div></div>
       </div>
     </div>
 </div>

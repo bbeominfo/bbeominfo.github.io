@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Kyungbeom Kim</title>
+<title>Projects | Kyungbeom Kim</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -109,9 +109,9 @@ html,body{height:auto;overflow:auto}
   <div class="nav-inner">
     <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit">Kyungbeom Kim</a></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="index.html">About</a></li>
       <li><a href="work.html">Work</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="awards.html">Awards</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -121,46 +121,32 @@ html,body{height:auto;overflow:auto}
 </nav>
 <div style="padding-top:60px">
 <div class="wrap">
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-start;padding-top:1rem;margin-bottom:3rem">
-        <div style="width:180px;height:220px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);flex-shrink:0;overflow:hidden">
-          <img src="personal_photo.jpg" alt="Kyungbeom Kim" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
-        </div>
-        <div>
-          <h1 style="font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.6rem">Kyungbeom <span style="color:var(--blue)">Kim</span></h1>
-          <p style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem">MS Computational Science &amp; Engineering · MS Bioinformatics · Georgia Institute of Technology</p>
-          <p style="font-size:14px;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:1.6rem">I am a graduate researcher at GT Bio-MIBLab working at the intersection of machine learning and biomedical science. My research focuses on large language models for clinical NLP, polygenic risk score integration for disease prediction, and multi-agent AI systems for biomedical data. I am passionate about building ML systems that are not only accurate but interpretable and clinically deployable. I am actively seeking internship opportunities in ML/AI engineering and biomedical AI research.</p>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Computational Science &amp; Engineering</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Bioinformatics</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">BE Biomedical Engineering &amp; Computer Art</strong> · Chung-ang University · 2019–2024</span>
+      <div class="sec-label">Projects</div>
+      <h2 class="sec-title">Selected projects</h2>
+      <div class="projects-grid">
+        <div class="p-card" onclick="location.href=\'proj-colon.html\'"><div class="p-thumb" style="background:#f0fdf4"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🧬</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Colon Cancer Risk Prediction with Polygenic Risk Scores</div><div class="p-card-chips"><span class="ptag">Machine Learning</span><span class="ptag">PRS</span><span class="ptag">UK Biobank</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-cleft.html\'">
+          <div class="p-thumb" style="background:#fff1f2">
+            <div class="p-thumb-placeholder">
+              <span class="p-thumb-icon">🧠</span>
+              <span class="p-thumb-hint">Image coming soon</span>
             </div>
           </div>
+          <div class="p-card-body">
+            <div class="p-card-title">GeneDAE-Based Variant Prioritization for Orofacial Cleft Risk</div>
+            <div class="p-card-chips"><span class="ptag">GeneDAE</span><span class="ptag">Integrated Gradients</span><span class="ptag">GWAS</span></div>
+            <div class="p-card-link">View details →</div>
+          </div>
         </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-        <button onclick="location.href='publications.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">📄</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Publications</div>
-          <div style="font-size:12px;color:var(--faint)">6 papers · IEEE, ACM</div>
-        </button>
-        <button onclick="location.href='projects.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🔬</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Projects</div>
-          <div style="font-size:12px;color:var(--faint)">10 projects · ML, Bioinformatics</div>
-        </button>
-        <button onclick="location.href='awards.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🏆</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Awards</div>
-          <div style="font-size:12px;color:var(--faint)">6 awards · IEEE, Georgia Tech</div>
-        </button>
+
+        <div class="p-card" onclick="location.href=\'proj-psoriasis.html\'"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🧫</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Interpretable Neural Networks for Autoimmune Disease Risk via Gene Embeddings</div><div class="p-card-chips"><span class="ptag">GeneDAE</span><span class="ptag">NID</span><span class="ptag">UK Biobank</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-glucose.html\'"><div class="p-thumb" style="background:var(--blue-bg)"><div class="p-thumb-placeholder"><span class="p-thumb-icon">📊</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Multimodal Glucose Response Modeling for Personalized Nutrition</div><div class="p-card-chips"><span class="ptag">XGBoost</span><span class="ptag">CGM</span><span class="ptag">Microbiome</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-scp.html\'"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🏥</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">LLM-Integrated Clinical Documentation Pipeline for Pediatric Cancer SCPs</div><div class="p-card-chips"><span class="ptag">GPT-4o</span><span class="ptag">Clinical NLP</span><span class="ptag">EHR</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-airhealth.html\'"><div class="p-thumb" style="background:#fef9c3"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🌬️</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">AirHealth: Air Quality &amp; Health Outcome Visualization Dashboard</div><div class="p-card-chips"><span class="ptag">LSTM</span><span class="ptag">D3.js</span><span class="ptag">EPA Data</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-protein.html\'"><div class="p-thumb" style="background:#fdf4ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🔬</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Active Learning-Guided Protein Mutation Effect Prediction</div><div class="p-card-chips"><span class="ptag">ESM-1v</span><span class="ptag">MLP Ensemble</span><span class="ptag">Active Learning</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-gnn.html\'"><div class="p-thumb" style="background:#ecfdf5"><div class="p-thumb-placeholder"><span class="p-thumb-icon">💊</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Drug-Disease Association Modeling via Heterogeneous GNNs</div><div class="p-card-chips"><span class="ptag">GNN</span><span class="ptag">Hetionet</span><span class="ptag">Sentence-BERT</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-rna.html\'"><div class="p-thumb" style="background:#f0f9ff"><div class="p-thumb-placeholder"><span class="p-thumb-icon">🔩</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">RNA Secondary Structure Prediction: DP to Deep Learning Benchmark</div><div class="p-card-chips"><span class="ptag">Transformer</span><span class="ptag">LSTM</span><span class="ptag">Nussinov</span></div><div class="p-card-link">View details →</div></div></div>
+        <div class="p-card" onclick="location.href=\'proj-face.html\'"><div class="p-thumb" style="background:#fffbeb"><div class="p-thumb-placeholder"><span class="p-thumb-icon">👁️</span><span class="p-thumb-hint">Image coming soon</span></div></div><div class="p-card-body"><div class="p-card-title">Facial Analysis via Traditional Asian Physiognomy</div><div class="p-card-chips"><span class="ptag">Computer Vision</span><span class="ptag">ML</span><span class="ptag">Web Dev</span></div><div class="p-card-link">View details →</div></div></div>
       </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Kyungbeom Kim</title>
+<title>Autoimmune Disease Risk | Kyungbeom Kim</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -109,9 +109,9 @@ html,body{height:auto;overflow:auto}
   <div class="nav-inner">
     <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit">Kyungbeom Kim</a></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="index.html">About</a></li>
       <li><a href="work.html">Work</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="awards.html">Awards</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -120,49 +120,11 @@ html,body{height:auto;overflow:auto}
   </div>
 </nav>
 <div style="padding-top:60px">
-<div class="wrap">
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-start;padding-top:1rem;margin-bottom:3rem">
-        <div style="width:180px;height:220px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);flex-shrink:0;overflow:hidden">
-          <img src="personal_photo.jpg" alt="Kyungbeom Kim" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
-        </div>
-        <div>
-          <h1 style="font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.6rem">Kyungbeom <span style="color:var(--blue)">Kim</span></h1>
-          <p style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem">MS Computational Science &amp; Engineering · MS Bioinformatics · Georgia Institute of Technology</p>
-          <p style="font-size:14px;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:1.6rem">I am a graduate researcher at GT Bio-MIBLab working at the intersection of machine learning and biomedical science. My research focuses on large language models for clinical NLP, polygenic risk score integration for disease prediction, and multi-agent AI systems for biomedical data. I am passionate about building ML systems that are not only accurate but interpretable and clinically deployable. I am actively seeking internship opportunities in ML/AI engineering and biomedical AI research.</p>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Computational Science &amp; Engineering</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Bioinformatics</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">BE Biomedical Engineering &amp; Computer Art</strong> · Chung-ang University · 2019–2024</span>
-            </div>
-          </div>
-        </div>
+<div class="wrap"><button class="btn-back" onclick="location.href='projects.html'">← Back to Projects</button><div class="p-detail-header"><div class="p-detail-meta">02 · ACM BCB 2025 · Philadelphia, PA</div><h1 class="p-detail-title">Interpretable Neural Networks Reveal Gene Interactions Underlying Autoimmune Disease Risk</h1><div class="p-detail-role">ML Contributor · Georgia Institute of Technology · Bio-MIBLab</div><div class="p-detail-chips"><span class="ptag">GeneDAE</span><span class="ptag">Neural Interaction Detection</span><span class="ptag">UK Biobank</span><span class="ptag">PRS</span><span class="ptag">Psoriasis</span><span class="ptag">PyTorch</span><span class="ptag">Interpretable ML</span></div></div>      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">Published at ACM BCB 2025. This project developed an interpretable neural network integrating gene-level embeddings (via GeneDAE) with clinical features to predict 10-year incident psoriasis risk in the UK Biobank. Using Neural Interaction Detection across 20,301 feature pairs, the model uncovered biologically plausible GxG and GxE interactions not captured by standard PRS methods.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-        <button onclick="location.href='publications.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">📄</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Publications</div>
-          <div style="font-size:12px;color:var(--faint)">6 papers · IEEE, ACM</div>
-        </button>
-        <button onclick="location.href='projects.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🔬</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Projects</div>
-          <div style="font-size:12px;color:var(--faint)">10 projects · ML, Bioinformatics</div>
-        </button>
-        <button onclick="location.href='awards.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🏆</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Awards</div>
-          <div style="font-size:12px;color:var(--faint)">6 awards · IEEE, Georgia Tech</div>
-        </button>
-      </div>
-    </div>
+      <div class="p-detail-grid"><div><div class="p-section"><div class="p-section-label">Problem Statement</div><p class="p-section-text">Polygenic Risk Scores (PRSs) aggregate genetic variant effects linearly, missing gene-by-gene (GxG) and gene-by-environment (GxE) interactions critical for autoimmune disease risk. This project developed an interpretable neural network integrating gene-level embeddings with clinical features to predict 10-year incident psoriasis and discover biologically meaningful interactions that conventional PRS methods cannot capture.</p></div><div class="p-section"><div class="p-section-label">Methods</div><div class="p-bullet"><strong>Dataset</strong> UK Biobank (~500K participants); 13,120 psoriasis cases (ICD-10 L40.0–L40.9), restricted to European ancestry</div><div class="p-bullet"><strong>GeneDAE (PRS2)</strong> Denoising autoencoder on 8,817 MHC variants (chr6); produced 159 interpretable gene-level embeddings</div><div class="p-bullet"><strong>Feature sets</strong> NG only (49 clinical) · NG+PRS1 (univariate PRS) · NG+PRS2 (208 features); tested with LR and NN</div><div class="p-bullet"><strong>Neural Interaction Detection (NID)</strong> 20,301 unique pairs (11,628 GxG, 7,497 GxE, 1,176 NG-NG); Bonferroni-corrected t-tests (α=0.01)</div></div><div class="p-section"><div class="p-section-label">Key Findings</div><div class="p-bullet"><strong>MIR3135B, BAK1, DXO</strong> emerged as hub genes consistent with psoriasis and smoking literature</div><div class="p-bullet">GxG effects stronger than GxE gene interaction networks drive psoriasis susceptibility</div><div class="p-bullet">7/10 top GxG gene pairs had prior psoriasis associations validated in literature</div><div class="p-bullet">First systematic application of interpretable NNs with gene-level embeddings for autoimmune disease prediction</div></div></div><div><div class="p-section"><div class="p-section-label">Results</div><div class="p-stats"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><div class="p-stat"><div class="p-stat-num">0.60</div><div class="p-stat-label">Best AUC (LR · NG features · 10-yr psoriasis)</div></div><div class="p-stat"><div class="p-stat-num">159</div><div class="p-stat-label">Gene-level embeddings from MHC region (GeneDAE)</div></div><div class="p-stat"><div class="p-stat-num">20,301</div><div class="p-stat-label">Unique feature pairs analyzed (GxG + GxE + NG-NG)</div></div><div class="p-stat"><div class="p-stat-num">7/10</div><div class="p-stat-label">Top GxG genes validated in psoriasis literature</div></div></div></div></div></div></div></div>
 </div>
 <script>
 function setActiveNav(){

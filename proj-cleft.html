@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Kyungbeom Kim</title>
+<title>Orofacial Cleft Variant Prioritization | Kyungbeom Kim</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 
@@ -109,9 +109,9 @@ html,body{height:auto;overflow:auto}
   <div class="nav-inner">
     <div class="nav-logo"><a href="index.html" style="text-decoration:none;color:inherit">Kyungbeom Kim</a></div>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">About</a></li>
+      <li><a href="index.html">About</a></li>
       <li><a href="work.html">Work</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="awards.html">Awards</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -121,46 +121,75 @@ html,body{height:auto;overflow:auto}
 </nav>
 <div style="padding-top:60px">
 <div class="wrap">
-      <div style="display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:flex-start;padding-top:1rem;margin-bottom:3rem">
-        <div style="width:180px;height:220px;border-radius:16px;background:var(--bg2);border:1px solid var(--border);flex-shrink:0;overflow:hidden">
-          <img src="personal_photo.jpg" alt="Kyungbeom Kim" style="width:100%;height:100%;object-fit:cover;object-position:center 15%" onerror="this.style.display='none';this.parentNode.style.display='flex';this.parentNode.style.alignItems='center';this.parentNode.style.justifyContent='center';this.parentNode.innerHTML='<div style=&quot;text-align:center&quot;><span style=&quot;font-size:2.5rem;font-weight:300;color:var(--faint);display:block&quot;>KK</span><span style=&quot;font-size:10px;color:var(--faint)&quot;>Photo coming soon</span></div>'">
+      <button class="btn-back" onclick="location.href='projects.html'">Back to Projects</button>
+      <div class="p-detail-header">
+        <div class="p-detail-meta">10 · Ongoing · Bio-MIBLab, Georgia Tech</div>
+        <h1 class="p-detail-title">Interpretable Gene Embedding and Variant Prioritization for Orofacial Cleft Using GeneDAE</h1>
+        <div class="p-detail-role">ML Researcher · Georgia Institute of Technology · Bio-MIBLab</div>
+        <div class="p-detail-chips"><span class="ptag">GeneDAE</span><span class="ptag">Integrated Gradients</span><span class="ptag">GWAS</span><span class="ptag">UK Biobank</span><span class="ptag">Sparse Autoencoder</span><span class="ptag">Non-coding Variants</span><span class="ptag">IRF6</span><span class="ptag">MPRA</span></div>
+      </div>
+
+      <div class="p-section" style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)">
+        <div class="p-section-label">Summary</div>
+        <p class="p-section-text">An end-to-end workflow for complex disease genetics: starting from case-control genotype data for orofacial cleft (OFC), we use GeneDAE (a sparse denoising autoencoder) to learn interpretable gene-level representations, then apply Integrated Gradients to prioritize non-coding variants as experimentally testable hypotheses. The pipeline bridges GWAS-level signals and wet-lab validation, connecting model-derived variant rankings to functional evidence from MPRA, luciferase, and CRISPR assays in the literature.</p>
+      </div>
+
+      <div class="p-detail-grid">
+        <div>
+          <div class="p-section">
+            <div class="p-section-label">Motivation</div>
+            <p class="p-section-text">GWAS for complex diseases like orofacial cleft yields many variant signals, but non-coding variants are particularly difficult to interpret and prioritize for follow-up experiments. Standard PRS approaches summarize genetic risk as a single scalar, losing the gene-level resolution needed for mechanistic understanding. We built an end-to-end workflow that produces interpretable gene embeddings and a ranked shortlist of candidate variants actionable for functional validation.</p>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Data</div>
+            <div class="p-bullet">UK Biobank cleft cases and matched controls; SNP genotypes encoded as 0/1/2 genotype matrix</div>
+            <div class="p-bullet">Standard QC pipeline with population structure correction; designed to integrate de novo variants from hospital cohorts if needed</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">GeneDAE Model</div>
+            <div class="p-bullet">Sparse Denoising Autoencoder that learns gene embeddings directly from genotype data</div>
+            <div class="p-bullet">Variant-to-gene connections constrained by a biologically informed adjacency mask, making embeddings interpretable at the gene level rather than operating as a black box</div>
+            <div class="p-bullet">Each gene embedding summarizes disease-relevant genetic signal across all variants in that gene window</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Gene-Level Signal Validation</div>
+            <div class="p-bullet">Trained encoder transforms individuals into gene embedding space; embeddings tested for case-control separation at known loci</div>
+            <div class="p-bullet">IRF6 locus used as proof-of-concept: embedding captures the direction of association consistent with GWAS-level signal, confirming the model learns biologically meaningful representations</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Variant Prioritization via Integrated Gradients</div>
+            <div class="p-bullet">Integrated Gradients applied to attribute each gene embedding back to individual input variants</div>
+            <div class="p-bullet">Variant importance plots generated for IRF6; top-ranked variant rs2235371 matches a well-established marker in the OFC literature, providing convergent validity</div>
+            <div class="p-bullet">Non-coding variants in top rankings become regulatory candidates for functional follow-up</div>
+          </div>
         </div>
         <div>
-          <h1 style="font-size:2.6rem;font-weight:600;letter-spacing:-0.04em;line-height:1.1;color:var(--text);margin-bottom:0.6rem">Kyungbeom <span style="color:var(--blue)">Kim</span></h1>
-          <p style="font-size:13px;font-weight:500;color:var(--blue);margin-bottom:1.4rem">MS Computational Science &amp; Engineering · MS Bioinformatics · Georgia Institute of Technology</p>
-          <p style="font-size:14px;color:var(--muted);line-height:1.85;max-width:540px;margin-bottom:1.6rem">I am a graduate researcher at GT Bio-MIBLab working at the intersection of machine learning and biomedical science. My research focuses on large language models for clinical NLP, polygenic risk score integration for disease prediction, and multi-agent AI systems for biomedical data. I am passionate about building ML systems that are not only accurate but interpretable and clinically deployable. I am actively seeking internship opportunities in ML/AI engineering and biomedical AI research.</p>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Computational Science &amp; Engineering</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">MS Bioinformatics</strong> · Georgia Tech · 2024–Present</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)">
-              <span style="width:6px;height:6px;border-radius:50%;background:var(--faint);flex-shrink:0;display:inline-block"></span>
-              <span><strong style="color:var(--text);font-weight:500">BE Biomedical Engineering &amp; Computer Art</strong> · Chung-ang University · 2019–2024</span>
+          <div class="p-section">
+            <div class="p-section-label">Literature Integration</div>
+            <div class="p-bullet"><strong>Layer A (historical anchor):</strong> Rahimov et al. 2008 (Nat Genet) showed rs642961 in the IRF6 enhancer disrupts a TFAP2A binding motif, providing a mechanistic story for how non-coding variants at this locus alter function</div>
+            <div class="p-bullet"><strong>Layer B (high-throughput functional screen):</strong> 2025 Nat Commun paper used MPRA and luciferase assays to test OFC locus SNPs for allele-specific regulatory activity, with CRISPR confirmation for select hits; critically, not all well-known SNPs show allele differences in every assay, reflecting context- and condition-dependent effects</div>
+            <div class="p-bullet">These two layers provide "connect the dots" evidence: our model narrows the search space, and existing functional data contextualizes which candidates are most experimentally tractable</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Validation Pipeline</div>
+            <div class="p-bullet"><strong>Step 1:</strong> Association signal or model-based prioritization (GeneDAE + Integrated Gradients)</div>
+            <div class="p-bullet"><strong>Step 2:</strong> Reporter assay (MPRA / luciferase) to confirm allele-specific regulatory activity</div>
+            <div class="p-bullet"><strong>Step 3:</strong> TF binding confirmation (EMSA, ChIP) to identify mechanistic basis</div>
+            <div class="p-bullet"><strong>Step 4:</strong> CRISPR editing to verify effect on gene expression</div>
+            <div class="p-bullet"><strong>Step 5:</strong> Phenotype assay to connect to functional outcome where applicable</div>
+          </div>
+          <div class="p-section">
+            <div class="p-section-label">Outputs</div>
+            <div class="p-stats">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <div class="p-stat"><div class="p-stat-num">Gene</div><div class="p-stat-label">Interpretable gene embeddings and gene-level risk signals per individual</div></div>
+                <div class="p-stat"><div class="p-stat-num">Variant</div><div class="p-stat-label">Integrated Gradients-based top variant shortlist for functional follow-up</div></div>
+                <div class="p-stat"><div class="p-stat-num">Evidence</div><div class="p-stat-label">GWAS and wet-lab literature-connected candidate justification</div></div>
+                <div class="p-stat"><div class="p-stat-num">Actionable</div><div class="p-stat-label">Candidates ready for MPRA, luciferase, TF binding, and CRISPR experiments</div></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-        <button onclick="location.href='publications.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">📄</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Publications</div>
-          <div style="font-size:12px;color:var(--faint)">6 papers · IEEE, ACM</div>
-        </button>
-        <button onclick="location.href='projects.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🔬</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Projects</div>
-          <div style="font-size:12px;color:var(--faint)">10 projects · ML, Bioinformatics</div>
-        </button>
-        <button onclick="location.href='awards.html'" style="padding:1rem;border:1px solid var(--border);border-radius:12px;background:var(--bg);cursor:pointer;font-family:var(--sans);transition:all 0.15s;text-align:left" onmouseover="this.style.borderColor='var(--blue-border)';this.style.background='var(--blue-bg)'" onmouseout="this.style.borderColor='var(--border)';this.style.background='var(--bg)'">
-          <div style="font-size:20px;margin-bottom:6px">🏆</div>
-          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:2px">Awards</div>
-          <div style="font-size:12px;color:var(--faint)">6 awards · IEEE, Georgia Tech</div>
-        </button>
       </div>
     </div>
 </div>
